@@ -12,11 +12,12 @@ export default function Home() {
           className="w-full h-full flex flex-col justift-center items-center"
           style={{ zIndex: 21 }}
         >
-          <div className="w-full h-4/5 flex flex-col justify-center items-center">
+          <div className="w-full h-4/5 flex flex-col justify-center items-center cursor-pointer">
             <iframe
               src="https://my.spline.design/wizardroomcopy-833ac17ba4b03bf17b85220fcc3da1a4/"
-              width="100%"
-              height="100%"
+              className="hover:scale-105 transition duration-500 ease-in-out"
+              width="90%"
+              height="90%"
             ></iframe>
           </div>
           <div className="w-full h-1/6 flex flex-col justify-center items-center">
