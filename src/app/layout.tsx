@@ -1,29 +1,33 @@
-import type { Metadata } from "next";
+import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/sidebar";
+import logo from "../../public/logo.ico";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+export const metadata = {
   title: "Kasun Udara",
   description: "Official Portfolio of Kasun Udara",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface RootLayoutProps {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex">
-          <div className="w-1/12">
-            <SideBar />
-          </div>
-          <div className="w-11/12">{children}</div>
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <link rel="icon" href={logo.src} />
+      </head>
+      <body className={`flex ${inter.className}`}>
+        <div className="w-1/12">
+          <SideBar />
         </div>
+        <div className="w-11/12">{children}</div>
       </body>
     </html>
   );

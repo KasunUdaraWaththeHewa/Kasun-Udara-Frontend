@@ -2,7 +2,7 @@
 
 import "boxicons/css/boxicons.min.css";
 import Image from "next/image";
-import logo from "../../public/next.svg";
+import logo from "../../public/logo.jpeg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
@@ -28,13 +28,21 @@ export default function SideBar() {
   return (
     <div className="w-full h-screen bg-gradient-to-br from-black to-darkgreen text-gold flex flex-col items-center py-4">
       <div className="w-full m-4 text-2xl font-bold flex flex-col items-center justify-center">
-        <Image className="w-3/4" src={logo} alt="Logo" />
+        <div className="w-1/3 h-auto flex justify-center items-center cursor-pointer">
+          <Link href="/" className="flex flex-col justify-center items-center">
+            <Image
+              className="w-3/4 h-full object-cover rounded-full transition transform hover:scale-110 transition duration-500 ease-in-out"
+              src={logo}
+              alt="Logo"
+            />
+          </Link>
+        </div>
       </div>
-      <div className="w-3/4 h-3/4 flex flex-col justify-center items-center p-4">
+      <div className="w-1/3 h-full flex flex-col justify-center items-center">
         {icons.map((item, index) => (
           <Link key={index} href={item.link}>
             <div
-              className={`mb-6 flex justify-center items-center transition transform hover:scale-110 ${
+              className={`w-full mb-6 flex justify-center items-center transition transform hover:scale-110 transition duration-500 ease-in-out ${
                 active === item.link ? "text-white" : "text-gold"
               }`}
             >
