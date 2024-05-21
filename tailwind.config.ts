@@ -24,13 +24,13 @@ const config: Config = {
           DEFAULT: "#000000",
           foreground: "#000000",
         },
-        darkgreen:{
-          DEFAULT: "#08433F",
-          foreground: "#08433F",
+        darkMaroon:{
+          DEFAULT: "#220901",
+          foreground: "#220901",
         },
-        lightgreen:{
-          DEFAULT: "#d9ed92",
-          foreground: "#d9ed92",
+        lightMaroon:{
+          DEFAULT: "#621708",
+          foreground: "#621708",
         },
         gold: {
           DEFAULT: "#F3D592",
