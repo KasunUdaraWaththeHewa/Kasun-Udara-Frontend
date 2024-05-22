@@ -95,17 +95,17 @@ export default function Page() {
                   href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-[270px] w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-black"
+                  className="h-[250px] w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out"
                 >
                   <Image
                     src={blog.image}
                     alt={blog.title}
                     width={300}
                     height={300}
-                    className="rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out"
+                    className="rounded-lg shadow-lg"
                   />
-                  <h1 className="text-gold text-1xl mt-2">{blog.title}</h1>
-                  <p className="text-white text-xs">{blog.subtitle}</p>
+                  <h1 className="text-black text-1xl mt-2"><b>{blog.title}</b></h1>
+                  <p className="text-black text-xs">{blog.subtitle}</p>
                 </a>
               </div>
             ))

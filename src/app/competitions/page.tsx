@@ -42,7 +42,7 @@ export default function Page() {
           {competitions.map((competition, index) => (
             <div
               key={index}
-              className="text-white p-4 rounded-lg bg-black"
+              className="text-white p-4 rounded-lg bg-white"
             >
               <Image
                 src={competition.image}
@@ -50,9 +50,9 @@ export default function Page() {
                 width={200}
                 height={200}
               />
-              <h2 className="text-sm mt-2 text-gold">{competition.title}</h2>
-              <p className="mt-2 text-sm">{competition.description}</p>
-              <p className="mt-2 text-sm">{competition.places}</p>
+              <h2 className="text-sm mt-2 text-black"><b>{competition.title}</b></h2>
+              <p className="mt-2 text-sm text-black">{competition.description}</p>
+              <p className="mt-2 text-sm text-black"><b>{competition.places}</b></p>
             </div>
           ))}
         </div>

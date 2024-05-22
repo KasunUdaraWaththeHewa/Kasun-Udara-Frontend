@@ -63,15 +63,15 @@ export default function Page() {
               rel="noopener noreferrer"
               className="hover:cursor-pointer hover:scale-105 transition transform transition duration-500 ease-in-out shadow-lg hover:shadow-xl rounded-lg"
             >
-              <div className="text-white p-4 rounded-lg bg-black cursor-pointer">
+              <div className="text-white p-4 rounded-lg bg-white cursor-pointer">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={200}
                   height={200}
                 />
-                <h2 className="text-sm mt-2 text-gold">{project.title}</h2>
-                <p className="mt-2 text-xs">{project.description}</p>
+                <h2 className="text-sm mt-2 text-black"><b>{project.title}</b></h2>
+                <p className="mt-2 text-xs text-black">{project.description}</p>
               </div>
             </Link>
           ))}
