@@ -2,34 +2,57 @@ import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import blogImage from "../../../public/assests/blogs/blogImage.webp";
 
+const socials = [
+  {
+    name: "medium",
+    logo: "bxl-medium-square",
+    link: "https://www.linkedin.com/in/w-h-kasun-udara/",
+  },
+  {
+    blogger: "blogger",
+    logo: "bxl-blogger",
+    link: "https://www.linkedin.com/in/w-h-kasun-udara/",
+  },
+  {
+    dev: "dev",
+    logo: "bxl-dev-to",
+    link: "https://www.linkedin.com/in/w-h-kasun-udara/",
+  },
+];
 const blogs = [
   {
     title: "CTF Writeup 01",
+    subtitle: "Writeup for CTF challenge",
     image: blogImage,
     link: "https://example.com/ctf-writeup-01",
   },
   {
     title: "Debugging React",
+    subtitle: "Debugging React Applications",
     image: blogImage,
     link: "https://example.com/debugging-react",
   },
   {
     title: "Spring Boot Microservices",
+    subtitle: "Spring Boot Microservices with Docker",
     image: blogImage,
     link: "https://example.com/spring-boot-microservices",
   },
   {
     title: "FastAPI for Machine Learning",
+    subtitle: "FastAPI for Machine Learning APIs",
     image: blogImage,
     link: "https://example.com/fastapi-for-ml",
   },
   {
     title: "Node Express vs Spring Boot",
+    subtitle: "Node Express vs Spring Boot for REST APIs",
     image: blogImage,
     link: "https://example.com/node-express-vs-spring-boot",
   },
   {
     title: "React Native vs Flutter",
+    subtitle: "React Native vs Flutter for Mobile Apps",
     image: blogImage,
     link: "https://example.com/react-native-vs-flutter",
   },
@@ -40,7 +63,23 @@ export default function Page() {
     <>
       <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-10">
+        <div
+          className="w-3/4 flex flex-row justify-end items-center cursor-pointer"
+          style={{ zIndex: 21 }}
+        >
+          {socials.map((social) => (
+            <a
+              key={social.name}
+              href={social.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
+            >
+              <i className={`bx ${social.logo} text-1xl`}></i>
+            </a>
+          ))}
+        </div>
+        <div className="mt-4">
           <h1 className="text-4xl text-white w-full text-center">
             <b>Blogs</b>
           </h1>
@@ -66,6 +105,7 @@ export default function Page() {
                     className="rounded-lg shadow-lg"
                   />
                   <h1 className="text-white text-1xl mt-2">{blog.title}</h1>
+                  <p className="text-gray text-xs">{blog.subtitle}</p>
                 </a>
               </div>
             ))

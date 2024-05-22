@@ -36,6 +36,10 @@ const config: Config = {
           DEFAULT: "#F3D592",
           foreground: "#F3D592",
         },
+        gray: {
+          DEFAULT: "#f9f9f9",
+          foreground: "#f9f9f9",
+        },
       },
     },
   },
