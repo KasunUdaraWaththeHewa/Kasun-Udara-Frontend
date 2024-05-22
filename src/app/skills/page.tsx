@@ -156,9 +156,9 @@ export default function Page() {
         </div>
         <div className="w-full flex flex-col justify-center items-center">
           <div className="w-3/4 h-[150px] p-2 mt-4">
-            <h1 className="text-sm text-white mt-2 w-full text-left">
+            {/* <h1 className="text-sm text-white mt-2 w-full text-left">
               Frontend Development
-            </h1>
+            </h1> */}
             <div className="flex flex-row justify-center items-center mt-2">
               {FrontendDevelopment.map((tech) => (
                 <div
@@ -177,9 +177,9 @@ export default function Page() {
             </div>
           </div>
           <div className="w-3/4 h-[150px] p-2">
-            <h1 className="text-sm text-white mt-2  w-full text-left">
+            {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               Backend Development
-            </h1>
+            </h1> */}
             <div className="flex flex-row justify-center items-center mt-2">
               {BackendDevelopment.map((tech) => (
                 <div
@@ -198,9 +198,9 @@ export default function Page() {
             </div>
           </div>
           <div className="w-3/4 h-[150px] p-2">
-            <h1 className="text-sm text-white mt-2  w-full text-left">
+            {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               Mobile App Development
-            </h1>
+            </h1> */}
             <div className="flex flex-row justify-center items-center mt-2">
               {MobileDevelopment.map((tech) => (
                 <div
@@ -219,9 +219,9 @@ export default function Page() {
             </div>
           </div>
           <div className="w-3/4 h-[150px] p-2">
-            <h1 className="text-sm text-white mt-2  w-full text-left">
+            {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               DevOps
-            </h1>
+            </h1> */}
             <div className="flex flex-row justify-center items-center mt-2">
               {DevOps.map((tech) => (
                 <div
