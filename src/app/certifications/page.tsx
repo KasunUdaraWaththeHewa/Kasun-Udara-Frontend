@@ -108,7 +108,7 @@ export default function Page() {
             I have completed several courses and certifications to
             enhance my skills and knowledge. I am always eager to learn new
             technologies and tools to improve my work. Here are some of the
-            certifications I have completed so far.
+            certifications I have completed so far in my career.
           </p>
         </div>
         <div className="w-full flex flex-wrap justify-center items-center mt-4">
@@ -119,7 +119,7 @@ export default function Page() {
                 href={certification.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 rounded-lg transition transform hover:scale-110 transition duration-500 ease-in-out bg-black p-2"
+                className="flex items-center space-x-2 rounded-lg transition transform hover:scale-110 transition duration-500 ease-in-out bg-black p-2 hover:bg-darkMaroon hover:shadow-lg"
               >
                 <Image
                   src={certification.logo}
@@ -128,7 +128,7 @@ export default function Page() {
                   height={25}
                   className="rounded-lg"
                 />
-                <span className="text-white hover:text-gold text-sm">
+                <span className="text-white text-sm">
                   {certification.name}
                 </span>
               </a>
