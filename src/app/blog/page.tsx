@@ -80,7 +80,7 @@ export default function Page() {
           ))}
         </div>
         <div className="mt-4 w-full">
-          <h1 className="text-4xl text-white w-full text-left">
+          <h1 className="text-2xl text-white w-full text-left">
             <b>Published Blogs</b>
           </h1>
         </div>
@@ -90,19 +90,19 @@ export default function Page() {
         >
           {blogs.length > 0 ? (
             blogs.map((blog, index) => (
-              <div key={index} className="w-full md:w-1/2 lg:w-1/3 p-2">
+              <div key={index} className="w-full md:w-1/2 lg:w-1/4 p-2">
                 <a
                   href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-[300px] w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer"
+                  className="h-[270px] w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-darkMaroon"
                 >
                   <Image
                     src={blog.image}
                     alt={blog.title}
                     width={300}
                     height={300}
-                    className="rounded-lg shadow-lg"
+                    className="rounded-lg shadow-lg hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out"
                   />
                   <h1 className="text-gold text-1xl mt-2">{blog.title}</h1>
                   <p className="text-white text-xs">{blog.subtitle}</p>

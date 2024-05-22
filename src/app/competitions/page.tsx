@@ -34,7 +34,7 @@ export default function Page() {
       <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
         <div className="mt-12 w-full">
-          <h1 className="text-4xl text-white w-full text-left">
+          <h1 className="text-2xl text-white w-full text-left">
             <b>Competitions</b>
           </h1>
         </div>
@@ -42,7 +42,7 @@ export default function Page() {
           {competitions.map((competition, index) => (
             <div
               key={index}
-              className="text-white p-4 rounded-lg"
+              className="text-white p-4 rounded-lg bg-darkMaroon"
             >
               <Image
                 src={competition.image}

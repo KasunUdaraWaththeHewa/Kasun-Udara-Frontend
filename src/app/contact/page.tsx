@@ -45,7 +45,7 @@ export default function Page() {
           ))}
         </div>
         <div className="mt-4 w-full">
-          <h1 className="text-4xl text-white w-full text-left">
+          <h1 className="text-2xl text-white w-full text-left">
             <b>Contact Me</b>
           </h1>
         </div>
