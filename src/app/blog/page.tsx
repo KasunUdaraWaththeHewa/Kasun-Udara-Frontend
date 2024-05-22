@@ -81,7 +81,7 @@ export default function Page() {
         </div>
         <div className="mt-4">
           <h1 className="text-4xl text-white w-full text-center">
-            <b>Blogs</b>
+            <b>Published Blogs</b>
           </h1>
         </div>
         <div
@@ -104,8 +104,8 @@ export default function Page() {
                     height={300}
                     className="rounded-lg shadow-lg"
                   />
-                  <h1 className="text-white text-1xl mt-2">{blog.title}</h1>
-                  <p className="text-gray text-xs">{blog.subtitle}</p>
+                  <h1 className="text-gold text-1xl mt-2">{blog.title}</h1>
+                  <p className="text-white text-xs">{blog.subtitle}</p>
                 </a>
               </div>
             ))
