@@ -7,7 +7,7 @@ export default function Page() {
     <>
       <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-4 w-full">
+        <div className="mt-12 w-full">
           <h1 className="text-2xl text-white w-full text-left">
             <b>About Me</b>
           </h1>
