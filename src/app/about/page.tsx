@@ -31,7 +31,7 @@ export default function Page() {
               <h1 className="text-2xl text-left w-full text-gold">
                 <b>Waththe Hewa Kasun Udara</b>
               </h1>
-              <p className="text-white mt-4 text-sm">
+              <p className="text-white mt-4 text-sm text-justify">
                 I am Kasun Udara, a Software Engineer, Web Developer, Mobile App
                 Developer, Backend Developer, Frontend Developer, FullStack
                 Developer, Machine Learning Enthusiast, Tech Enthusiast,
@@ -55,8 +55,8 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="w-full h-auto px-10 pt-4">
-            <p className="text-white text-sm">
+          <div className="w-3/4 h-auto px-10 pt-4">
+            <p className="text-white text-sm text-justify">
               As a passionate Full-stack Developer and Java Developer, I thrive
               on pushing the boundaries of technology. With a strong foundation
               in frontend, backend, and mobile app development, I bring a
@@ -65,8 +65,8 @@ export default function Page() {
               technologies and applying them to real-world problems.
             </p>
           </div>
-          <div className="w-full h-auto px-10 pt-4">
-            <p className="text-white text-sm">
+          <div className="w-3/4 h-auto px-10 pt-4">
+            <p className="text-white text-sm text-justify">
               I am currently the <span className="text-gold">Web Master</span>{" "}
               at UCSC ACM and I got experiences at web tasks at UCSC ACM ,{" "}
               <span className="text-gold">marketing tasks</span> at UCSC ACM,
