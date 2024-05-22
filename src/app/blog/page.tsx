@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
-import blogImage from "../../../public/assests/blogs/blogImage.webp";
 
 const socials = [
   {
@@ -23,37 +21,31 @@ const blogs = [
   {
     title: "CTF Writeup 01",
     subtitle: "Writeup for CTF challenge",
-    image: blogImage,
     link: "https://example.com/ctf-writeup-01",
   },
   {
     title: "Debugging React",
     subtitle: "Debugging React Applications",
-    image: blogImage,
     link: "https://example.com/debugging-react",
   },
   {
     title: "Spring Boot Microservices",
     subtitle: "Spring Boot Microservices with Docker",
-    image: blogImage,
     link: "https://example.com/spring-boot-microservices",
   },
   {
     title: "FastAPI for Machine Learning",
     subtitle: "FastAPI for Machine Learning APIs",
-    image: blogImage,
     link: "https://example.com/fastapi-for-ml",
   },
   {
     title: "Node Express vs Spring Boot",
     subtitle: "Node Express vs Spring Boot for REST APIs",
-    image: blogImage,
     link: "https://example.com/node-express-vs-spring-boot",
   },
   {
     title: "React Native vs Flutter",
     subtitle: "React Native vs Flutter for Mobile Apps",
-    image: blogImage,
     link: "https://example.com/react-native-vs-flutter",
   },
 ];
@@ -101,15 +93,8 @@ export default function Page() {
                   href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-[250px] text-black w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white p-2"
+                  className="h-[150px] text-black w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white p-2"
                 >
-                  <Image
-                    src={blog.image}
-                    alt={blog.title}
-                    width={300}
-                    height={300}
-                    className="rounded-lg shadow-lg"
-                  />
                   <h1 className="text-1xl mt-2">
                     <b>{blog.title}</b>
                   </h1>
