@@ -36,6 +36,7 @@ export default function Home() {
                   "Frontend Developer",
                   "Fullstack Developer",
                   "Machine Learning Enthusiast",
+                  "Cyber Security Enthusiast",
                   "Mobile App Developer",
                   "Java Developer"
                 ]}

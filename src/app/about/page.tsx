@@ -185,7 +185,7 @@ export default function Page() {
   ];
   return (
     <>
-      <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
+      <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
         <div
           className="w-3/4 flex flex-row justify-end items-center cursor-pointer"
