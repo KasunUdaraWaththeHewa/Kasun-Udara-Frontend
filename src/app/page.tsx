@@ -31,27 +31,29 @@ export default function Home() {
               Hi, I am <span className="text-gold">Kasun Udara</span>
             </h1>
             <div className="text-2xl text-center text-white">
-              <Typewriter
-                words={[
-                  "Software Engineer",
-                  "Web Developer",
-                  "Tech Enthusiast",
-                  "Freelancer",
-                  "Backend Developer",
-                  "Frontend Developer",
-                  "Fullstack Developer",
-                  "Machine Learning Enthusiast",
-                  "Cyber Security Enthusiast",
-                  "Mobile App Developer",
-                  "Java Developer",
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="|"
-                typeSpeed={70}
-                deleteSpeed={50}
-                delaySpeed={1000}
-              />
+              <b>
+                <Typewriter
+                  words={[
+                    "Software Engineer",
+                    "Web Developer",
+                    "Tech Enthusiast",
+                    "Freelancer",
+                    "Backend Developer",
+                    "Frontend Developer",
+                    "Fullstack Developer",
+                    "Machine Learning Enthusiast",
+                    "Cyber Security Enthusiast",
+                    "Mobile App Developer",
+                    "Java Developer",
+                  ]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </b>
             </div>
           </div>
         </div>
