@@ -47,7 +47,7 @@ export default function Page() {
                 className="flex items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
               >
                 <div className="flex flex-row w-[100px]">
-                  <i className={`bx ${social.logo} text-1xl`}></i>
+                  <i className={`bx ${social.logo} text-1xl text-white`}></i>
                   <span className="text-white text-sm">
                     &nbsp;{social.name}
                   </span>

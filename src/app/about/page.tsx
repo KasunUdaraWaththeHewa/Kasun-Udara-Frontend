@@ -28,7 +28,7 @@ export default function Page() {
               className="w-full flex flex-col justify-center items-center ml-10"
               style={{ width: "60%", zIndex: 21 }}
             >
-              <h1 className="text-2xl text-left w-full text-gold">
+              <h1 className="text-2xl text-left w-full text-white">
                 <b>Waththe Hewa Kasun Udara</b>
               </h1>
               <p className="text-white mt-4 text-sm text-justify">
@@ -39,11 +39,11 @@ export default function Page() {
                 undergraduate at University of Colombo School of Computing. I
                 went to Dharmasoka College Ambalangoda. I am also the Chief
                 Executive Officer at our startup
-                <span className="text-gold"> IgniteX</span>.
+                <span className="text-white"> IgniteX</span>.
               </p>
               <div className="w-full flex flex-row mt-1">
-                <i className="bx bx-location-plus mt-1"></i>
-                <h3 className="ml-4 text-1xl text-left w-full text-gold">
+                <i className="bx bx-location-plus mt-1 text-white"></i>
+                <h3 className="ml-4 text-1xl text-left w-full text-white">
                   Ambalangoda, Sri Lanka
                 </h3>
               </div>
@@ -67,12 +67,12 @@ export default function Page() {
           </div>
           <div className="w-3/4 h-auto px-10 pt-4">
             <p className="text-white text-sm text-justify">
-              I am currently the <span className="text-gold">Web Master</span>{" "}
+              I am currently the <span className="text-white">Web Master</span>{" "}
               at UCSC ACM and I got experiences at web tasks at UCSC ACM ,{" "}
-              <span className="text-gold">marketing tasks</span> at UCSC ACM,
+              <span className="text-white">marketing tasks</span> at UCSC ACM,
               where I help to market events and posts, for events and workshops.
-              I have involved in the <span className="text-gold">program</span>{" "}
-              and <span className="text-gold">logistics and finance tasks</span>
+              I have involved in the <span className="text-white">program</span>{" "}
+              and <span className="text-white">logistics and finance tasks</span>
               , where I developed and promoted engaging content and campaigns
               for the chapter.
             </p>

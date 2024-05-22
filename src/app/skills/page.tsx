@@ -151,7 +151,10 @@ export default function Page() {
           </h1>
           <p className="text-white text-sm mt-4">
             I have a confident understanding on these languages, tech stacks and
-            I am a good self learner who always learn new things.
+            I am a good self learner who always learn new things. I am always up
+            for new challenges and I am a good team player. I have a good
+            understanding on Agile methodologies and I have worked in many
+            projects using Agile methodologies.
           </p>
         </div>
         <div className="w-full flex flex-col justify-center items-center">
