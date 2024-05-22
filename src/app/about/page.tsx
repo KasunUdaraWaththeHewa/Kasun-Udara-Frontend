@@ -280,7 +280,7 @@ export default function Page() {
               key={tech.name}
               className="p-2 flex flex-col justify-center items-center"
             >
-              <Image src={tech.logo} alt={tech.name} width={20} height={20} />
+              <Image src={tech.logo} alt={tech.name} width={18} height={18} />
             </div>
           ))}
         </div>
