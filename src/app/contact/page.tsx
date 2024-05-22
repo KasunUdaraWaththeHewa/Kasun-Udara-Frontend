@@ -48,6 +48,9 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>Contact Me</b>
           </h1>
+          <p className="text-white text-xs w-full text-left mt-4">
+            Feel free to contact me for any inquiries or collaborations. I am always open to new opportunities and projects. You can reach me through the following social media platforms or send me an email directly. I will get back to you as soon as possible. Thank you!
+          </p>
         </div>
         <div className="w-full flex flex-wrap justify-center items-center mt-4">
           <div className="w-1/2 flex flex-row items-center justify-center items-center">

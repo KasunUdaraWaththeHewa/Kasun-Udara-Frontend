@@ -37,6 +37,9 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>Competitions and Victories</b>
           </h1>
+          <p className="text-white text-xs w-full text-left mt-4">
+            I have participated in several competitions and hackathons and have won several of them. Here are some of the competitions I have participated in and won. I have won several competitions including Hacktoberfest, Google Code-in, and Google Summer of Code. I have also participated in several hackathons
+          </p>
         </div>
         <div className="grid grid-row-1 md:grid-cols-2 gap-4 mt-4 p-4 mx-20">
           {competitions.map((competition, index) => (

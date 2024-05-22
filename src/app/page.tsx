@@ -7,8 +7,13 @@ export default function Home() {
     <>
       <div className="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center">
         <Particles />
-        {/* <h1 className="text-8xl font-bold text-white mb-10">Kasun Udara</h1>
-      <p className="text-2xl text-white">I am a Software Engineer</p> */}
+        {/* <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          src="/kasun_udara.me/public/fire.mp4"
+          autoPlay
+          muted
+          loop
+        ></video> */}
         <div
           className="w-full h-full flex flex-col justift-center items-center"
           style={{ zIndex: 21 }}
@@ -38,7 +43,7 @@ export default function Home() {
                   "Machine Learning Enthusiast",
                   "Cyber Security Enthusiast",
                   "Mobile App Developer",
-                  "Java Developer"
+                  "Java Developer",
                 ]}
                 loop={0}
                 cursor

@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <SideBar />
         </div>
         <div className="w-11/12">
-          {children}
+          <div className="relative z-10">{children}</div>
         </div>
       </body>
     </html>

@@ -83,6 +83,11 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>Blogs and Publications</b>
           </h1>
+          <p className="text-white text-xs w-full text-left mt-4">
+            I have written several blogs and publications on various topics
+            including Cyber Security, Web Development, Mobile Development, and
+            Machine Learning. Here are some of my blogs and publications. You can find more on my Medium, Blogger, and Dev.to profiles.
+          </p>
         </div>
         <div
           className="w-full flex flex-wrap justify-center items-center mt-4"
@@ -104,7 +109,9 @@ export default function Page() {
                     height={300}
                     className="rounded-lg shadow-lg"
                   />
-                  <h1 className="text-black text-1xl mt-2"><b>{blog.title}</b></h1>
+                  <h1 className="text-black text-1xl mt-2">
+                    <b>{blog.title}</b>
+                  </h1>
                   <p className="text-black text-xs">{blog.subtitle}</p>
                 </a>
               </div>
