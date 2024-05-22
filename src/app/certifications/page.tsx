@@ -119,7 +119,7 @@ export default function Page() {
                 href={certification.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 rounded-lg transition transform hover:scale-110 transition duration-500 ease-in-out bg-black p-2 hover:bg-darkMaroon hover:shadow-lg"
+                className="flex items-center space-x-2 rounded-lg transition transform hover:scale-105 transition duration-500 ease-in-out bg-black p-2 hover:bg-darkMaroon hover:shadow-lg"
               >
                 <Image
                   src={certification.logo}
