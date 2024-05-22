@@ -14,6 +14,7 @@ const icons = [
   { icon: "bxs-contact", link: "/contact" },
   { icon: "bxs-circle-three-quarter", link: "/competitions" },
   { icon: "bxs-briefcase", link: "/projects" },
+  { icon: "bx-certification", link: "/certifications" },
   { icon: "bxs-building-house", link: "/services" },
 ];
 

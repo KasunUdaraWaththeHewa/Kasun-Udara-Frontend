@@ -36,7 +36,8 @@ export default function Home() {
                   "Frontend Developer",
                   "Fullstack Developer",
                   "Machine Learning Enthusiast",
-                  "Mobile App Developer"
+                  "Mobile App Developer",
+                  "Java Developer"
                 ]}
                 loop={0}
                 cursor
