@@ -81,7 +81,7 @@ export default function Page() {
         </div>
         <div className="mt-4 w-full">
           <h1 className="text-2xl text-white w-full text-left">
-            <b>Published Blogs</b>
+            <b>Blogs and Publications</b>
           </h1>
         </div>
         <div
@@ -95,7 +95,7 @@ export default function Page() {
                   href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-[270px] w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-darkMaroon"
+                  className="h-[270px] w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-black"
                 >
                   <Image
                     src={blog.image}

@@ -35,14 +35,14 @@ export default function Page() {
         <Particles />
         <div className="mt-12 w-full">
           <h1 className="text-2xl text-white w-full text-left">
-            <b>Competitions</b>
+            <b>Competitions and Victories</b>
           </h1>
         </div>
-        <div className="grid grid-row-1 md:grid-cols-2 gap-4 mt-4 p-4">
+        <div className="grid grid-row-1 md:grid-cols-2 gap-4 mt-4 p-4 mx-20">
           {competitions.map((competition, index) => (
             <div
               key={index}
-              className="text-white p-4 rounded-lg bg-darkMaroon"
+              className="text-white p-4 rounded-lg bg-black"
             >
               <Image
                 src={competition.image}

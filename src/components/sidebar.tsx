@@ -16,6 +16,7 @@ const icons = [
   { icon: "bxs-briefcase", link: "/projects" },
   { icon: "bx-certification", link: "/certifications" },
   { icon: "bxs-building-house", link: "/services" },
+  { icon: "bxs-hand", link: "/skills" },
 ];
 
 export default function SideBar() {
