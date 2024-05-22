@@ -207,14 +207,6 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>About Me</b>
           </h1>
-          <p className="text-white text-xs w-full text-left mt-4">
-            I am a Software Engineer, Web Developer, Mobile App Developer,
-            Backend Developer, Frontend Developer, FullStack Developer, Machine
-            Learning Enthusiast, Tech Enthusiast, Freelancer and more... I am
-            currently a computer science undergraduate at University of Colombo
-            School of Computing. I am also the Chief Executive Officer at our
-            startup IgniteX.
-          </p>
         </div>
         <div className="w-full h-[275px] flex flex-row mt-4 justify-center items-center">
           <div className="h-full flex flex-col justify-center items-center" style={{ width: "15%" }}>
@@ -231,9 +223,9 @@ export default function Page() {
             <h1 className="text-2xl text-left w-full text-gold">
               <b>Waththe Hewa Kasun Udara</b>
             </h1>
-            <p className="text-white mt-4">
+            <p className="text-white mt-4 text-sm">
               Hello I am Kasun Udara, a Software Engineer, Web Developer, Mobile App Developer, Backend Developer, Frontend Developer, FullStack Developer, Machine Learning Enthusiast, Tech Enthusiast, Freelancer and more... I am currently a computer science undergraduate at University of Colombo School of Computing. I am also the Chief Executive Officer at our startup
-              <span className="text-gold">IgniteX</span>.
+              <span className="text-gold"> IgniteX</span>.
             </p>
             <div className="w-full flex flex-row mt-1">
               <i className="bx bx-location-plus mt-1"></i>
@@ -250,7 +242,7 @@ export default function Page() {
           </div>
         </div>
         <div className="w-full h-auto px-10 pt-4">
-          <p className="text-white">
+          <p className="text-white text-sm">
             As a passionate Full-stack Developer and Java Developer, I thrive on
             pushing the boundaries of technology. With a strong foundation in
             frontend, backend, and mobile app development, I bring a versatile
@@ -260,7 +252,7 @@ export default function Page() {
           </p>
         </div>
         <div className="w-full h-auto px-10 pt-4">
-          <p className="text-white">
+          <p className="text-white text-sm">
             I am currently the <span className="text-gold">Web Master</span> at
             UCSC ACM and I got experiences at web tasks at UCSC ACM ,{" "}
             <span className="text-gold">marketing tasks</span> at UCSC ACM,
@@ -272,7 +264,7 @@ export default function Page() {
           </p>
         </div>
         <div className="w-full h-auto px-10 pt-4">
-          <p className="text-white">
+          <p className="text-white text-sm">
             I have a confident understanding on these languages, tech stacks and
             I am a good self learner who always learn new things.
           </p>
