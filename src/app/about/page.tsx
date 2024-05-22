@@ -209,7 +209,10 @@ export default function Page() {
           </h1>
         </div>
         <div className="w-full h-[275px] flex flex-row mt-4 justify-center items-center">
-          <div className="h-full flex flex-col justify-center items-center" style={{ width: "15%" }}>
+          <div
+            className="h-full flex flex-col justify-center items-center"
+            style={{ width: "15%" }}
+          >
             <Image
               alt="Kasun Udara"
               src={logo}
@@ -224,7 +227,13 @@ export default function Page() {
               <b>Waththe Hewa Kasun Udara</b>
             </h1>
             <p className="text-white mt-4 text-sm">
-              Hello I am Kasun Udara, a Software Engineer, Web Developer, Mobile App Developer, Backend Developer, Frontend Developer, FullStack Developer, Machine Learning Enthusiast, Tech Enthusiast, Freelancer and more... I am currently a computer science undergraduate at University of Colombo School of Computing. I am also the Chief Executive Officer at our startup
+              I am Kasun Udara, a Software Engineer, Web Developer, Mobile App
+              Developer, Backend Developer, Frontend Developer, FullStack
+              Developer, Machine Learning Enthusiast, Tech Enthusiast,
+              Freelancer and more... I am currently a computer science
+              undergraduate at University of Colombo School of Computing. I went
+              to Dharmasoka College Ambalangoda. I am also the Chief Executive
+              Officer at our startup
               <span className="text-gold"> IgniteX</span>.
             </p>
             <div className="w-full flex flex-row mt-1">
