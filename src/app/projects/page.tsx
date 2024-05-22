@@ -52,7 +52,14 @@ export default function Page() {
             <b>Projects and Contributions</b>
           </h1>
           <p className="text-white text-xs w-full text-left mt-4">
-            I have worked on several projects and have contributed to several open source projects. Here are some of the projects I have worked on and contributed to. I have worked on several projects including web development projects, mobile app development projects, and machine learning projects. I have also contributed to several open source projects and have made several contributions to several open source projects. I have also worked on several freelance projects and have made several contributions to several freelance projects.
+            I have worked on several projects and have contributed to several
+            open source projects. Here are some of the projects I have worked on
+            and contributed to. I have worked on several projects including web
+            development projects, mobile app development projects, and machine
+            learning projects. I have also contributed to several open source
+            projects and have made several contributions to several open source
+            projects. I have also worked on several freelance projects and have
+            made several contributions to several freelance projects.
           </p>
         </div>
         <div className="grid grid-rows-1 md:grid-cols-5 gap-4 mt-4 p-4">
@@ -66,15 +73,17 @@ export default function Page() {
               rel="noopener noreferrer"
               className="hover:cursor-pointer hover:scale-105 transition transform transition duration-500 ease-in-out shadow-lg hover:shadow-xl rounded-lg"
             >
-              <div className="text-white p-4 rounded-lg bg-white cursor-pointer">
+              <div className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white">
                 <Image
                   src={project.image}
                   alt={project.title}
                   width={200}
                   height={200}
                 />
-                <h2 className="text-sm mt-2 text-black"><b>{project.title}</b></h2>
-                <p className="mt-2 text-xs text-black">{project.description}</p>
+                <h2 className="text-sm mt-2">
+                  <b>{project.title}</b>
+                </h2>
+                <p className="mt-2 text-xs">{project.description}</p>
               </div>
             </Link>
           ))}

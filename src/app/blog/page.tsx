@@ -100,7 +100,7 @@ export default function Page() {
                   href={blog.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="h-[250px] w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out"
+                  className="h-[250px] text-black w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white p-2"
                 >
                   <Image
                     src={blog.image}
@@ -109,10 +109,10 @@ export default function Page() {
                     height={300}
                     className="rounded-lg shadow-lg"
                   />
-                  <h1 className="text-black text-1xl mt-2">
+                  <h1 className="text-1xl mt-2">
                     <b>{blog.title}</b>
                   </h1>
-                  <p className="text-black text-xs">{blog.subtitle}</p>
+                  <p className="text-xs">{blog.subtitle}</p>
                 </a>
               </div>
             ))

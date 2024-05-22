@@ -45,7 +45,7 @@ export default function Page() {
           {competitions.map((competition, index) => (
             <div
               key={index}
-              className="text-white p-4 rounded-lg bg-white"
+              className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white hover:scale-105 mx-4 mt-2"
             >
               <Image
                 src={competition.image}
@@ -53,9 +53,9 @@ export default function Page() {
                 width={200}
                 height={200}
               />
-              <h2 className="text-sm mt-2 text-black"><b>{competition.title}</b></h2>
-              <p className="mt-2 text-sm text-black">{competition.description}</p>
-              <p className="mt-2 text-sm text-black"><b>{competition.places}</b></p>
+              <h2 className="text-sm mt-2"><b>{competition.title}</b></h2>
+              <p className="mt-2 text-sm">{competition.description}</p>
+              <p className="mt-2 text-sm"><b>{competition.places}</b></p>
             </div>
           ))}
         </div>
