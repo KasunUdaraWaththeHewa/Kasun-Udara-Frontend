@@ -1,5 +1,6 @@
-import Image from "next/image";
+"use client";
 import Particles from "@/components/particles/ParticleDesign";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
   return (
@@ -21,12 +22,30 @@ export default function Home() {
             ></iframe>
           </div>
           <div className="w-full h-1/6 flex flex-col justify-center items-center">
-            <h1 className="text-6xl  text-left w-1/3 font-bold text-white">
-              Kasun Udara
+            <h1 className="text-4xl  text-center w-1/2 font-bold text-white">
+              Hi, I am <span className="text-gold">Kasun Udara</span>
             </h1>
-            <p className="text-2xl text-left w-1/3 text-gold">
-              Software Engineer
-            </p>
+            <div className="text-2xl text-center text-white">
+              <Typewriter
+                words={[
+                  "Software Engineer",
+                  "Web Developer",
+                  "Tech Enthusiast",
+                  "Freelancer",
+                  "Backend Developer",
+                  "Frontend Developer",
+                  "Fullstack Developer",
+                  "Machine Learning Enthusiast",
+                  "Mobile App Developer"
+                ]}
+                loop={0}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </div>
           </div>
         </div>
       </div>
