@@ -51,15 +51,10 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>Projects and Contributions</b>
           </h1>
-          <p className="text-white text-xs w-full text-left mt-4">
+          <p className="text-white text-sm w-full text-left mt-4">
             I have worked on several projects and have contributed to several
             open source projects. Here are some of the projects I have worked on
-            and contributed to. I have worked on several projects including web
-            development projects, mobile app development projects, and machine
-            learning projects. I have also contributed to several open source
-            projects and have made several contributions to several open source
-            projects. I have also worked on several freelance projects and have
-            made several contributions to several freelance projects.
+            and contributed to. You can find more on my GitHub profile.
           </p>
         </div>
         <div className="grid grid-rows-1 md:grid-cols-5 gap-4 mt-4 p-4">

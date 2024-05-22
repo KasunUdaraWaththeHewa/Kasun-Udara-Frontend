@@ -28,28 +28,12 @@ export default function Page() {
     <>
       <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div
-          className="w-3/4 flex flex-row justify-end items-center cursor-pointer"
-          style={{ zIndex: 21 }}
-        >
-          {socials.map((social) => (
-            <a
-              key={social.name}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
-            >
-              <i className={`bx ${social.logo} text-1xl`}></i>
-            </a>
-          ))}
-        </div>
-        <div className="mt-4 w-full">
+        <div className="mt-12 w-full">
           <h1 className="text-2xl text-white w-full text-left">
             <b>Contact Me</b>
           </h1>
-          <p className="text-white text-xs w-full text-left mt-4">
-            Feel free to contact me for any inquiries or collaborations. I am always open to new opportunities and projects. You can reach me through the following social media platforms or send me an email directly. I will get back to you as soon as possible. Thank you!
+          <p className="text-white text-sm w-full text-left mt-4">
+            Feel free to contact me for any inquiries or collaborations. I am always open to new opportunities and projects. You can reach me through the following social media platforms or send me an email directly.I will get back to you as soon as possible. Thank you!
           </p>
         </div>
         <div className="w-full flex flex-wrap justify-center items-center mt-4">

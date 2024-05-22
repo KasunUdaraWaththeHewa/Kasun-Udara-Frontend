@@ -42,17 +42,10 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>Services I offer</b>
           </h1>
-          <p className="text-white text-xs w-full text-left mt-4">
-            I offer several services including web development services, mobile
-            app development services, machine learning services, and freelance
-            services. I have worked on several projects and have contributed to
-            several open source projects. Here are some of the services I offer.
-            I have worked on several projects including web development
-            projects, mobile app development projects, and machine learning
-            projects. I have also contributed to several open source projects
-            and have made several contributions to several open source projects.
-            I have also worked on several freelance projects and have made
-            several contributions to several freelance projects.
+          <p className="text-white text-sm w-full text-left mt-4">
+            I offer several services including web development services, have
+            worked on several projects and have contributed to several open
+            source projects. Here are some of the services I offer.
           </p>
         </div>
         <div className="grid grid-row-1 md:grid-cols-3 gap-4 mt-4 p-4 mx-20">

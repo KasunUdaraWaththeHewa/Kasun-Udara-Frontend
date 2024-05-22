@@ -104,13 +104,11 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>Licenses and Certifications</b>
           </h1>
-          <p className="text-white text-xs w-full text-left mt-4">
-            I have completed several online courses and certifications to
+          <p className="text-white text-sm w-full text-left mt-4">
+            I have completed several courses and certifications to
             enhance my skills and knowledge. I am always eager to learn new
             technologies and tools to improve my work. Here are some of the
-            certifications I have completed so far. I am planning to complete
-            more certifications in the future to expand my knowledge and
-            expertise.
+            certifications I have completed so far.
           </p>
         </div>
         <div className="w-full flex flex-wrap justify-center items-center mt-4">

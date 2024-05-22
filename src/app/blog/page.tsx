@@ -64,7 +64,7 @@ export default function Page() {
       <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
         <div
-          className="w-3/4 flex flex-row justify-end items-center cursor-pointer"
+          className="w-full flex flex-row justify-end items-center cursor-pointer mr-10"
           style={{ zIndex: 21 }}
         >
           {socials.map((social) => (
@@ -83,10 +83,11 @@ export default function Page() {
           <h1 className="text-2xl text-white w-full text-left">
             <b>Blogs and Publications</b>
           </h1>
-          <p className="text-white text-xs w-full text-left mt-4">
+          <p className="text-white text-sm w-full text-left mt-4">
             I have written several blogs and publications on various topics
             including Cyber Security, Web Development, Mobile Development, and
-            Machine Learning. Here are some of my blogs and publications. You can find more on my Medium, Blogger, and Dev.to profiles.
+            Machine Learning. Here are some of my blogs and publications. You
+            can find more on my Medium, Blogger, and Dev.to profiles.
           </p>
         </div>
         <div
