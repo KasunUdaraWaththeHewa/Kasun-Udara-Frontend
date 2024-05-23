@@ -19,40 +19,40 @@ const competitions = [
     description:
       "Hack The Box UniCTF 2023 is a Capture The Flag competition organized by Hack The Box.",
     image: HackTheBoxUniCTF2023,
-    places: "101st Place (Worldwide)",
+    places: "101st Place (Worldwide) , 1st Place (Sri Lanka)",
   },
   {
     title: "IEEE Xtreme 17.0",
     description:
-      "IEEE Xtreme is a global challenge in which teams of IEEE Student members compete in a 24-hour time span against each other to solve a set of programming problems.",
+      "IEEE Xtreme is a global 24 hour competitive programming Hackathon which students compete.",
     image: IEEEXtreme2023,
     places: "50 th place (Sri Lanka)",
   },
   {
     title: "ManthraCTF 2023",
     description:
-      "ManthraCTF is a Capture The Flag competition organized by the IEEE Student Branch  with IEEE Computer Society at NSBM Green University.",
+      "ManthraCTF is a Capture The Flag competition organized by the IEEE at NSBM Green University.",
     image: ManthraCTF,
     places: "2nd Upper (Sri Lanka)",
   },
   {
     title: "Hacktoberfest 2023",
     description:
-      "Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and Twilio.",
+      "Hacktoberfest is a month-long global open source software challenge.",
     image: hacktoberfest,
     places: "Completed",
   },
   {
     title: "CodeFest Algothon 2022",
     description:
-      "CodeFest Algothon is a competitive programming hackathon organized by the SLIIT University in Codefest 2022.",
+      "Algothon is a CP hackathon organized by the SLIIT in Codefest 2022.",
     image: CodefestAlgothon2022,
     places: "6th Place (Sri Lanka)",
   },
   {
     title: "PyHack 2.0",
     description:
-      "PyHack 2.0 is a competitive programming hackathon organized by the IEEE Student Branch  at IIT University.",
+      "PyHack 2.0 is a CP hackathon organized by the IEEE at IIT University.",
     image: pyHack2,
     places: "7 th Place (Sri Lanka)",
   },
@@ -110,7 +110,7 @@ export default function Page() {
             </p>
           </div>
         </motion.main>
-        <div className="grid grid-row-1 md:grid-cols-2 gap-4 mt-4 md:p-4 mx-6 sm:mx-6 md:mx-10">
+        <div className="grid grid-row-1 md:grid-cols-3 gap-4 mt-4 md:p-4 mx-6 sm:mx-6 md:mx-10">
           {competitions.map((competition, index) => (
             <motion.div
               key={index}

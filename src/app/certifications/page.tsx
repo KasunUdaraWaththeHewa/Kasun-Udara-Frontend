@@ -2,99 +2,115 @@
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import sample from "../../../public/assests/certificates/sample.png";
+import IJSE from "../../../public/assests/certificateLogo/IJSE.png";
+import universityOfMichigan from "../../../public/assests/certificateLogo/University of Michigan.png";
+import Hackerrank from "../../../public/assests/certificateLogo/Hackerrank.png";
+import IBM from "../../../public/assests/certificateLogo/IBM.png";
+import Google from "../../../public/assests/certificateLogo/Google.png";
+import ISC2 from "../../../public/assests/certificateLogo/ISC2.png";
+import UCDavis from "../../../public/assests/certificateLogo/UCDAVIS.png";
+import Cisco from "../../../public/assests/certificateLogo/Cisco.png";
+import AWS from "../../../public/assests/certificateLogo/AWS.png";
+import LinkedIn from "../../../public/assests/certificateLogo/LinkedIn.png";
+
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 const certifications = [
   {
-    name: "AWS Certified Solutions Architect - Associate",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/7f0c7b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Deploma in Comprehensive Master Java Developer",
+    logo: IJSE,
+    link: "https://www.linkedin.com/posts/w-h-kasun-udara-5647a4218_java-oracle-oop-activity-7011543055962968065-4AMR/",
   },
   {
-    name: "Google IT Support Professional Certificate",
-    logo: sample,
-    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/8X6Z9TJ7XU2J",
+    name: "Programming for Everybody (Getting Started with Python)",
+    logo: universityOfMichigan,
+    link: "https://www.coursera.org/account/accomplishments/certificate/E48NH9HA3L8R",
   },
   {
-    name: "IBM Data Science Professional Certificate",
-    logo: sample,
-    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/3ZQZ9Z8Y7QZ6",
+    name: "Python (Basic) Certificate",
+    logo: Hackerrank,
+    link: "https://www.hackerrank.com/certificates/e8f694d904d6",
   },
   {
-    name: "Cisco Networking Essentials",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/4f8f3c3f-6c7c-4c2b-9a3a-0e2b8e8b9f6d",
+    name: "Problem Solving (Basic) Certificate",
+    logo: Hackerrank,
+    link: "https://www.hackerrank.com/certificates/0cb415f3c931",
   },
   {
-    name: "CompTIA IT Fundamentals",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/0e8b3b0d-4e5b-4b1e-8b2f-4e6c0d5b0e8b",
+    name: "Javascript (Basic) Certificate",
+    logo: Hackerrank,
+    link: "https://www.hackerrank.com/certificates/8a38cf474154",
   },
   {
-    name: "Microsoft Azure Fundamentals",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Java (Basic) Certificate",
+    logo: Hackerrank,
+    link: "https://www.hackerrank.com/certificates/6d83df93d9f4",
   },
   {
-    name: "Red Hat Certified System Administrator",
-    logo: sample,
-    link: "https://www.redhat.com/rhtapps/verify/?certId=210-284-913",
+    name: "CSS (Basic) Certificate",
+    logo: Hackerrank,
+    link: "https://www.hackerrank.com/certificates/e446f206ff25",
   },
   {
-    name: "VMware Data Center Virtualization Fundamentals",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "What is Data Science",
+    logo: IBM,
+    link: "https://www.coursera.org/account/accomplishments/certificate/SW6TCAUE3XLX",
   },
   {
-    name: "Dell EMC Information Storage and Management",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Google Project Management Professional Certificate",
+    logo: Google,
+    link: "https://www.coursera.org/account/accomplishments/certificate/YZ77WBNPH57Q",
   },
   {
-    name: "Juniper Networks Certified Associate",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Introduction to Technical Support",
+    logo: IBM,
+    link: "https://www.coursera.org/account/accomplishments/certificate/AY4FHESWSFC2",
   },
   {
-    name: "Oracle Database SQL Certified Associate",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Introduction to Artificial Intelligence (AI)",
+    logo: IBM,
+    link: "https://www.coursera.org/account/accomplishments/certificate/Q8RVP3W3RCAV",
   },
   {
-    name: "SAP Certified Application Associate",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Google Cybersecurity Professional Certificate",
+    logo: Google,
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/6SEBHUQJFRNB",
   },
   {
-    name: "Salesforce Certified Administrator",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Certified in Cybersecurity",
+    logo: ISC2,
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/RL32SHLCLPA6",
   },
   {
-    name: "CISSP - Certified Information Systems Security Professional",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Agile Project Management",
+    logo: Google,
+    link: "https://www.coursera.org/account/accomplishments/certificate/T9SMNGZ8NZXY",
   },
   {
-    name: "CEH - Certified Ethical Hacker",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Javascript for Beginners (Specialization)",
+    logo: UCDavis,
+    link: "https://www.coursera.org/account/accomplishments/specialization/certificate/XHYUFKHDRHSC",
   },
   {
-    name: "CISM - Certified Information Security Manager",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "Networking Essentials",
+    logo: Cisco,
+    link: "",
   },
   {
-    name: "CRISC - Certified in Risk and Information Systems Control",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "AWS Educate Introduction to Cloud 101",
+    logo: AWS,
+    link: "https://www.credly.com/badges/b5d2c6fd-47c5-48c1-8548-d0998a77df1e/linked_in_profile",
   },
   {
-    name: "PMP - Project Management Professional",
-    logo: sample,
-    link: "https://www.youracclaim.com/badges/1d3c0b4d-8e3f-4b1a-9e6d-4b3c6b7b0c8a",
+    name: "React JS Essential Training",
+    logo: LinkedIn,
+    link: "https://www.linkedin.com/learning/certificates/320510bf00d530158e0c310c95e54d33b76b14ab009e3ee0b4f44f880585002c?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B%2BLhZmvi0Tc64D4HDGPE3cQ%3D%3D",
+  },
+  {
+    name: "MERN Essential Training",
+    logo: LinkedIn,
+    link: "https://www.linkedin.com/learning/certificates/ffc0c50aeda38fe9baffc454d44e470f7b59cbe6e73e5edf9f3910c325a1b8e2",
   },
 ];
 
@@ -162,13 +178,30 @@ export default function Page() {
                     className="rounded-lg"
                   />
                   <span className="text-white text-sm w-full">
-                    <h1 className="text-sm text-left md:text-left">{certification.name}</h1>
+                    <h1 className="text-sm text-left md:text-left">
+                      {certification.name}
+                    </h1>
                   </span>
                 </a>
               </motion.div>
             ))}
           </div>
         </div>
+        <p
+          className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4"
+          style={{ zIndex: 21 }}
+        >
+          You may visit my{" "}
+          <a
+            href="https://www.linkedin.com/in/w-h-kasun-udara/details/certifications/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold cursor-pointer"
+          >
+            LinkedIn
+          </a>{" "}
+          profile to see more certifications I possess.
+        </p>
       </div>
     </>
   );
