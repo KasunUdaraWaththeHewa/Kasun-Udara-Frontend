@@ -200,7 +200,16 @@ export default function Page() {
           >
             LinkedIn
           </a>{" "}
-          profile to see more certifications I possess.
+          profile or{" "}
+          <a
+            href="https://github.com/KasunUdaraWaththeHewa/My-Certificates-in-IT"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gold cursor-pointer"
+          >
+            Github
+          </a>{" "}
+          repository to see more certifications I possess.
         </p>
       </div>
     </>
