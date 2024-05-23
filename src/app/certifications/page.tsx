@@ -116,7 +116,7 @@ export default function Page() {
           className="w-full h-auto flex flex-col justify-center items-center"
         >
           <div className="mt-12 w-full flex flex-col justify-center items-center">
-            <h1 className="text-1xl md:text-2xl text-white w-full text-center">
+            <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
               <b>
                 <Typewriter
                   words={["Licenses and Certifications"]}
