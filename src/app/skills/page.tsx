@@ -200,7 +200,7 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-center mt-4">
+            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
               I have a confident understanding on these languages, tech stacks
               and I am a good self learner who always learn new things. I am
               always up for new challenges and I am a good team player. I have a

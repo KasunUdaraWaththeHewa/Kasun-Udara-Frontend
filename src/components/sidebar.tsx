@@ -10,7 +10,7 @@ import React, { useState, useEffect } from "react";
 const icons = [
   { icon: "bx-home", link: "/" },
   { icon: "bx-user", link: "/about" },
-  { icon: "bxl-blogger", link: "/blog" },
+  // { icon: "bxl-blogger", link: "/blog" },
   { icon: "bxs-contact", link: "/contact" },
   { icon: "bxs-circle-three-quarter", link: "/competitions" },
   { icon: "bxs-briefcase", link: "/projects" },

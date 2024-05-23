@@ -62,7 +62,7 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-center mt-4">
+            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
               I have participated in several competitions and hackathons and
               have won several of them. Here are some of the competitions I have
               participated in and won.

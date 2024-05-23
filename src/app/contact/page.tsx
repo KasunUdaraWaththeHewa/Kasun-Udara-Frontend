@@ -57,7 +57,7 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-center mt-4">
+            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
               Feel free to contact me for any inquiries or collaborations. I am
               always open to new opportunities and projects. You can reach me
               through the following social media platforms or send me an email

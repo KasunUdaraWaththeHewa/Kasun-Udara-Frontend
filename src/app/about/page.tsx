@@ -42,7 +42,7 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-3/4 sm:w-3/4 md:w-full text-center md:text-center mt-4">
+            <p className="text-white text-sm w-3/4 sm:w-3/4 md:w-3/4 text-center md:text-center mt-4">
               I am Kasun Udara, a Software Engineer, Web Developer, Mobile App
               Developer, Backend Developer, Frontend Developer, FullStack
               Developer, Machine Learning Enthusiast, Tech Enthusiast,
