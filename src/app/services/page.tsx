@@ -63,7 +63,7 @@ export default function Page() {
                   delaySpeed={1000}
                 /></b>
             </h1>
-            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-center mt-4">
               I offer several services including web development services, have
               worked on several projects and have contributed to several open
               source projects. Here are some of the services I offer.

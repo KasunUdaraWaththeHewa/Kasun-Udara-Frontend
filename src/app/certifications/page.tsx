@@ -129,7 +129,7 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-center mt-4">
               I have completed several courses and certifications to enhance my
               skills and knowledge. I am always eager to learn new technologies
               and tools to improve my work. Here are some of the certifications
