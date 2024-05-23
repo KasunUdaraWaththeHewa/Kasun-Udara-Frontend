@@ -62,8 +62,8 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-12 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
+          <div className="mt-12 w-full  flex flex-col justify-center items-center">
+            <h1 className="text-1xl md:text-2xl text-white w-full text-center">
               <b><Typewriter
                   words={["Projects and Contributions"]}
                   loop={0}
@@ -74,7 +74,7 @@ export default function Page() {
                   delaySpeed={1000}
                 /></b>
             </h1>
-            <p className="text-white text-sm w-full text-left mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
               I have worked on several projects and have contributed to several
               open source projects. Here are some of the projects I have worked
               on and contributed to. You can find more on my GitHub profile.
@@ -106,10 +106,10 @@ export default function Page() {
                     width={200}
                     height={200}
                   />
-                  <h2 className="text-sm mt-2">
+                  <h2 className="text-sm mt-2 text-center">
                     <b>{project.title}</b>
                   </h2>
-                  <p className="mt-2 text-xs">{project.description}</p>
+                  <p className="mt-2 text-xs text-center">{project.description}</p>
                 </div>
               </Link>
             </motion.div>
