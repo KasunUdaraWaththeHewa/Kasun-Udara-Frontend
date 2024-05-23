@@ -80,7 +80,7 @@ export default function Page() {
             >
               <div
                 key={index}
-                className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white hover:scale-105 mx-4 mt-2"
+                className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white hover:scale-105 mx-4 mt-2 flex flex-col md:justify-center items-center"
               >
                 <Image
                   src={competition.image}
@@ -88,11 +88,11 @@ export default function Page() {
                   width={200}
                   height={200}
                 />
-                <h2 className="text-sm mt-2">
+                <h2 className="text-sm text-center mt-2">
                   <b>{competition.title}</b>
                 </h2>
-                <p className="mt-2 text-sm">{competition.description}</p>
-                <p className="mt-2 text-sm">
+                <p className="mt-2 text-sm text-center">{competition.description}</p>
+                <p className="mt-2 text-sm text-center">
                   <b>{competition.places}</b>
                 </p>
               </div>
