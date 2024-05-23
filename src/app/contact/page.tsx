@@ -47,7 +47,7 @@ export default function Page() {
             <h1 className="md:text-2xl text-white w-full text-center">
               <b>
                 <Typewriter
-                  words={["Contact Me"]}
+                  words={["Contact Me", "Get in Touch"]}
                   loop={0}
                   cursor
                   cursorStyle="|"

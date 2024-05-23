@@ -26,7 +26,13 @@ export default function Page() {
             <h1 className="sm:text-1xl md:text-2xl text-white w-full flex flex-col justify-center items-center">
               <b>
                 <Typewriter
-                  words={["About Me"]}
+                  words={[
+                    "About Me",
+                    "Who Am I",
+                    "I am Kasun Udara",
+                    "From",
+                    "University of Colombo School of Computing"
+                  ]}
                   loop={0}
                   cursor
                   cursorStyle="|"
