@@ -64,7 +64,7 @@ export default function Page() {
               </div>
               <div
                 className="w-full flex flex-col justify-center items-center md:ml-10 mt-4 w-[170px] md:w-[700px]"
-                style={{zIndex: 21 }}
+                style={{ zIndex: 21 }}
               >
                 <h1 className="text-1xl md:text-2xl text-center md:text-left w-full text-white">
                   <b>Waththe Hewa Kasun Udara</b>
@@ -78,15 +78,15 @@ export default function Page() {
                   embracing new technologies and applying them to real-world
                   problems.
                 </p>
-                <div className="w-full flex flex-row mt-4 sm:mt-4 md:mt-1 text-white hover:text-gold cursor-pointer">
+                <div className="w-full flex flex-row justify-center items-center mt-4 sm:mt-4 md:mt-1 text-white hover:text-gold cursor-pointer">
                   <i className="bx bx-location-plus mt-1"></i>
-                  <h3 className="ml-4 text-sm text-left w-3/4 md:w-full">
+                  <h3 className="ml-4 text-sm text-left md:w-full">
                     Ambalangoda, Sri Lanka
                   </h3>
                 </div>
-                <div className="w-full flex flex-row mt-1 text-white hover:text-gold cursor-pointer">
+                <div className="w-full flex flex-row justify-center items-center mt-1 text-white hover:text-gold cursor-pointer">
                   <i className="bx bxl-gmail mt-1"></i>
-                  <h3 className="ml-4 text-sm text-left w-3/4 md:w-full">
+                  <h3 className="ml-4 text-sm text-left w-full">
                     kasunu2001@gmail.com
                   </h3>
                 </div>
