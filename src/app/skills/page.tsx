@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import html from "../../../public/assests/techlogo/html.webp";
@@ -139,24 +141,35 @@ const DevOps = [
     logo: Kubernetes,
   },
 ];
-
+const tileVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
+};
 export default function Page() {
   return (
     <>
       <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-12 w-full">
-          <h1 className="text-2xl text-white w-full text-left">
-            <b>Skills and Technologies</b>
-          </h1>
-          <p className="text-white text-sm mt-4">
-            I have a confident understanding on these languages, tech stacks and
-            I am a good self learner who always learn new things. I am always up
-            for new challenges and I am a good team player. I have a good
-            understanding on Agile methodologies and I have worked in many
-            projects using Agile methodologies.
-          </p>
-        </div>
+        <motion.main
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-auto flex flex-col justify-center items-center"
+        >
+          <div className="mt-12 w-full">
+            <h1 className="text-2xl text-white w-full text-left">
+              <b>Skills and Technologies</b>
+            </h1>
+            <p className="text-white text-sm mt-4">
+              I have a confident understanding on these languages, tech stacks
+              and I am a good self learner who always learn new things. I am
+              always up for new challenges and I am a good team player. I have a
+              good understanding on Agile methodologies and I have worked in
+              many projects using Agile methodologies.
+            </p>
+          </div>
+        </motion.main>
         <div className="w-full flex flex-col justify-center items-center">
           <div className="w-3/4 h-[150px] p-2 mt-4">
             {/* <h1 className="text-sm text-white mt-2 w-full text-left">
@@ -164,18 +177,26 @@ export default function Page() {
             </h1> */}
             <div className="flex flex-row justify-center items-center mt-2">
               {FrontendDevelopment.map((tech) => (
-                <div
+                <motion.div
                   key={tech.name}
-                  className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
+                  variants={tileVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="w-full"
                 >
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={50}
-                    height={50}
-                    style={{ zIndex: 21 }}
-                  />
-                </div>
+                  <div
+                    key={tech.name}
+                    className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
+                  >
+                    <Image
+                      src={tech.logo}
+                      alt={tech.name}
+                      width={50}
+                      height={50}
+                      style={{ zIndex: 21 }}
+                    />
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -185,18 +206,26 @@ export default function Page() {
             </h1> */}
             <div className="flex flex-row justify-center items-center mt-2">
               {BackendDevelopment.map((tech) => (
-                <div
+                <motion.div
                   key={tech.name}
-                  className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
+                  variants={tileVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="w-full"
                 >
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={50}
-                    height={50}
-                    style={{ zIndex: 21 }}
-                  />
-                </div>
+                  <div
+                    key={tech.name}
+                    className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
+                  >
+                    <Image
+                      src={tech.logo}
+                      alt={tech.name}
+                      width={50}
+                      height={50}
+                      style={{ zIndex: 21 }}
+                    />
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -204,21 +233,31 @@ export default function Page() {
             {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               Mobile App Development
             </h1> */}
-            <div className="flex flex-row justify-center items-center mt-2">
-              {MobileDevelopment.map((tech) => (
-                <div
-                  key={tech.name}
-                  className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
-                >
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={50}
-                    height={50}
-                    style={{ zIndex: 21 }}
-                  />
-                </div>
-              ))}
+            <div className="flex flex-row justify-center items-center mt-2 w-full">
+              <div className="w-1/2 h-full flex flex-row justify-center items-center">
+                {MobileDevelopment.map((tech) => (
+                  <motion.div
+                    key={tech.name}
+                    variants={tileVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="w-full"
+                  >
+                    <div
+                      key={tech.name}
+                      className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
+                    >
+                      <Image
+                        src={tech.logo}
+                        alt={tech.name}
+                        width={50}
+                        height={50}
+                        style={{ zIndex: 21 }}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="w-3/4 h-[150px] p-2">
@@ -227,18 +266,26 @@ export default function Page() {
             </h1> */}
             <div className="flex flex-row justify-center items-center mt-2">
               {DevOps.map((tech) => (
-                <div
+                <motion.div
                   key={tech.name}
-                  className="flex flex-col justify-center items-center p-2 ml-10 cursor-pointer"
+                  variants={tileVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="w-full"
                 >
-                  <Image
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={50}
-                    height={50}
-                    style={{ zIndex: 21 }}
-                  />
-                </div>
+                  <div
+                    key={tech.name}
+                    className="flex flex-col justify-center items-center p-2 ml-10 cursor-pointer"
+                  >
+                    <Image
+                      src={tech.logo}
+                      alt={tech.name}
+                      width={50}
+                      height={50}
+                      style={{ zIndex: 21 }}
+                    />
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>

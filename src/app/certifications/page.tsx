@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import sample from "../../../public/assests/certificates/sample.png";
+import { motion } from "framer-motion";
 
 const certifications = [
   {
@@ -95,43 +97,64 @@ const certifications = [
   },
 ];
 
+const tileVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
+
 export default function Page() {
   return (
     <>
       <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-12 w-full">
-          <h1 className="text-2xl text-white w-full text-left">
-            <b>Licenses and Certifications</b>
-          </h1>
-          <p className="text-white text-sm w-full text-left mt-4">
-            I have completed several courses and certifications to
-            enhance my skills and knowledge. I am always eager to learn new
-            technologies and tools to improve my work. Here are some of the
-            certifications I have completed so far in my career.
-          </p>
-        </div>
+        <motion.main
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-auto flex flex-col justify-center items-center"
+        >
+          <div className="mt-12 w-full">
+            <h1 className="text-2xl text-white w-full text-left">
+              <b>Licenses and Certifications</b>
+            </h1>
+            <p className="text-white text-sm w-full text-left mt-4">
+              I have completed several courses and certifications to enhance my
+              skills and knowledge. I am always eager to learn new technologies
+              and tools to improve my work. Here are some of the certifications
+              I have completed so far in my career.
+            </p>
+          </div>
+        </motion.main>
         <div className="w-full flex flex-wrap justify-center items-center mt-4">
           <div className="w-3/4 grid grid-cols-1 md:grid-cols-2 gap-4">
             {certifications.map((certification) => (
-              <a
+              <motion.div
                 key={certification.name}
-                href={certification.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 rounded-lg transition transform hover:scale-105 transition duration-500 ease-in-out bg-black p-2 hover:bg-darkMaroon hover:shadow-lg"
+                variants={tileVariants}
+                initial="hidden"
+                animate="visible"
+                className="w-full"
               >
-                <Image
-                  src={certification.logo}
-                  alt={certification.name}
-                  width={25}
-                  height={25}
-                  className="rounded-lg"
-                />
-                <span className="text-white text-sm">
-                  {certification.name}
-                </span>
-              </a>
+                <a
+                  key={certification.name}
+                  href={certification.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 rounded-lg transition transform hover:scale-105 transition duration-500 ease-in-out bg-black p-2 hover:bg-darkMaroon hover:shadow-lg"
+                >
+                  <Image
+                    src={certification.logo}
+                    alt={certification.name}
+                    width={25}
+                    height={25}
+                    className="rounded-lg"
+                  />
+                  <span className="text-white text-sm">
+                    {certification.name}
+                  </span>
+                </a>
+              </motion.div>
             ))}
           </div>
         </div>

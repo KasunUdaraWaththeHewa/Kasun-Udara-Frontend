@@ -1,4 +1,6 @@
+"use client";
 import Particles from "@/components/particles/ParticleDesign";
+import { motion } from "framer-motion";
 
 const Services = [
   {
@@ -19,7 +21,7 @@ const Services = [
   {
     title: "Mobile App Development",
     description:
-      "I am confident on my mobile app development skills. I have worked on cross platform mobile app development tasks, specially at the Mobile App Development Course at University of Colombo School of Computing.",
+      "I am confident on my mobile app development skills. I have worked on cross platform mobile app dev tasks at University of Colombo School of Computing.",
   },
   {
     title: "Machine Learning",
@@ -32,33 +34,52 @@ const Services = [
       "I am confident on my UI/UX design skills. I have worked on several UI/UX design tasks, specially as the Web Master at ACM UCSC Student Chapeter.",
   },
 ];
-
+const tileVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
 export default function Page() {
   return (
     <>
       <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-12 w-full">
-          <h1 className="text-2xl text-white w-full text-left">
-            <b>Services I offer</b>
-          </h1>
-          <p className="text-white text-sm w-full text-left mt-4">
-            I offer several services including web development services, have
-            worked on several projects and have contributed to several open
-            source projects. Here are some of the services I offer.
-          </p>
-        </div>
+        <motion.main
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-auto flex flex-col justify-center items-center"
+        >
+          <div className="mt-12 w-full">
+            <h1 className="text-2xl text-white w-full text-left">
+              <b>Services I offer</b>
+            </h1>
+            <p className="text-white text-sm w-full text-left mt-4">
+              I offer several services including web development services, have
+              worked on several projects and have contributed to several open
+              source projects. Here are some of the services I offer.
+            </p>
+          </div>
+        </motion.main>
         <div className="grid grid-row-1 md:grid-cols-3 gap-4 mt-4 p-4 mx-20">
           {Services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="text-black cursor-pointer p-4 rounded-lg bg-white p-2 transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white"
+              variants={tileVariants}
+              initial="hidden"
+              animate="visible"
+              className="w-full"
             >
-              <h2 className="text-sm mt-2">
-                <b>{service.title}</b>
-              </h2>
-              <p className="mt-2 text-sm">{service.description}</p>
-            </div>
+              <div
+                key={index}
+                className="text-black cursor-pointer p-4 rounded-lg bg-white p-2 transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white"
+              >
+                <h2 className="text-sm mt-2">
+                  <b>{service.title}</b>
+                </h2>
+                <p className="mt-2 text-sm">{service.description}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

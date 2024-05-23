@@ -1,8 +1,10 @@
+"use client";
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import googleSummerOfCode from "../../../public/assests/competitions/googleSummerOfCode.png";
 import hacktoberfest from "../../../public/assests/competitions/hacktoberfest.png";
 import googleCodeIn from "../../../public/assests/competitions/googleCodeIn.jpg";
+import { motion } from "framer-motion";
 
 const competitions = [
   {
@@ -28,41 +30,62 @@ const competitions = [
   },
 ];
 
+const tileVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
+
 export default function Page() {
   return (
     <>
       <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-12 w-full">
-          <h1 className="text-2xl text-white w-full text-left">
-            <b>Competitions and Victories</b>
-          </h1>
-          <p className="text-white text-sm w-full text-left mt-4">
-            I have participated in several competitions and hackathons and have
-            won several of them. Here are some of the competitions I have
-            participated in and won.
-          </p>
-        </div>
+        <motion.main
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-auto flex flex-col justify-center items-center"
+        >
+          <div className="mt-12 w-full">
+            <h1 className="text-2xl text-white w-full text-left">
+              <b>Competitions and Victories</b>
+            </h1>
+            <p className="text-white text-sm w-full text-left mt-4">
+              I have participated in several competitions and hackathons and
+              have won several of them. Here are some of the competitions I have
+              participated in and won.
+            </p>
+          </div>
+        </motion.main>
         <div className="grid grid-row-1 md:grid-cols-2 gap-4 mt-4 p-4 mx-20">
           {competitions.map((competition, index) => (
-            <div
+            <motion.div
               key={index}
-              className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white hover:scale-105 mx-4 mt-2"
+              variants={tileVariants}
+              initial="hidden"
+              animate="visible"
+              className="w-full"
             >
-              <Image
-                src={competition.image}
-                alt={competition.title}
-                width={200}
-                height={200}
-              />
-              <h2 className="text-sm mt-2">
-                <b>{competition.title}</b>
-              </h2>
-              <p className="mt-2 text-sm">{competition.description}</p>
-              <p className="mt-2 text-sm">
-                <b>{competition.places}</b>
-              </p>
-            </div>
+              <div
+                key={index}
+                className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white hover:scale-105 mx-4 mt-2"
+              >
+                <Image
+                  src={competition.image}
+                  alt={competition.title}
+                  width={200}
+                  height={200}
+                />
+                <h2 className="text-sm mt-2">
+                  <b>{competition.title}</b>
+                </h2>
+                <p className="mt-2 text-sm">{competition.description}</p>
+                <p className="mt-2 text-sm">
+                  <b>{competition.places}</b>
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>

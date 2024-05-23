@@ -1,83 +1,105 @@
+"use client";
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import logo from "../../../public/logo.jpeg";
+import { motion } from "framer-motion";
+
+const tileVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
 
 export default function Page() {
   return (
     <>
       <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-12 w-full">
-          <h1 className="text-2xl text-white w-full text-left">
-            <b>About Me</b>
-          </h1>
-        </div>
-        <div className="w-full h-[600px] flex flex-col justify-center items-center">
-          <div className="w-full h-[275px] flex flex-row mt-4 justify-center items-center">
-            <div
-              className="h-full flex flex-col justify-center items-center"
-              style={{ width: "15%" }}
-            >
-              <Image
-                alt="Kasun Udara"
-                src={logo}
-                className="rounded-full"
-              ></Image>
+        <motion.main
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-auto flex flex-col justify-center items-center"
+        >
+          <div className="mt-12 w-full">
+            <h1 className="text-2xl text-white w-full text-left">
+              <b>About Me</b>
+            </h1>
+            <p className="text-white text-sm w-full text-justify mt-4">
+              I am Kasun Udara, a Software Engineer, Web Developer, Mobile App
+              Developer, Backend Developer, Frontend Developer, FullStack
+              Developer, Machine Learning Enthusiast, Tech Enthusiast,
+              Freelancer.<br></br> I am currently a computer science
+              undergraduate at University of Colombo School of Computing. I went
+              to Dharmasoka College Ambalangoda. I am also the Chief Executive
+              Officer at our startup IgniteX.
+            </p>
+          </div>
+        </motion.main>
+        <motion.div
+          variants={tileVariants}
+          initial="hidden"
+          animate="visible"
+          className="w-full"
+        >
+          <div className="w-full h-[400px] flex flex-col justify-center items-center">
+            <div className="w-full h-[275px] flex flex-row mt-4 justify-center items-center">
+              <div
+                className="h-full flex flex-col justify-center items-center"
+                style={{ width: "15%" }}
+              >
+                <Image
+                  alt="Kasun Udara"
+                  src={logo}
+                  className="rounded-full"
+                ></Image>
+              </div>
+              <div
+                className="w-full flex flex-col justify-center items-center ml-10"
+                style={{ width: "60%", zIndex: 21 }}
+              >
+                <h1 className="text-2xl text-left w-full text-white">
+                  <b>Waththe Hewa Kasun Udara</b>
+                </h1>
+                <p className="text-white mt-4 text-sm text-justify">
+                  As a passionate Full-stack Developer and Java Developer, I
+                  thrive on pushing the boundaries of technology. With a strong
+                  foundation in frontend, backend, and mobile app development, I
+                  bring a versatile skill set to every project I undertake. What
+                  sets me apart is my unwavering commitment to learning and
+                  embracing new technologies and applying them to real-world
+                  problems.
+                </p>
+                <div className="w-full flex flex-row mt-1">
+                  <i className="bx bx-location-plus mt-1 text-white"></i>
+                  <h3 className="ml-4 text-1xl text-left w-full text-white">
+                    Ambalangoda, Sri Lanka
+                  </h3>
+                </div>
+                <div className="w-full flex flex-row mt-1">
+                  <i className="bx bxl-gmail mt-1 text-white"></i>
+                  <h3 className="ml-4 text-sm text-left w-full text-white">
+                    kasunu2001@gmail.com
+                  </h3>
+                </div>
+              </div>
             </div>
-            <div
-              className="w-full flex flex-col justify-center items-center ml-10"
-              style={{ width: "60%", zIndex: 21 }}
-            >
-              <h1 className="text-2xl text-left w-full text-white">
-                <b>Waththe Hewa Kasun Udara</b>
-              </h1>
-              <p className="text-white mt-4 text-sm text-justify">
-                I am Kasun Udara, a Software Engineer, Web Developer, Mobile App
-                Developer, Backend Developer, Frontend Developer, FullStack
-                Developer, Machine Learning Enthusiast, Tech Enthusiast,
-                Freelancer and more... I am currently a computer science
-                undergraduate at University of Colombo School of Computing. I
-                went to Dharmasoka College Ambalangoda. I am also the Chief
-                Executive Officer at our startup
-                <span className="text-white"> IgniteX</span>.
+            <div className="w-3/4 h-auto px-10 pt-4">
+              <p className="text-white text-sm text-justify">
+                I am currently the{" "}
+                <span className="text-white">Web Master</span> at UCSC ACM and I
+                got experiences at web tasks at UCSC ACM ,{" "}
+                <span className="text-white">marketing tasks</span> at UCSC ACM,
+                where I help to market events and posts, for events and
+                workshops. I have involved in the{" "}
+                <span className="text-white">program</span> and{" "}
+                <span className="text-white">logistics and finance tasks</span>,
+                where I developed and promoted engaging content and campaigns
+                for the chapter.
               </p>
-              <div className="w-full flex flex-row mt-1">
-                <i className="bx bx-location-plus mt-1 text-white"></i>
-                <h3 className="ml-4 text-1xl text-left w-full text-white">
-                  Ambalangoda, Sri Lanka
-                </h3>
-              </div>
-              <div className="w-full flex flex-row mt-1">
-                <i className="bx bxl-gmail mt-1 text-white"></i>
-                <h3 className="ml-4 text-sm text-left w-full text-white">
-                  kasunu2001@gmail.com
-                </h3>
-              </div>
             </div>
           </div>
-          <div className="w-3/4 h-auto px-10 pt-4">
-            <p className="text-white text-sm text-justify">
-              As a passionate Full-stack Developer and Java Developer, I thrive
-              on pushing the boundaries of technology. With a strong foundation
-              in frontend, backend, and mobile app development, I bring a
-              versatile skill set to every project I undertake. What sets me
-              apart is my unwavering commitment to learning and embracing new
-              technologies and applying them to real-world problems.
-            </p>
-          </div>
-          <div className="w-3/4 h-auto px-10 pt-4">
-            <p className="text-white text-sm text-justify">
-              I am currently the <span className="text-white">Web Master</span>{" "}
-              at UCSC ACM and I got experiences at web tasks at UCSC ACM ,{" "}
-              <span className="text-white">marketing tasks</span> at UCSC ACM,
-              where I help to market events and posts, for events and workshops.
-              I have involved in the <span className="text-white">program</span>{" "}
-              and <span className="text-white">logistics and finance tasks</span>
-              , where I developed and promoted engaging content and campaigns
-              for the chapter.
-            </p>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );

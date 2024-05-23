@@ -1,5 +1,6 @@
-import Image from "next/image";
+"use client";
 import Particles from "@/components/particles/ParticleDesign";
+import { motion } from "framer-motion";
 
 const socials = [
   {
@@ -23,78 +24,109 @@ const socials = [
     link: "mailto:kasunu2001@gmail.com",
   },
 ];
+
+const tileVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
+
 export default function Page() {
   return (
     <>
       <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
-        <div className="mt-12 w-full">
-          <h1 className="text-2xl text-white w-full text-left">
-            <b>Contact Me</b>
-          </h1>
-          <p className="text-white text-sm w-full text-left mt-4">
-            Feel free to contact me for any inquiries or collaborations. I am always open to new opportunities and projects. You can reach me through the following social media platforms or send me an email directly.I will get back to you as soon as possible. Thank you!
-          </p>
-        </div>
-        <div className="w-full flex flex-wrap justify-center items-center mt-4">
-          <div className="w-1/2 flex flex-row items-center justify-center items-center">
-            {socials.map((social) => (
-              <a
-                key={social.name}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
+        <motion.main
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5 }}
+          className="w-full h-auto flex flex-col justify-center items-center"
+        >
+          <div className="mt-12 w-full">
+            <h1 className="text-2xl text-white w-full text-left">
+              <b>Contact Me</b>
+            </h1>
+            <p className="text-white text-sm w-full text-left mt-4">
+              Feel free to contact me for any inquiries or collaborations. I am
+              always open to new opportunities and projects. You can reach me
+              through the following social media platforms or send me an email
+              directly.I will get back to you as soon as possible. Thank you!
+            </p>
+          </div>
+        </motion.main>
+        <motion.div
+          variants={tileVariants}
+          initial="hidden"
+          animate="visible"
+          className="w-full"
+        >
+          <div className="w-full flex flex-wrap justify-center items-center mt-4">
+            <div className="w-1/2 flex flex-row items-center justify-center items-center">
+              {socials.map((social) => (
+                <a
+                  key={social.name}
+                  href={social.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
+                >
+                  <div className="flex flex-row w-[100px]">
+                    <i className={`bx ${social.logo} text-1xl text-white`}></i>
+                    <span className="text-white text-sm">
+                      &nbsp;{social.name}
+                    </span>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+        <motion.div
+          variants={tileVariants}
+          initial="hidden"
+          animate="visible"
+          className="w-full flex flex-col justify-center items-center"
+        >
+          <div className="w-1/2 flex flex-col justify-center items-center mt-4">
+            <div className="w-full flex flex-col items-center justify-center">
+              <label className="text-white text-1xl w-full text-left">
+                Your Name{" "}
+              </label>
+              <input
+                type="text"
+                className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
+                style={{ zIndex: 21 }}
+              />
+            </div>
+            <div className="w-full flex flex-col items-center justify-center mt-4">
+              <label className="text-white text-1xl w-full text-left">
+                Your Email{" "}
+              </label>
+              <input
+                type="email"
+                className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
+                style={{ zIndex: 21 }}
+              />
+            </div>
+            <div className="w-full flex flex-col items-center justify-center mt-4">
+              <label className="text-white text-1xl w-full text-left">
+                Your Message{" "}
+              </label>
+              <textarea
+                className="w-full h-[200px] p-2 rounded-lg mt-2 text-black"
+                style={{ zIndex: 21 }}
+              />
+            </div>
+            <div className="w-1/6 flex flex-col items-center justify-center mt-4 mb-4">
+              <button
+                className="w-full h-[50px] bg-gold text-black rounded-lg cursor-pointer"
+                style={{ zIndex: 21 }}
               >
-                <div className="flex flex-row w-[100px]">
-                  <i className={`bx ${social.logo} text-1xl text-white`}></i>
-                  <span className="text-white text-sm">
-                    &nbsp;{social.name}
-                  </span>
-                </div>
-              </a>
-            ))}
+                <b>Send</b>
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="w-1/2 flex flex-col justify-center items-center mt-4">
-          <div className="w-full flex flex-col items-center justify-center">
-            <label className="text-white text-1xl w-full text-left">
-              Your Name{" "}
-            </label>
-            <input
-              type="text"
-              className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
-              style={{ zIndex: 21 }}
-            />
-          </div>
-          <div className="w-full flex flex-col items-center justify-center mt-4">
-            <label className="text-white text-1xl w-full text-left">
-              Your Email{" "}
-            </label>
-            <input
-              type="email"
-              className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
-              style={{ zIndex: 21 }}
-            />
-          </div>
-          <div className="w-full flex flex-col items-center justify-center mt-4">
-            <label className="text-white text-1xl w-full text-left">
-              Your Message{" "}
-            </label>
-            <textarea
-              className="w-full h-[200px] p-2 rounded-lg mt-2 text-black"
-              style={{ zIndex: 21 }}
-            />
-          </div>
-          <div className="w-1/6 flex flex-col items-center justify-center mt-4 mb-4">
-            <button
-              className="w-full h-[50px] bg-gold text-black rounded-lg cursor-pointer"
-              style={{ zIndex: 21 }}
-            >
-              <b>Send</b>
-            </button>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </>
   );
