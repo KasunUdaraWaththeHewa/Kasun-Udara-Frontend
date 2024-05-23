@@ -115,8 +115,8 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-12 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
+          <div className="mt-12 w-full flex flex-col justify-center items-center">
+            <h1 className="text-1xl md:text-2xl text-white w-full text-center">
               <b>
                 <Typewriter
                   words={["Licenses and Certifications"]}
@@ -129,7 +129,7 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-full text-left mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
               I have completed several courses and certifications to enhance my
               skills and knowledge. I am always eager to learn new technologies
               and tools to improve my work. Here are some of the certifications
@@ -161,8 +161,8 @@ export default function Page() {
                     height={25}
                     className="rounded-lg"
                   />
-                  <span className="text-white text-sm">
-                    {certification.name}
+                  <span className="text-white text-sm w-full">
+                    <h1 className="text-sm text-left md:text-left">{certification.name}</h1>
                   </span>
                 </a>
               </motion.div>
