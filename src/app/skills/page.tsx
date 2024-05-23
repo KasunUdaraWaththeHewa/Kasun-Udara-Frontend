@@ -177,7 +177,7 @@ const tileVariants = {
 export default function Page() {
   return (
     <>
-      <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
+      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
         <motion.main
           initial={{ opacity: 0, y: 50 }}
@@ -186,8 +186,8 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-12 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
+          <div className="mt-12 w-full flex flex-col justify-center items-center">
+            <h1 className="text-1xl md:text-2xl text-white w-full text-center">
               <b>
                 <Typewriter
                   words={["Skills and Technologies"]}
@@ -200,7 +200,7 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
               I have a confident understanding on these languages, tech stacks
               and I am a good self learner who always learn new things. I am
               always up for new challenges and I am a good team player. I have a
@@ -210,11 +210,11 @@ export default function Page() {
           </div>
         </motion.main>
         <div className="w-full flex flex-col justify-center items-center">
-          <div className="w-3/4 h-[150px] p-2 mt-4">
+          <div className="w-3/4 h:auto md:h-[150px] p-2 mt-4">
             {/* <h1 className="text-sm text-white mt-2 w-full text-left">
               Frontend Development
             </h1> */}
-            <div className="flex flex-row justify-center items-center mt-2">
+            <div className="flex flex-col md:flex-row justify-center items-center mt-2">
               {FrontendDevelopment.map((tech) => (
                 <motion.div
                   key={tech.name}
@@ -225,7 +225,7 @@ export default function Page() {
                 >
                   <div
                     key={tech.name}
-                    className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
+                    className="flex flex-col justify-center items-center p-2  md:ml-10 cursor-pointer"
                   >
                     <Image
                       src={tech.logo}
@@ -240,11 +240,11 @@ export default function Page() {
               ))}
             </div>
           </div>
-          <div className="w-3/4 h-[150px] p-2">
+          <div className="w-3/4 h:auto md:h-[150px] p-2 mt-4">
             {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               Backend Development
             </h1> */}
-            <div className="flex flex-row justify-center items-center mt-2">
+            <div className="flex flex-col md:flex-row justify-center items-center md:mt-2">
               {BackendDevelopment.map((tech) => (
                 <motion.div
                   key={tech.name}
@@ -255,7 +255,7 @@ export default function Page() {
                 >
                   <div
                     key={tech.name}
-                    className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
+                    className="flex flex-col justify-center items-center p-2  md:ml-10  cursor-pointer"
                   >
                     <Image
                       src={tech.logo}
@@ -270,43 +270,42 @@ export default function Page() {
               ))}
             </div>
           </div>
-          <div className="w-3/4 h-[150px] p-2">
+          <div className="w-3/4 h:auto md:h-[150px] p-2">
             {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               Mobile App Development
             </h1> */}
-            <div className="flex flex-row justify-center items-center mt-2 w-full">
-              <div className="w-full h-full flex flex-row justify-center items-center">
-                {MobileDevelopment.map((tech) => (
-                  <motion.div
+
+            <div className="flex flex-col md:flex-row justify-center items-center md:mt-2">
+              {MobileDevelopment.map((tech) => (
+                <motion.div
+                  key={tech.name}
+                  variants={tileVariants}
+                  initial="hidden"
+                  animate="visible"
+                  className="w-full"
+                >
+                  <div
                     key={tech.name}
-                    variants={tileVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="w-full"
+                    className="flex flex-col justify-center items-center p-2  md:ml-10 cursor-pointer"
                   >
-                    <div
-                      key={tech.name}
-                      className="flex flex-col justify-center items-center p-2  ml-10 cursor-pointer"
-                    >
-                      <Image
-                        src={tech.logo}
-                        alt={tech.name}
-                        width={50}
-                        height={50}
-                        style={{ zIndex: 21 }}
-                        title={tech.name}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+                    <Image
+                      src={tech.logo}
+                      alt={tech.name}
+                      width={50}
+                      height={50}
+                      style={{ zIndex: 21 }}
+                      title={tech.name}
+                    />
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
-          <div className="w-3/4 h-[150px] p-2">
+          <div className="w-3/4 h:auto md:h-[150px] p-2">
             {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               DevOps
             </h1> */}
-            <div className="flex flex-row justify-center items-center mt-2">
+            <div className="flex flex-col md:flex-row justify-center items-center md:mt-2">
               {DevOps.map((tech) => (
                 <motion.div
                   key={tech.name}
@@ -317,7 +316,7 @@ export default function Page() {
                 >
                   <div
                     key={tech.name}
-                    className="flex flex-col justify-center items-center p-2 ml-10 cursor-pointer"
+                    className="flex flex-col justify-center items-center p-2 md:ml-10 cursor-pointer"
                   >
                     <Image
                       src={tech.logo}
