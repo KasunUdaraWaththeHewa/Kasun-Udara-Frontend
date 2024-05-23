@@ -86,7 +86,7 @@ export default function Page() {
                 </div>
                 <div className="w-full flex flex-row justify-center items-center mt-1 text-white hover:text-gold cursor-pointer">
                   <i className="bx bxl-gmail mt-1"></i>
-                  <h3 className="ml-4 text-sm text-left w-full">
+                  <h3 className="ml-4 text-sm text-left md:w-full">
                     kasunu2001@gmail.com
                   </h3>
                 </div>
