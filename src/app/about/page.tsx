@@ -69,7 +69,7 @@ export default function Page() {
                 <h1 className="text-1xl md:text-2xl text-center md:text-left w-full text-white">
                   <b>Waththe Hewa Kasun Udara</b>
                 </h1>
-                <p className="text-white mt-4 text-sm text-center md:text-justify">
+                <p className="text-white mt-4 text-sm text-center md:text-justify w-3/4 md:w-full">
                   As a passionate Full-stack Developer and Java Developer, I
                   thrive on pushing the boundaries of technology. With a strong
                   foundation in frontend, backend, and mobile app development, I
