@@ -94,9 +94,10 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-4 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
-              <b><Typewriter
+          <div className="mt-4 w-full flex flex-col justify-center items-center sm:items-center md:items-left sm:justify-center">
+            <h1 className="sm:text-1xl md:text-2xl text-white w-full flex flex-col justify-center items-center">
+              <b>
+                <Typewriter
                   words={["Blogs and Publications"]}
                   loop={0}
                   cursor
@@ -104,9 +105,10 @@ export default function Page() {
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1000}
-                /></b>
+                />
+              </b>
             </h1>
-            <p className="text-white text-sm w-full text-left mt-4">
+            <p className="text-white text-sm w-3/4 sm:w-3/4 md:w-full text-center md:text-left mt-4">
               I have written several blogs and publications on various topics
               including Cyber Security, Web Development, Mobile Development, and
               Machine Learning. Here are some of my blogs and publications. You
@@ -115,7 +117,7 @@ export default function Page() {
           </div>
         </motion.main>
         <div
-          className="w-full flex flex-wrap justify-center items-center mt-4"
+          className="w-3/4 flex flex-wrap justify-center items-center mt-4"
           style={{ zIndex: 21 }}
         >
           {blogs.length > 0 ? (
@@ -134,10 +136,10 @@ export default function Page() {
                     rel="noopener noreferrer"
                     className="h-[150px] text-black w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white p-2"
                   >
-                    <h1 className="text-1xl mt-2">
-                      <b>{blog.title}</b>
+                    <h1 className="text-1xl mt-2 text-center">
+                      <b className="text-center">{blog.title}</b>
                     </h1>
-                    <p className="text-xs">{blog.subtitle}</p>
+                    <p className="text-xs text-center">{blog.subtitle}</p>
                   </a>
                 </motion.div>
               </div>

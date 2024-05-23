@@ -43,9 +43,10 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-12 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
-              <b><Typewriter
+          <div className="mt-12 w-full flex flex-col justify-center items-center">
+            <h1 className="md:text-2xl text-white w-full text-center">
+              <b>
+                <Typewriter
                   words={["Contact Me"]}
                   loop={0}
                   cursor
@@ -53,9 +54,10 @@ export default function Page() {
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1000}
-                /></b>
+                />
+              </b>
             </h1>
-            <p className="text-white text-sm w-full text-left mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
               Feel free to contact me for any inquiries or collaborations. I am
               always open to new opportunities and projects. You can reach me
               through the following social media platforms or send me an email
@@ -70,16 +72,16 @@ export default function Page() {
           className="w-full"
         >
           <div className="w-full flex flex-wrap justify-center items-center mt-4">
-            <div className="w-1/2 flex flex-row items-center justify-center items-center">
+            <div className="w-1/2 flex flex-col md:flex-row items-center justify-center items-center">
               {socials.map((social) => (
                 <a
                   key={social.name}
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
+                  className="flex flex-col justify-center items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
                 >
-                  <div className="flex flex-row w-[100px]">
+                  <div className="flex flex-row justify-center items-center w-[100px]">
                     <i className={`bx ${social.logo} text-1xl text-white`}></i>
                     <span className="text-white text-sm">
                       &nbsp;{social.name}
@@ -126,7 +128,7 @@ export default function Page() {
                 style={{ zIndex: 21 }}
               />
             </div>
-            <div className="w-1/6 flex flex-col items-center justify-center mt-4 mb-4">
+            <div className="w-1/2 md:w-1/6 flex flex-col items-center justify-center mt-4 mb-4">
               <button
                 className="w-full h-[50px] bg-gold text-black rounded-lg cursor-pointer"
                 style={{ zIndex: 21 }}
