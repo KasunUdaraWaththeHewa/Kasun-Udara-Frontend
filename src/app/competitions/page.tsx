@@ -48,8 +48,8 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-12 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
+          <div className="mt-12 w-full flex flex-col justify-center items-center">
+            <h1 className="text-1xl md:text-2xl text-white w-full text-center">
               <b>
                 <Typewriter
                   words={["Competitions and Victories"]}
@@ -62,14 +62,14 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-full text-left mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
               I have participated in several competitions and hackathons and
               have won several of them. Here are some of the competitions I have
               participated in and won.
             </p>
           </div>
         </motion.main>
-        <div className="grid grid-row-1 md:grid-cols-2 gap-4 mt-4 p-4 mx-20">
+        <div className="grid grid-row-1 md:grid-cols-2 gap-4 mt-4 md:p-4 mx-6 sm:mx-6 md:mx-10">
           {competitions.map((competition, index) => (
             <motion.div
               key={index}
