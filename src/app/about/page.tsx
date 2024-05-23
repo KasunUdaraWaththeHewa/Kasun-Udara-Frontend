@@ -3,6 +3,7 @@ import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import logo from "../../../public/logo.jpeg";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const tileVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -23,7 +24,17 @@ export default function Page() {
         >
           <div className="mt-12 w-full">
             <h1 className="text-2xl text-white w-full text-left">
-              <b>About Me</b>
+              <b>
+                <Typewriter
+                  words={["About Me"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </b>
             </h1>
             <p className="text-white text-sm w-full text-justify mt-4">
               I am Kasun Udara, a Software Engineer, Web Developer, Mobile App
@@ -42,7 +53,7 @@ export default function Page() {
           animate="visible"
           className="w-full"
         >
-          <div className="w-full h-[400px] flex flex-col justify-center items-center">
+          <div className="w-full h-[500px] flex flex-col justify-center items-center">
             <div className="w-full h-[275px] flex flex-row mt-4 justify-center items-center">
               <div
                 className="h-full flex flex-col justify-center items-center"
@@ -96,6 +107,17 @@ export default function Page() {
                 <span className="text-white">logistics and finance tasks</span>,
                 where I developed and promoted engaging content and campaigns
                 for the chapter.
+              </p>
+            </div>
+            <div className="w-3/4 h-auto px-10 pt-4">
+              <p className="text-white text-sm text-justify">
+                I am comfirtable with Javascript frameworks and Libraries for
+                fullstack development. I have experiences in react , mongo ,
+                express , nodejs , PHP , Javascript , MySQL , HTML , CSS , Java
+                , springboot , python , C , C++ , fastAPI, React Native ,
+                Flutter. I am currently trying to engage Machine Learning and
+                Blockchaain technology for Fullstack development. I am a quick
+                self learner and I am always ready to learn new technologies.
               </p>
             </div>
           </div>

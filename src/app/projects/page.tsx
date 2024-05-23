@@ -4,6 +4,7 @@ import Particles from "@/components/particles/ParticleDesign";
 import projectOne from "../../../public/assests/projects/project1.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const projects = [
   {
@@ -63,7 +64,15 @@ export default function Page() {
         >
           <div className="mt-12 w-full">
             <h1 className="text-2xl text-white w-full text-left">
-              <b>Projects and Contributions</b>
+              <b><Typewriter
+                  words={["Projects and Contributions"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                /></b>
             </h1>
             <p className="text-white text-sm w-full text-left mt-4">
               I have worked on several projects and have contributed to several

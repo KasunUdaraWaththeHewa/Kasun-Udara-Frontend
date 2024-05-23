@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import html from "../../../public/assests/techlogo/html.webp";
@@ -59,6 +60,18 @@ const FrontendDevelopment = [
     name: "NextJS",
     logo: nextjs,
   },
+  {
+    name: "Bootstrap",
+    logo: Bootsrap,
+  },
+  {
+    name: "TailwindCSS",
+    logo: Tailwind,
+  },
+  {
+    name: "Vite",
+    logo: Vite,
+  },
 ];
 
 const BackendDevelopment = [
@@ -108,6 +121,22 @@ const MobileDevelopment = [
   {
     name: "Flutter",
     logo: flutter,
+  },
+  {
+    name: "Firebase",
+    logo: Firebase,
+  },
+  {
+    name: "MySQL",
+    logo: MySQL,
+  },
+  {
+    name: "MongoDB",
+    logo: MongoDB,
+  },
+  {
+    name: "PostgreSQL",
+    logo: PostgreSQL,
   },
 ];
 
@@ -159,7 +188,17 @@ export default function Page() {
         >
           <div className="mt-12 w-full">
             <h1 className="text-2xl text-white w-full text-left">
-              <b>Skills and Technologies</b>
+              <b>
+                <Typewriter
+                  words={["Skills and Technologies"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </b>
             </h1>
             <p className="text-white text-sm mt-4">
               I have a confident understanding on these languages, tech stacks
@@ -194,6 +233,7 @@ export default function Page() {
                       width={50}
                       height={50}
                       style={{ zIndex: 21 }}
+                      title={tech.name}
                     />
                   </div>
                 </motion.div>
@@ -223,6 +263,7 @@ export default function Page() {
                       width={50}
                       height={50}
                       style={{ zIndex: 21 }}
+                      title={tech.name}
                     />
                   </div>
                 </motion.div>
@@ -234,7 +275,7 @@ export default function Page() {
               Mobile App Development
             </h1> */}
             <div className="flex flex-row justify-center items-center mt-2 w-full">
-              <div className="w-1/2 h-full flex flex-row justify-center items-center">
+              <div className="w-full h-full flex flex-row justify-center items-center">
                 {MobileDevelopment.map((tech) => (
                   <motion.div
                     key={tech.name}
@@ -253,6 +294,7 @@ export default function Page() {
                         width={50}
                         height={50}
                         style={{ zIndex: 21 }}
+                        title={tech.name}
                       />
                     </div>
                   </motion.div>
@@ -283,6 +325,7 @@ export default function Page() {
                       width={50}
                       height={50}
                       style={{ zIndex: 21 }}
+                      title={tech.name}
                     />
                   </div>
                 </motion.div>

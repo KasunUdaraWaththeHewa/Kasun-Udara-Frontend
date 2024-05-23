@@ -1,6 +1,7 @@
 "use client";
 import Particles from "@/components/particles/ParticleDesign";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const socials = [
   {
@@ -44,7 +45,15 @@ export default function Page() {
         >
           <div className="mt-12 w-full">
             <h1 className="text-2xl text-white w-full text-left">
-              <b>Contact Me</b>
+              <b><Typewriter
+                  words={["Contact Me"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                /></b>
             </h1>
             <p className="text-white text-sm w-full text-left mt-4">
               Feel free to contact me for any inquiries or collaborations. I am

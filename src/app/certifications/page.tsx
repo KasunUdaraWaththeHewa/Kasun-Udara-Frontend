@@ -3,6 +3,7 @@ import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import sample from "../../../public/assests/certificates/sample.png";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const certifications = [
   {
@@ -116,7 +117,17 @@ export default function Page() {
         >
           <div className="mt-12 w-full">
             <h1 className="text-2xl text-white w-full text-left">
-              <b>Licenses and Certifications</b>
+              <b>
+                <Typewriter
+                  words={["Licenses and Certifications"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </b>
             </h1>
             <p className="text-white text-sm w-full text-left mt-4">
               I have completed several courses and certifications to enhance my

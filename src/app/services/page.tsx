@@ -1,6 +1,7 @@
 "use client";
 import Particles from "@/components/particles/ParticleDesign";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const Services = [
   {
@@ -52,7 +53,15 @@ export default function Page() {
         >
           <div className="mt-12 w-full">
             <h1 className="text-2xl text-white w-full text-left">
-              <b>Services I offer</b>
+              <b><Typewriter
+                  words={["Services I offer"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                /></b>
             </h1>
             <p className="text-white text-sm w-full text-left mt-4">
               I offer several services including web development services, have

@@ -5,6 +5,7 @@ import googleSummerOfCode from "../../../public/assests/competitions/googleSumme
 import hacktoberfest from "../../../public/assests/competitions/hacktoberfest.png";
 import googleCodeIn from "../../../public/assests/competitions/googleCodeIn.jpg";
 import { motion } from "framer-motion";
+import { Typewriter } from "react-simple-typewriter";
 
 const competitions = [
   {
@@ -49,7 +50,17 @@ export default function Page() {
         >
           <div className="mt-12 w-full">
             <h1 className="text-2xl text-white w-full text-left">
-              <b>Competitions and Victories</b>
+              <b>
+                <Typewriter
+                  words={["Competitions and Victories"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={1000}
+                />
+              </b>
             </h1>
             <p className="text-white text-sm w-full text-left mt-4">
               I have participated in several competitions and hackathons and
