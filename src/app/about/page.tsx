@@ -31,7 +31,7 @@ export default function Page() {
                     "Who Am I",
                     "I am Kasun Udara",
                     "From",
-                    "University of Colombo School of Computing"
+                    "University of Colombo"
                   ]}
                   loop={0}
                   cursor
