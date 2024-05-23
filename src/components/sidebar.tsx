@@ -29,8 +29,8 @@ export default function SideBar() {
 
   return (
     <div className="w-full h-screen bg-gradient-to-br from-black to-darkgreen text-gold flex flex-col items-center py-4">
-      <div className="w-full m-4 text-2xl font-bold flex flex-col items-center justify-center">
-        <div className="w-1/3 h-auto flex justify-center items-center cursor-pointer">
+      <div className="hidden md:block w-full m-4 text-2xl font-bold flex flex-row pl-10 items-center justify-center">
+        <div className="w-1/2 h-auto flex justify-center items-center cursor-pointer">
           <Link href="/" className="flex flex-col justify-center items-center">
             <Image
               className="w-3/4 h-full object-cover rounded-full transition transform hover:scale-110 transition duration-500 ease-in-out"
