@@ -1,33 +1,74 @@
 "use client";
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
-import googleSummerOfCode from "../../../public/assests/competitions/googleSummerOfCode.png";
+import HackTheBoxUniCTF2023 from "../../../public/assests/competitions/HackTheBoxUniCTF2023.png";
 import hacktoberfest from "../../../public/assests/competitions/hacktoberfest.png";
-import googleCodeIn from "../../../public/assests/competitions/googleCodeIn.jpg";
+import IEEEXtreme2023 from "../../../public/assests/competitions/IEEE Xtreme 2023.png";
+import ManthraCTF from "../../../public/assests/competitions/ManthraCTF.png";
+import CodefestAlgothon2022 from "../../../public/assests/competitions/CodeFest Algothon 2022.png";
+import pyHack2 from "../../../public/assests/competitions/PyHack 2.0.png";
+import HackX2023 from "../../../public/assests/competitions/HackX2023.jpg";
+import Devthon from "../../../public/assests/competitions/Devthon 1.0.jpeg";
+
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 const competitions = [
   {
-    title: "Hacktoberfest",
+    title: "Hack The Box UniCTF 2023",
     description:
-      "Hacktoberfest is a month-long celebration of open source software run by DigitalOcean.",
+      "Hack The Box UniCTF 2023 is a Capture The Flag competition organized by Hack The Box.",
+    image: HackTheBoxUniCTF2023,
+    places: "101st Place (Worldwide)",
+  },
+  {
+    title: "IEEE Xtreme 17.0",
+    description:
+      "IEEE Xtreme is a global challenge in which teams of IEEE Student members compete in a 24-hour time span against each other to solve a set of programming problems.",
+    image: IEEEXtreme2023,
+    places: "50 th place (Sri Lanka)",
+  },
+  {
+    title: "ManthraCTF 2023",
+    description:
+      "ManthraCTF is a Capture The Flag competition organized by the IEEE Student Branch  with IEEE Computer Society at NSBM Green University.",
+    image: ManthraCTF,
+    places: "2nd Upper (Sri Lanka)",
+  },
+  {
+    title: "Hacktoberfest 2023",
+    description:
+      "Hacktoberfest is a month-long celebration of open source software run by DigitalOcean in partnership with GitHub and Twilio.",
     image: hacktoberfest,
-    places: "1st Place",
+    places: "Completed",
   },
   {
-    title: "Google Code-in",
+    title: "CodeFest Algothon 2022",
     description:
-      "Google Code-in is a contest to introduce pre-university students (ages 13-17) to open source software development.",
-    image: googleCodeIn,
-    places: "1st Place",
+      "CodeFest Algothon is a competitive programming hackathon organized by the SLIIT University in Codefest 2022.",
+    image: CodefestAlgothon2022,
+    places: "6th Place (Sri Lanka)",
   },
   {
-    title: "Google Summer of Code",
+    title: "PyHack 2.0",
     description:
-      "Google Summer of Code is a global program focused on bringing more student developers into open source software development.",
-    image: googleSummerOfCode,
-    places: "1st Place",
+      "PyHack 2.0 is a competitive programming hackathon organized by the IEEE Student Branch  at IIT University.",
+    image: pyHack2,
+    places: "7 th Place (Sri Lanka)",
+  },
+  {
+    title: "HackX 2023",
+    description:
+      "HackX 2023 is a Inter University Startup Challenge organized by University of Kelaniya.",
+    image: HackX2023,
+    places: "Semi Finalist (Sri Lanka)",
+  },
+  {
+    title: "Devthon 1.0",
+    description:
+      "Devthon 1.0 is a hackathon organized by the Leo Club at University of Moratuwa University.",
+    image: Devthon,
+    places: "Semi Finalist (Sri Lanka)",
   },
 ];
 
@@ -91,7 +132,9 @@ export default function Page() {
                 <h2 className="text-sm text-center mt-2">
                   <b>{competition.title}</b>
                 </h2>
-                <p className="mt-2 text-sm text-center">{competition.description}</p>
+                <p className="mt-2 text-sm text-center">
+                  {competition.description}
+                </p>
                 <p className="mt-2 text-sm text-center">
                   <b>{competition.places}</b>
                 </p>
