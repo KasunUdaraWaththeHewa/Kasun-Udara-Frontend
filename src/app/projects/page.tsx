@@ -2,46 +2,81 @@
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import projectOne from "../../../public/assests/projects/project1.png";
+import Akahub from "../../../public/assests/projects/Akahub.png";
+import StaySafeQuarantineCenter from "../../../public/assests/projects/Stay Safe Quarantine Center.png";
+import Hackathonslk from "../../../public/assests/projects/HackAthonslk.jpeg";
+import hackaholics6 from "../../../public/assests/projects/Hackaholics6.0.png";
+import noilk from "../../../public/assests/projects/noilk.png";
+import noiportal from "../../../public/assests/projects/NOI Portal.png";
+import kasunudarame from "../../../public/assests/projects/kasunudara.me.png";
+import readConnect from "../../../public/assests/projects/readconnect.png";
+import kiddieED from "../../../public/assests/projects/kiddieED.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
 const projects = [
   {
-    title: "Project 01",
-    description: "Description of Project 01",
-    image: projectOne,
-    link: "https://example.com/project-01",
+    title: "ඇක Hub",
+    description:
+      "Student Collaborative and Connectivity platform for UCSC Students.",
+    image: Akahub,
+    link: "https://github.com/SaliyaBandara/aka-hub",
   },
   {
-    title: "Project 02",
-    description: "Description of Project 02",
-    image: projectOne,
-    link: "https://example.com/project-02",
+    title: "Stay Safe Quarantine Center",
+    description:
+      "A web application to manage quarantine centers in Sri Lanka using MERN Stack.",
+    image: StaySafeQuarantineCenter,
+    link: "https://github.com/KasunUdaraWaththeHewa/Stay-Safe-Quarantine-Center",
   },
   {
-    title: "Project 03",
-    description: "Description of Project 03",
-    image: projectOne,
-    link: "https://example.com/project-03",
+    title: "HackAthons.lk",
+    description: "A platform to find hackathons happening around Sri Lanka.",
+    image: Hackathonslk,
+    link: "https://github.com/IntendAble/HackHive",
   },
   {
-    title: "Project 04",
-    description: "Description of Project 04",
-    image: projectOne,
-    link: "https://example.com/project-04",
+    title: "Read Connect",
+    description:
+      "A Library Management system specially designed for School libraries.",
+    image: readConnect,
+    link: "https://github.com/IgniteX-SL/Read-Connect",
   },
   {
-    title: "Project 05",
-    description: "Description of Project 05",
-    image: projectOne,
-    link: "https://example.com/project-05",
+    title: "Kiddie ED Backend",
+    description:
+      "Backend for the Kiddie ED project which is a Kindergarten platform.",
+    image: kiddieED,
+    link: "https://github.com/kORzix/KiddieEd-node-backend",
   },
   {
-    title: "Project 06",
-    description: "Description of Project 06",
-    image: projectOne,
-    link: "https://example.com/project-06",
+    title: "Hackaholic 6.0",
+    description:
+      "Official Website for Hackaholics 6.0 organized by IEEE WIE affinity group of UCSC.",
+    image: hackaholics6,
+    link: "https://github.com/IEEEUCSC/Hackaholics-6.0-2024",
+  },
+  {
+    title: "NOI.lk",
+    description:
+      "National Olympiad of Informatics 2024 organized by ACM UCSC in collaboration with Ministry of Education.",
+    image: noilk,
+    link: "https://github.com/NOI-SL/noi-platform-24",
+  },
+  {
+    title: "NOI Portal",
+    description:
+      "A LMS type portal platform to manage National Olimpiad of Informatics and manage the participants.",
+    image: noiportal,
+    link: "https://github.com/NOI-SL/NOI-LMS-PHP",
+  },
+  {
+    title: "kasunudara.me",
+    description:
+      "My personal portfolio website to show my projects, skills, certifications and services.",
+    image: kasunudarame,
+    link: "https://github.com/KasunUdaraWaththeHewa/Kasun-Udara-Frontend",
   },
 ];
 
@@ -64,7 +99,8 @@ export default function Page() {
         >
           <div className="mt-12 w-full  flex flex-col justify-center items-center">
             <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
-              <b><Typewriter
+              <b>
+                <Typewriter
                   words={["Projects and Contributions"]}
                   loop={0}
                   cursor
@@ -72,7 +108,8 @@ export default function Page() {
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1000}
-                /></b>
+                />
+              </b>
             </h1>
             <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
               I have worked on several projects and have contributed to several
@@ -99,7 +136,7 @@ export default function Page() {
                 rel="noopener noreferrer"
                 className="hover:cursor-pointer hover:scale-105 transition transform transition duration-500 ease-in-out shadow-lg hover:shadow-xl rounded-lg"
               >
-                <div className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white">
+                <div className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white flex flex-col justify-center items-center">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -109,7 +146,9 @@ export default function Page() {
                   <h2 className="text-sm mt-2 text-center">
                     <b>{project.title}</b>
                   </h2>
-                  <p className="mt-2 text-xs text-center">{project.description}</p>
+                  <p className="mt-2 text-xs text-center">
+                    {project.description}
+                  </p>
                 </div>
               </Link>
             </motion.div>
