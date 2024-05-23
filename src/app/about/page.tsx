@@ -22,8 +22,8 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-12 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
+          <div className="mt-12 w-full flex flex-col justify-center items-center sm:items-center md:items-left sm:justify-center">
+            <h1 className="sm:text-1xl md:text-2xl text-white w-full flex flex-col justify-center items-center">
               <b>
                 <Typewriter
                   words={["About Me"]}
@@ -36,14 +36,14 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-full text-justify mt-4">
+            <p className="text-white text-sm w-3/4 sm:w-3/4 md:w-full text-center md:text-left mt-4">
               I am Kasun Udara, a Software Engineer, Web Developer, Mobile App
               Developer, Backend Developer, Frontend Developer, FullStack
               Developer, Machine Learning Enthusiast, Tech Enthusiast,
-              Freelancer.<br></br> I am currently a computer science
-              undergraduate at University of Colombo School of Computing. I went
-              to Dharmasoka College Ambalangoda. I am also the Chief Executive
-              Officer at our startup IgniteX.
+              Freelancer. I am currently a computer science undergraduate at
+              University of Colombo School of Computing. I went to Dharmasoka
+              College Ambalangoda. I am also the Chief Executive Officer at our
+              startup IgniteX.
             </p>
           </div>
         </motion.main>
@@ -53,12 +53,9 @@ export default function Page() {
           animate="visible"
           className="w-full"
         >
-          <div className="w-full h-[500px] flex flex-col justify-center items-center">
-            <div className="w-full h-[275px] flex flex-row mt-4 justify-center items-center">
-              <div
-                className="h-full flex flex-col justify-center items-center"
-                style={{ width: "15%" }}
-              >
+          <div className="w-full h-auto md:h-[500px] flex flex-col justify-center items-center">
+            <div className="w-full h-auto md:h-[275px] flex flex-col md:flex-row mt-4 justify-center items-center">
+              <div className="h-full flex flex-col justify-center items-center w-[100px] sm:w-[100px] md:w-[200px]">
                 <Image
                   alt="Kasun Udara"
                   src={logo}
@@ -66,13 +63,13 @@ export default function Page() {
                 ></Image>
               </div>
               <div
-                className="w-full flex flex-col justify-center items-center ml-10"
-                style={{ width: "60%", zIndex: 21 }}
+                className="w-full flex flex-col justify-center items-center md:ml-10 mt-4 w-[170px] md:w-[700px]"
+                style={{zIndex: 21 }}
               >
-                <h1 className="text-2xl text-left w-full text-white">
+                <h1 className="text-1xl md:text-2xl text-center md:text-left w-full text-white">
                   <b>Waththe Hewa Kasun Udara</b>
                 </h1>
-                <p className="text-white mt-4 text-sm text-justify">
+                <p className="text-white mt-4 text-sm text-center md:text-justify">
                   As a passionate Full-stack Developer and Java Developer, I
                   thrive on pushing the boundaries of technology. With a strong
                   foundation in frontend, backend, and mobile app development, I
@@ -81,22 +78,22 @@ export default function Page() {
                   embracing new technologies and applying them to real-world
                   problems.
                 </p>
-                <div className="w-full flex flex-row mt-1">
-                  <i className="bx bx-location-plus mt-1 text-white"></i>
-                  <h3 className="ml-4 text-1xl text-left w-full text-white">
+                <div className="w-full flex flex-row mt-4 sm:mt-4 md:mt-1 text-white hover:text-gold cursor-pointer">
+                  <i className="bx bx-location-plus mt-1"></i>
+                  <h3 className="ml-4 text-sm text-left w-full">
                     Ambalangoda, Sri Lanka
                   </h3>
                 </div>
-                <div className="w-full flex flex-row mt-1">
-                  <i className="bx bxl-gmail mt-1 text-white"></i>
-                  <h3 className="ml-4 text-sm text-left w-full text-white">
+                <div className="w-full flex flex-row mt-1 text-white hover:text-gold cursor-pointer">
+                  <i className="bx bxl-gmail mt-1"></i>
+                  <h3 className="ml-4 text-sm text-left w-full">
                     kasunu2001@gmail.com
                   </h3>
                 </div>
               </div>
             </div>
-            <div className="w-3/4 h-auto px-10 pt-4">
-              <p className="text-white text-sm text-justify">
+            <div className="w-3/4 h-auto md:px-10 pt-4">
+              <p className="text-white text-sm text-center md:text-justify">
                 I am currently the{" "}
                 <span className="text-white">Web Master</span> at UCSC ACM and I
                 got experiences at web tasks at UCSC ACM ,{" "}
@@ -109,8 +106,8 @@ export default function Page() {
                 for the chapter.
               </p>
             </div>
-            <div className="w-3/4 h-auto px-10 pt-4">
-              <p className="text-white text-sm text-justify">
+            <div className="w-3/4 h-auto md:px-10 pt-4">
+              <p className="text-white text-sm text-center md:text-justify">
                 I am comfirtable with Javascript frameworks and Libraries for
                 fullstack development. I have experiences in react , mongo ,
                 express , nodejs , PHP , Javascript , MySQL , HTML , CSS , Java
