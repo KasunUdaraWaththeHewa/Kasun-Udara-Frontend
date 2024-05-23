@@ -42,7 +42,7 @@ const tileVariants = {
 export default function Page() {
   return (
     <>
-      <div className="w-full h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
+      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
         <Particles />
         <motion.main
           initial={{ opacity: 0, y: 50 }}
