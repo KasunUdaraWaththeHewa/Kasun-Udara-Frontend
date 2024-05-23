@@ -51,8 +51,8 @@ export default function Page() {
           transition={{ duration: 0.5 }}
           className="w-full h-auto flex flex-col justify-center items-center"
         >
-          <div className="mt-12 w-full">
-            <h1 className="text-2xl text-white w-full text-left">
+          <div className="mt-12 w-full flex flex-col justify-center items-center">
+            <h1 className="text-1xl md:text-2xl text-white w-full text-center">
               <b><Typewriter
                   words={["Services I offer"]}
                   loop={0}
@@ -63,14 +63,14 @@ export default function Page() {
                   delaySpeed={1000}
                 /></b>
             </h1>
-            <p className="text-white text-sm w-full text-left mt-4">
+            <p className="text-white text-sm w-3/4 md:w-full text-center md:text-left mt-4">
               I offer several services including web development services, have
               worked on several projects and have contributed to several open
               source projects. Here are some of the services I offer.
             </p>
           </div>
         </motion.main>
-        <div className="grid grid-row-1 md:grid-cols-3 gap-4 mt-4 p-4 mx-20">
+        <div className="grid grid-row-1 md:grid-cols-3 gap-4 mt-4 p-4 mx-6 sm:mx-6 md:mx-10">
           {Services.map((service, index) => (
             <motion.div
               key={index}
@@ -83,10 +83,10 @@ export default function Page() {
                 key={index}
                 className="text-black cursor-pointer p-4 rounded-lg bg-white p-2 transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white"
               >
-                <h2 className="text-sm mt-2">
+                <h2 className="text-sm mt-2 text-center">
                   <b>{service.title}</b>
                 </h2>
-                <p className="mt-2 text-sm">{service.description}</p>
+                <p className="mt-2 text-sm text-center">{service.description}</p>
               </div>
             </motion.div>
           ))}
