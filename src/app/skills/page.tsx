@@ -214,7 +214,7 @@ export default function Page() {
             {/* <h1 className="text-sm text-white mt-2 w-full text-left">
               Frontend Development
             </h1> */}
-            <div className="flex flex-col md:flex-row justify-center items-center mt-2">
+            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
               {FrontendDevelopment.map((tech) => (
                 <motion.div
                   key={tech.name}
@@ -244,7 +244,7 @@ export default function Page() {
             {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               Backend Development
             </h1> */}
-            <div className="flex flex-col md:flex-row justify-center items-center md:mt-2">
+            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
               {BackendDevelopment.map((tech) => (
                 <motion.div
                   key={tech.name}
@@ -275,7 +275,7 @@ export default function Page() {
               Mobile App Development
             </h1> */}
 
-            <div className="flex flex-col md:flex-row justify-center items-center md:mt-2">
+            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
               {MobileDevelopment.map((tech) => (
                 <motion.div
                   key={tech.name}
@@ -305,7 +305,7 @@ export default function Page() {
             {/* <h1 className="text-sm text-white mt-2  w-full text-left">
               DevOps
             </h1> */}
-            <div className="flex flex-col md:flex-row justify-center items-center md:mt-2">
+            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
               {DevOps.map((tech) => (
                 <motion.div
                   key={tech.name}
