@@ -24,10 +24,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="icon" href={logo.src} />
       </head>
       <body className={`flex ${inter.className}`}>
-        <div className="w-1/12" style={{ zIndex: 21 }}>
+        <div className="w-1/12 fixed top-0" style={{ zIndex: 21 }}>
           <SideBar />
         </div>
-        <div className="w-11/12">
+        <div className="w-11/12 ml-8 md:ml-32">
           <div className="relative z-10">{children}</div>
         </div>
       </body>
