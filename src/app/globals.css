@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.text-outline {
+  -webkit-text-stroke: 1px #220901;
+  color: white;
+}
