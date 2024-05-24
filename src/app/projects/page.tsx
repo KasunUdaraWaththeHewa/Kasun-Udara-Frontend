@@ -67,7 +67,7 @@ const projects = [
     title: "NOI.lk",
     description:
       "National Olympiad of Informatics 2024 organized by ACM UCSC in collaboration with Ministry of Education.",
-    techStack: "Nextjs MongoDB Typescript Tailwind",
+    techStack: "NextJS MongoDB Typescript Tailwind",
     image: noilk,
     link: "https://github.com/NOI-SL/noi-platform-24",
   },
@@ -83,7 +83,7 @@ const projects = [
     title: "kasunudara.me",
     description:
       "My personal portfolio website to show my projects, skills, certifications and services.",
-    techStack: "Nextjs MongoDB Typescript Tailwind",
+    techStack: "NextJS MongoDB Typescript Tailwind",
     image: kasunudarame,
     link: "https://github.com/KasunUdaraWaththeHewa/Kasun-Udara-Frontend",
   },
