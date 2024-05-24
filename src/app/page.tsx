@@ -27,7 +27,7 @@ export default function Home() {
             ></iframe>
           </div>
           <div className="w-full h-1/6 flex flex-col justify-center items-center">
-            <div className="sm:text-1xl md:text-2xl text-center text-gold">
+            <div className="sm:text-1xl md:text-2xl text-center text-white">
               <b>
                 <Typewriter
                   words={[
