@@ -31,7 +31,7 @@ export default function Page() {
                     "Who Am I",
                     "I am Kasun Udara",
                     "From",
-                    "University of Colombo"
+                    "University of Colombo",
                   ]}
                   loop={0}
                   cursor
@@ -48,8 +48,7 @@ export default function Page() {
               Developer, Machine Learning Enthusiast, Tech Enthusiast,
               Freelancer. I am currently a computer science undergraduate at
               University of Colombo School of Computing. I went to Dharmasoka
-              College Ambalangoda. I am also the Chief Executive Officer at our
-              startup IgniteX.
+              College Ambalangoda. I am also the founder at our startup IgniteX.
             </p>
           </div>
         </motion.main>
