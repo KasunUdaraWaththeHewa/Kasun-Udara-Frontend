@@ -27,10 +27,6 @@ export default function Home() {
             ></iframe>
           </div>
           <div className="w-full h-1/6 flex flex-col justify-center items-center">
-            <h1 className="sm:text-2xl md:text-2xl  text-center w-full font-bold text-white">
-              Hi, I am
-              <span className="text-white"> Kasun Udara</span>
-            </h1>
             <div className="sm:text-1xl md:text-2xl text-center text-gold">
               <b>
                 <Typewriter
@@ -56,6 +52,14 @@ export default function Home() {
                 />
               </b>
             </div>
+            <a
+              className="bg-lightMaroon text-white p-2 rounded-lg mt-4 hover:bg-white hover:text-black hover:shadow-lg transition duration-500 ease-in-out"
+              href="https://drive.google.com/file/d/1hO1wRM7uHJkB7KVAQ-CFRE2eHfK0WYTY/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <b>Download CV</b>
+            </a>
           </div>
         </div>
       </div>
