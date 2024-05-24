@@ -1,6 +1,7 @@
 "use client";
 import Particles from "@/components/particles/ParticleDesign";
 import { Typewriter } from "react-simple-typewriter";
+import SP from "@/components/spline";
 
 export default function Home() {
   return (
@@ -19,12 +20,13 @@ export default function Home() {
           style={{ zIndex: 21 }}
         >
           <div className="w-full h-4/5 flex flex-col justify-center items-center cursor-pointer">
-            <iframe
+            {/* <iframe
               src="https://my.spline.design/wizardroomcopy-833ac17ba4b03bf17b85220fcc3da1a4/"
               className="hover:scale-105 transition duration-500 ease-in-out"
               width="90%"
               height="90%"
-            ></iframe>
+            ></iframe> */}
+            <SP />
           </div>
           <div className="w-full h-1/6 flex flex-col justify-center items-center">
             <div className="sm:text-1xl md:text-2xl text-center text-white">
