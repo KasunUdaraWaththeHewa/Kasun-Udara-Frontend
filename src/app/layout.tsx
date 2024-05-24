@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href="/logo.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body className={`flex ${inter.className}`}>
         <div className="w-1/12 fixed top-0" style={{ zIndex: 21 }}>
