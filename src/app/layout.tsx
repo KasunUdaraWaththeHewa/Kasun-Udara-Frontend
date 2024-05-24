@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/sidebar";
-import logo from "./logo.ico";
+// import logo from "./logo.ico";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
-        <link rel="icon" href={logo.src} />
+        <link rel="icon" href="/logo.ico" />
       </head>
       <body className={`flex ${inter.className}`}>
         <div className="w-1/12 fixed top-0" style={{ zIndex: 21 }}>
