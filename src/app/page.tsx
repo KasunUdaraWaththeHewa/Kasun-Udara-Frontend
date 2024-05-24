@@ -8,28 +8,17 @@ export default function Home() {
     <>
       <div className="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center">
         <Particles />
-        {/* <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          src="/kasun_udara.me/public/fire.mp4"
-          autoPlay
-          muted
-          loop
-        ></video> */}
         <div
-          className="w-full h-full flex flex-col justift-center items-center"
+          className="w-full h-full flex flex-col md:flex-row justift-center items-center"
           style={{ zIndex: 21 }}
         >
-          <div className="w-full h-4/5 flex flex-col justify-center items-center cursor-pointer">
-            {/* <iframe
-              src="https://my.spline.design/wizardroomcopy-833ac17ba4b03bf17b85220fcc3da1a4/"
-              className="hover:scale-105 transition duration-500 ease-in-out"
-              width="90%"
-              height="90%"
-            ></iframe> */}
-            <SP />
-          </div>
-          <div className="w-full h-1/6 flex flex-col justify-center items-center">
-            <div className="sm:text-1xl md:text-2xl text-center text-white">
+          <div className="w-full md:w-1/3 flex flex-col justify-center items-center">
+            <h1 className="text-right text-white w-full">
+              <b>
+                <span className="text-4xl md:text-6xl">Kasun Udara</span>
+              </b>
+            </h1>
+            <div className="sm:text-1xl md:text-2xl text-right text-gold w-full">
               <b>
                 <Typewriter
                   words={[
@@ -54,14 +43,19 @@ export default function Home() {
                 />
               </b>
             </div>
-            <a
-              className="bg-lightMaroon text-white p-2 rounded-lg mt-4 hover:bg-white hover:text-black hover:shadow-lg transition duration-500 ease-in-out"
-              href="https://drive.google.com/file/d/1hO1wRM7uHJkB7KVAQ-CFRE2eHfK0WYTY/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <b>Download CV</b>
-            </a>
+            <div className="w-full flex flex-end justify-end items-center">
+              <a
+                className="bg-lightMaroon text-white p-2 rounded-lg mt-4 hover:bg-white hover:text-black hover:shadow-lg transition duration-500 ease-in-out"
+                href="https://drive.google.com/file/d/1hO1wRM7uHJkB7KVAQ-CFRE2eHfK0WYTY/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <b>Download CV</b>
+              </a>
+            </div>
+          </div>
+          <div className="w-full md:w-2/3 h-full flex flex-col justify-center items-center cursor-pointer">
+            <SP />
           </div>
         </div>
       </div>
