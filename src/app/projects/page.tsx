@@ -20,6 +20,7 @@ const projects = [
     title: "ඇක Hub",
     description:
       "Student Collaborative and Connectivity platform for UCSC Students.",
+    techStack: "PHP MySQL HTML CSS JS JQuery ",
     image: Akahub,
     link: "https://github.com/SaliyaBandara/aka-hub",
   },
@@ -27,12 +28,14 @@ const projects = [
     title: "Stay Safe Quarantine Center",
     description:
       "A web application to manage quarantine centers in Sri Lanka using MERN Stack.",
+    techStack: "MongoDB Express React NodeJS",
     image: StaySafeQuarantineCenter,
     link: "https://github.com/KasunUdaraWaththeHewa/Stay-Safe-Quarantine-Center",
   },
   {
     title: "HackAthons.lk",
     description: "A platform to find hackathons happening around Sri Lanka.",
+    techStack: "MongoDB Express React NodeJS",
     image: Hackathonslk,
     link: "https://github.com/IntendAble/HackHive",
   },
@@ -40,6 +43,7 @@ const projects = [
     title: "Read Connect",
     description:
       "A Library Management system specially designed for School libraries.",
+    techStack: "MongoDB Express React NodeJS",
     image: readConnect,
     link: "https://github.com/IgniteX-SL/Read-Connect",
   },
@@ -47,13 +51,15 @@ const projects = [
     title: "Kiddie ED Backend",
     description:
       "Backend for the Kiddie ED project which is a Kindergarten platform.",
+    techStack: "MongoDB Express React NodeJS",
     image: kiddieED,
     link: "https://github.com/kORzix/KiddieEd-node-backend",
   },
   {
     title: "Hackaholic 6.0",
     description:
-      "Official Website for Hackaholics 6.0 organized by IEEE WIE affinity group of UCSC.",
+      "Official Website for Hackaholics 6.0 organized by IEEE WIE in UCSC.",
+    techStack: "MongoDB Express React NodeJS Typescript Tailwind",
     image: hackaholics6,
     link: "https://github.com/IEEEUCSC/Hackaholics-6.0-2024",
   },
@@ -61,6 +67,7 @@ const projects = [
     title: "NOI.lk",
     description:
       "National Olympiad of Informatics 2024 organized by ACM UCSC in collaboration with Ministry of Education.",
+    techStack: "Nextjs MongoDB Typescript Tailwind",
     image: noilk,
     link: "https://github.com/NOI-SL/noi-platform-24",
   },
@@ -68,6 +75,7 @@ const projects = [
     title: "NOI Portal",
     description:
       "A LMS type portal platform to manage National Olimpiad of Informatics and manage the participants.",
+    techStack: "PHP MySQL HTML CSS JS JQuery",
     image: noiportal,
     link: "https://github.com/NOI-SL/NOI-LMS-PHP",
   },
@@ -75,6 +83,7 @@ const projects = [
     title: "kasunudara.me",
     description:
       "My personal portfolio website to show my projects, skills, certifications and services.",
+    techStack: "Nextjs MongoDB Typescript Tailwind",
     image: kasunudarame,
     link: "https://github.com/KasunUdaraWaththeHewa/Kasun-Udara-Frontend",
   },
@@ -148,6 +157,9 @@ export default function Page() {
                   </h2>
                   <p className="mt-2 text-xs text-center">
                     {project.description}
+                  </p>
+                  <p className="mt-2 text-xs text-center">
+                    <b>{project.techStack}</b>
                   </p>
                 </div>
               </Link>
