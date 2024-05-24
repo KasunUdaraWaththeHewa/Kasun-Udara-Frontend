@@ -26,31 +26,31 @@ const blogs = [
     subtitle: "Writeup for CTF challenge",
     link: "https://example.com/ctf-writeup-01",
   },
-  {
-    title: "Debugging React",
-    subtitle: "Debugging React Applications",
-    link: "https://example.com/debugging-react",
-  },
-  {
-    title: "Spring Boot Microservices",
-    subtitle: "Spring Boot Microservices with Docker",
-    link: "https://example.com/spring-boot-microservices",
-  },
-  {
-    title: "FastAPI for Machine Learning",
-    subtitle: "FastAPI for Machine Learning APIs",
-    link: "https://example.com/fastapi-for-ml",
-  },
-  {
-    title: "Node Express vs Spring Boot",
-    subtitle: "Node Express vs Spring Boot for REST APIs",
-    link: "https://example.com/node-express-vs-spring-boot",
-  },
-  {
-    title: "React Native vs Flutter",
-    subtitle: "React Native vs Flutter for Mobile Apps",
-    link: "https://example.com/react-native-vs-flutter",
-  },
+  // {
+  //   title: "Debugging React",
+  //   subtitle: "Debugging React Applications",
+  //   link: "https://example.com/debugging-react",
+  // },
+  // {
+  //   title: "Spring Boot Microservices",
+  //   subtitle: "Spring Boot Microservices with Docker",
+  //   link: "https://example.com/spring-boot-microservices",
+  // },
+  // {
+  //   title: "FastAPI for Machine Learning",
+  //   subtitle: "FastAPI for Machine Learning APIs",
+  //   link: "https://example.com/fastapi-for-ml",
+  // },
+  // {
+  //   title: "Node Express vs Spring Boot",
+  //   subtitle: "Node Express vs Spring Boot for REST APIs",
+  //   link: "https://example.com/node-express-vs-spring-boot",
+  // },
+  // {
+  //   title: "React Native vs Flutter",
+  //   subtitle: "React Native vs Flutter for Mobile Apps",
+  //   link: "https://example.com/react-native-vs-flutter",
+  // },
 ];
 
 const tileVariants = {

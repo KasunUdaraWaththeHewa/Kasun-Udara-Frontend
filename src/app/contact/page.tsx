@@ -1,4 +1,6 @@
 "use client";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Particles from "@/components/particles/ParticleDesign";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
@@ -32,6 +34,53 @@ const tileVariants = {
 };
 
 export default function Page() {
+  const form = useRef<HTMLFormElement>(null);
+  const [message, setMessage] = useState<string | null>(null);
+  const [isError, setIsError] = useState(false);
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [userMessage, setUserMessage] = useState("");
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!name || !email || !userMessage) {
+      setMessage("All fields are required.");
+      setIsError(true);
+      return;
+    }
+
+    if (form.current) {
+      emailjs
+        .sendForm(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+          form.current,
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            console.log("Message Sent");
+            setMessage(
+              "Your message has been sent successfully! Kasun Udara will contact you soon."
+            );
+            setIsError(false);
+            form.current?.reset();
+            setName("");
+            setEmail("");
+            setUserMessage("");
+          },
+          (error) => {
+            console.log(error.text);
+            setMessage("Failed to send your message. Please try again later.");
+            setIsError(true);
+          }
+        );
+    }
+  };
+
   return (
     <>
       <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
@@ -47,7 +96,12 @@ export default function Page() {
             <h1 className="md:text-2xl text-gold w-full text-center">
               <b>
                 <Typewriter
-                  words={["Contact Me", "Get in Touch"]}
+                  words={[
+                    "Contact Me",
+                    "Get in touch with me",
+                    "Let's Talk!",
+                    "Send me a message!",
+                  ]}
                   loop={0}
                   cursor
                   cursorStyle="|"
@@ -61,7 +115,9 @@ export default function Page() {
               Feel free to contact me for any inquiries or collaborations. I am
               always open to new opportunities and projects. You can reach me
               through the following social media platforms or send me an email
-              directly.I will get back to you as soon as possible. Thank you!
+              directly.I will get back to you as soon as possible. My Email
+              address is{" "}
+              <span className="text-gold">kasunu2001@gmail.com</span> Thank you!
             </p>
           </div>
         </motion.main>
@@ -99,43 +155,62 @@ export default function Page() {
           className="w-full flex flex-col justify-center items-center"
         >
           <div className="w-1/2 flex flex-col justify-center items-center mt-4">
-            <div className="w-full flex flex-col items-center justify-center">
-              <label className="text-white text-1xl w-full text-left">
-                Your Name{" "}
-              </label>
-              <input
-                type="text"
-                className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
-                style={{ zIndex: 21 }}
-              />
-            </div>
-            <div className="w-full flex flex-col items-center justify-center mt-4">
-              <label className="text-white text-1xl w-full text-left">
-                Your Email{" "}
-              </label>
-              <input
-                type="email"
-                className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
-                style={{ zIndex: 21 }}
-              />
-            </div>
-            <div className="w-full flex flex-col items-center justify-center mt-4">
-              <label className="text-white text-1xl w-full text-left">
-                Your Message{" "}
-              </label>
-              <textarea
-                className="w-full h-[200px] p-2 rounded-lg mt-2 text-black"
-                style={{ zIndex: 21 }}
-              />
-            </div>
-            <div className="w-1/2 md:w-1/6 flex flex-col items-center justify-center mt-4 mb-4">
-              <button
-                className="w-full h-[50px] bg-gold text-black rounded-lg cursor-pointer"
-                style={{ zIndex: 21 }}
+            <form ref={form} onSubmit={sendEmail} className="w-full">
+              <div className="w-full flex flex-col items-center justify-center">
+                <label className="text-white text-1xl w-full text-left">
+                  Your Name{" "}
+                </label>
+                <input
+                  type="text"
+                  name="user_name"
+                  className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
+                  style={{ zIndex: 21 }}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </div>
+              <div className="w-full flex flex-col items-center justify-center mt-4">
+                <label className="text-white text-1xl w-full text-left">
+                  Your Email{" "}
+                </label>
+                <input
+                  type="email"
+                  name="user_email"
+                  className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
+                  style={{ zIndex: 21 }}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div className="w-full flex flex-col items-center justify-center mt-4">
+                <label className="text-white text-1xl w-full text-left">
+                  Your Message{" "}
+                </label>
+                <textarea
+                  className="w-full h-[200px] p-2 rounded-lg mt-2 text-black"
+                  name="user_message"
+                  style={{ zIndex: 21 }}
+                  onChange={(e) => setUserMessage(e.target.value)}
+                />
+              </div>
+              <div className="w-1/2 md:w-1/6 flex flex-col items-center justify-center mt-4 mb-4">
+                <button
+                  type="submit"
+                  value="Send"
+                  className="w-full h-[35px] bg-gold hover:bg-lightMaroon hover:text-white transition transform hover:scale-110 transition duration-500 ease-in-out text-black rounded-lg cursor-pointer"
+                  style={{ zIndex: 21 }}
+                >
+                  <b>Send</b>
+                </button>
+              </div>
+            </form>
+            {message && (
+              <p
+                className={`mt-4 text-sm ${
+                  isError ? "text-red-500" : "text-green-500"
+                }`}
               >
-                <b>Send</b>
-              </button>
-            </div>
+                {message}
+              </p>
+            )}
           </div>
         </motion.div>
       </div>
