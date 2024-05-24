@@ -46,7 +46,7 @@ export default function Home() {
             <div className="w-full flex flex-end justify-end items-center">
               <a
                 className="bg-lightMaroon text-white p-2 rounded-lg mt-4 hover:bg-white hover:text-black hover:shadow-lg transition duration-500 ease-in-out"
-                href="https://drive.google.com/file/d/1hO1wRM7uHJkB7KVAQ-CFRE2eHfK0WYTY/view?usp=sharing"
+                href="https://drive.google.com/drive/folders/10xjKzVYgEHbfke_43dqWDfJW2NUZg_-H?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
