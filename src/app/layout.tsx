@@ -25,13 +25,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title.default}</title>
+        {/* <title>{metadata.title.default}</title>
         <meta name="description" content={metadata.description.default} />
         <meta property="og:title" content={metadata.title.default} />
         <meta
           property="og:description"
           content={metadata.description.default}
-        />
+        /> */}
         <link rel="icon" href={logo.src} />
       </head>
       <body className={`flex ${inter.className}`}>
