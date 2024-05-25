@@ -54,7 +54,7 @@ export default function Page() {
           <div className="mt-12 w-full flex flex-col justify-center items-center">
             <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
               <b><Typewriter
-                  words={["Services I offer"]}
+                  words={["Services I offer","What I can do for you"]}
                   loop={0}
                   cursor
                   cursorStyle="|"

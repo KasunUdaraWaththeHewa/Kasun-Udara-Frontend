@@ -190,7 +190,7 @@ export default function Page() {
             <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
               <b>
                 <Typewriter
-                  words={["Skills and Technologies"]}
+                  words={["Skills and Technologies","What I am Good At","Tech Stacks I am Familiar With"]}
                   loop={0}
                   cursor
                   cursorStyle="|"

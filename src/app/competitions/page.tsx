@@ -66,7 +66,7 @@ const competitions = [
   {
     title: "Devthon 1.0",
     description:
-      "Devthon 1.0 is a hackathon organized by the Leo Club at University of Moratuwa University.",
+      "Devthon 1.0 is a hackathon organized by the Leo Club at University of Moratuwa.",
     image: Devthon,
     places: "Semi Finalist (Sri Lanka)",
   },
@@ -93,7 +93,7 @@ export default function Page() {
             <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
               <b>
                 <Typewriter
-                  words={["Competitions and Victories"]}
+                  words={["Competitions and Victories","What I have Participated"]}
                   loop={0}
                   cursor
                   cursorStyle="|"

@@ -111,13 +111,19 @@ export default function Page() {
                 />
               </b>
             </h1>
-            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
+            <p
+              className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4"
+              style={{ zIndex: 21 }}
+            >
               Feel free to contact me for any inquiries or collaborations. I am
               always open to new opportunities and projects. You can reach me
               through the following social media platforms or send me an email
               directly.I will get back to you as soon as possible. My Email
               address is{" "}
-              <span className="text-gold">kasunu2001@gmail.com</span> Thank you!
+              <span className="text-gold cursor-pointer">
+                kasunu2001@gmail.com
+              </span>{" "}
+              Thank you!
             </p>
           </div>
         </motion.main>

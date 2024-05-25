@@ -98,7 +98,7 @@ export default function Page() {
             <h1 className="sm:text-1xl md:text-2xl text-gold w-full flex flex-col justify-center items-center">
               <b>
                 <Typewriter
-                  words={["Blogs and Publications"]}
+                  words={["Blogs and Publications","What I have Written"]}
                   loop={0}
                   cursor
                   cursorStyle="|"
