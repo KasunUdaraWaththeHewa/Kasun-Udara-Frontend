@@ -18,9 +18,10 @@ import { Typewriter } from "react-simple-typewriter";
 
 const certifications = [
   {
-    name: "Deploma in Comprehensive Master Java Developer",
+    name: "Diploma in Comprehensive Master Java Developer",
     logo: IJSE,
-    link: "https://www.linkedin.com/posts/w-h-kasun-udara-5647a4218_java-oracle-oop-activity-7011543055962968065-4AMR/",
+    // link: "https://www.linkedin.com/posts/w-h-kasun-udara-5647a4218_java-oracle-oop-activity-7011543055962968065-4AMR/",
+    link: "",
   },
   {
     name: "Programming for Everybody (Getting Started with Python)",

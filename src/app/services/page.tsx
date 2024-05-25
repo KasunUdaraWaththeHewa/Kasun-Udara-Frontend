@@ -7,32 +7,32 @@ const Services = [
   {
     title: "Frontend Development",
     description:
-      "I am confident on my frontend development skills. I have worked on several frontend development tasks, specially as the Web Master at ACM UCSC Student Chapeter.",
+      "I am confident on my frontend development skills. I have worked on several frontend development tasks.",
   },
   {
     title: "Backend Development",
     description:
-      "I am confident on my backend development skills. I have worked on several backend development tasks, specially as the Web Master at ACM UCSC Student Chapeter.",
+      "I am confident on my backend development skills. I have worked on several backend development tasks.",
   },
   {
     title: "Full Stack Development",
     description:
-      "I am confident on my full stack development skills. I have worked on several full stack development tasks, specially as the Web Master at ACM UCSC Student Chapeter.",
+      "I am confident on my full stack development skills. I have worked on several full stack development tasks.",
   },
   {
     title: "Mobile App Development",
     description:
-      "I am confident on my mobile app development skills. I have worked on cross platform mobile app dev tasks at University of Colombo School of Computing.",
+      "I am confident on my mobile app development skills. I have worked on cross platform mobile app dev tasks.",
   },
   {
     title: "Machine Learning",
     description:
-      "I am confident on my machine learning skills. I have worked on several machine learning tasks, specially at the my research projects at IgniteX",
+      "I am confident on my machine learning skills. I have worked on several machine learning tasks.",
   },
   {
     title: "UI/UX Design",
     description:
-      "I am confident on my UI/UX design skills. I have worked on several UI/UX design tasks, specially as the Web Master at ACM UCSC Student Chapeter.",
+      "I am confident on my UI/UX design skills. I have worked on several UI/UX design tasks.",
   },
 ];
 const tileVariants = {
@@ -53,20 +53,22 @@ export default function Page() {
         >
           <div className="mt-12 w-full flex flex-col justify-center items-center">
             <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
-              <b><Typewriter
-                  words={["Services I offer","What I can do for you"]}
+              <b>
+                <Typewriter
+                  words={["Services I offer", "What I can do for you"]}
                   loop={0}
                   cursor
                   cursorStyle="|"
                   typeSpeed={70}
                   deleteSpeed={50}
                   delaySpeed={1000}
-                /></b>
+                />
+              </b>
             </h1>
             <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
-              I offer several services including web development services, have
-              worked on several projects and have contributed to several open
-              source projects. Here are some of the services I offer.
+              I offer several services including web development services. Here
+              are some of the services I offer You can contact me for more
+              details.
             </p>
           </div>
         </motion.main>
@@ -86,7 +88,9 @@ export default function Page() {
                 <h2 className="text-sm mt-2 text-center">
                   <b>{service.title}</b>
                 </h2>
-                <p className="mt-2 text-sm text-center">{service.description}</p>
+                <p className="mt-2 text-sm text-center">
+                  {service.description}
+                </p>
               </div>
             </motion.div>
           ))}

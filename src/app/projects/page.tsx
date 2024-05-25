@@ -37,7 +37,8 @@ const projects = [
     description: "A platform to find hackathons happening around Sri Lanka.",
     techStack: "MongoDB Express React NodeJS",
     image: Hackathonslk,
-    link: "https://github.com/IntendAble/HackHive",
+    // link: "https://github.com/IntendAble/HackHive",
+    link: "",
   },
   {
     title: "Read Connect",
@@ -61,7 +62,7 @@ const projects = [
       "Official Website for Hackaholics 6.0 organized by IEEE WIE in UCSC.",
     techStack: "MongoDB Express React NodeJS Typescript Tailwind",
     image: hackaholics6,
-    link: "https://github.com/IEEEUCSC/Hackaholics-6.0-2024",
+    link: "https://hackaholics.ucscieee.lk/",
   },
   {
     title: "NOI.lk",
@@ -69,7 +70,7 @@ const projects = [
       "National Olympiad of Informatics 2024 organized by ACM UCSC in collaboration with Ministry of Education.",
     techStack: "NextJS MongoDB Typescript Tailwind",
     image: noilk,
-    link: "https://github.com/NOI-SL/noi-platform-24",
+    link: "https://www.noi.lk/",
   },
   {
     title: "NOI Portal",
@@ -77,7 +78,8 @@ const projects = [
       "A LMS type portal platform to manage National Olimpiad of Informatics and manage the participants.",
     techStack: "PHP MySQL HTML CSS JS JQuery",
     image: noiportal,
-    link: "https://github.com/NOI-SL/NOI-LMS-PHP",
+    // link: "https://github.com/NOI-SL/NOI-LMS-PHP",
+    link: "",
   },
   {
     title: "kasunudara.me",

@@ -29,7 +29,7 @@ import Github from "../../../public/assests/techlogo/github.png";
 import Postman from "../../../public/assests/techlogo/postman.png";
 import MySQL from "../../../public/assests/techlogo/mysql.png";
 import MongoDB from "../../../public/assests/techlogo/mongo-db.png";
-import PostgreSQL from "../../../public/assests/techlogo/postgreSQL.jpg";
+import PostgreSQL from "../../../public/assests/techlogo/postgreSQL.png";
 import Firebase from "../../../public/assests/techlogo/firebase.png";
 import Vite from "../../../public/assests/techlogo/vite.png";
 import Docker from "../../../public/assests/techlogo/docker.png";
@@ -190,7 +190,11 @@ export default function Page() {
             <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
               <b>
                 <Typewriter
-                  words={["Skills and Technologies","What I am Good At","Tech Stacks I am Familiar With"]}
+                  words={[
+                    "Skills and Technologies",
+                    "What I am Good At",
+                    "Tech Stacks I am Familiar With",
+                  ]}
                   loop={0}
                   cursor
                   cursorStyle="|"
@@ -201,11 +205,9 @@ export default function Page() {
               </b>
             </h1>
             <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
-              I have a confident understanding on these languages, tech stacks
-              and I am a good self learner who always learn new things. I am
-              always up for new challenges and I am a good team player. I have a
-              good understanding on Agile methodologies and I have worked in
-              many projects using Agile methodologies.
+              I have a confident understanding on these languages and tech
+              stacks. I am a good quick self learner who always learn new
+              technologies and applying them for my projects.
             </p>
           </div>
         </motion.main>
