@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 import Particles from "@/components/particles/ParticleDesign";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const socials = [
   {
@@ -41,6 +43,19 @@ export default function Page() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [userMessage, setUserMessage] = useState("");
+
+  const handleTextClick = (text: any) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log("Text copied to clipboard!");
+        toast.success("Text copied to clipboard!");
+      })
+      .catch((err) => {
+        toast.error("Failed to copy text!");
+        console.error("Could not copy text: ", err);
+      });
+  };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -120,7 +135,11 @@ export default function Page() {
               through the following social media platforms or send me an email
               directly.I will get back to you as soon as possible. My Email
               address is{" "}
-              <span className="text-gold cursor-pointer">
+              <span
+                className="text-gold cursor-pointer"
+                onClick={() => handleTextClick("kasunu2001@gmail.com")}
+                title="Click to copy email address"
+              >
                 kasunu2001@gmail.com
               </span>{" "}
               Thank you!
@@ -220,6 +239,17 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }

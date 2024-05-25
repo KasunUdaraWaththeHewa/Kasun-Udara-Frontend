@@ -4,6 +4,8 @@ import Particles from "@/components/particles/ParticleDesign";
 import logo from "../../../public/logo.jpeg";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const tileVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -11,6 +13,18 @@ const tileVariants = {
 };
 
 export default function Page() {
+  const handleTextClick = (text: any) => {
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        console.log("Text copied to clipboard!");
+        toast.success("Text copied to clipboard!");
+      })
+      .catch((err) => {
+        toast.error("Failed to copy text!");
+        console.error("Could not copy text: ", err);
+      });
+  };
   return (
     <>
       <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
@@ -91,7 +105,11 @@ export default function Page() {
                 </div>
                 <div className="w-full flex flex-row justify-center items-center mt-1 text-white hover:text-gold cursor-pointer">
                   <i className="bx bxl-gmail mt-1"></i>
-                  <h3 className="ml-4 text-sm text-left md:w-full">
+                  <h3
+                    className="ml-4 text-sm text-left md:w-full"
+                    onClick={() => handleTextClick("kasunu2001@gmail.com")}
+                    title="Click to copy email address"
+                  >
                     kasunu2001@gmail.com
                   </h3>
                 </div>
@@ -125,6 +143,17 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </>
   );
 }
