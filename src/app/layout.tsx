@@ -11,7 +11,7 @@ export const metadata = {
   title: "Kasun Udara",
   description:
     "Kasun Udara is a computer science undergraduate at University of Colombo School of Computing, Sri Lanka. He is a Software Engineer, Web Developer, Mobile App Developer, Backend Developer, Frontend Developer, FullStack Developer, Machine Learning Enthusiast, Tech Enthusiast, Freelancer.",
-  ogImage: "./favicon.ico",
+  ogImage: "./logo.jpeg",
 };
 
 interface RootLayoutProps {
