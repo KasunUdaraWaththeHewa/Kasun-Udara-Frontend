@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/sidebar";
-import Head from 'next/head';
+// import Head from 'next/head';
 import logo from "./favicon.ico";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,7 +21,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <head>
         <title>{metadata.title}</title>
+        <meta name="title" content="Kasunudara.me" />
+        <meta name="description" content="Official Portfolio site from Kasun Udara" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.kasunudara.me/" />
+        <meta property="og:title" content="Kasunudara.me" />
+        <meta property="og:description" content="Official Portfolio site from Kasun Udara" />
+        <meta property="og:image" content="./favicon.ico" />
         <meta name="description" content={metadata.description} />
+        
         <link rel="icon" href={logo.src} />
       </head>
       <body className={`flex ${inter.className}`}>
