@@ -27,7 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta property="og:url" content="https://www.kasunudara.me/" />
         <meta property="og:title" content="Kasunudara.me" />
         <meta property="og:description" content="Official Portfolio site from Kasun Udara" />
-        <meta property="og:image" content="./favicon.ico" />
+        <meta property="og:image" content=".//logo.jpeg" />
         <meta name="description" content={metadata.description} />
         
         <link rel="icon" href={logo.src} />
