@@ -9,7 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Kasun Udara",
-  description: "Official Portfolio of Kasun Udara",
+  description:
+    "Kasun Udara is a computer science undergraduate at University of Colombo School of Computing, Sri Lanka. He is a Software Engineer, Web Developer, Mobile App Developer, Backend Developer, Frontend Developer, FullStack Developer, Machine Learning Enthusiast, Tech Enthusiast, Freelancer.",
+  ogImage: "./favicon.ico",
 };
 
 interface RootLayoutProps {
@@ -21,24 +23,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <head>
         <title>{metadata.title}</title>
-        <meta name="title" content="Kasunudara.me" />
-        <meta
-          name="description"
-          content="Kasun Udara is a computer science undergraduate at
-              University of Colombo School of Computing, Sri Lanka. He is a Software Engineer, Web Developer, Mobile App
-              Developer, Backend Developer, Frontend Developer, FullStack
-              Developer, Machine Learning Enthusiast, Tech Enthusiast,
-              Freelancer."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.kasunudara.me/" />
-        <meta property="og:title" content="Kasunudara.me" />
-        <meta
-          property="og:description"
-          content="Official Portfolio site from Kasun Udara"
-        />
-        <meta property="og:image" content="https://www.kasunudara.me/public/logo.jpeg" />
         <meta name="description" content={metadata.description} />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content={metadata.ogImage} />
 
         <link rel="icon" href={logo.src} />
       </head>
