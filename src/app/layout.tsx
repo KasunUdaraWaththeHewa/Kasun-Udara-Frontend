@@ -8,10 +8,13 @@ import logo from "./favicon.ico";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Kasun Udara",
-  description:
-    "Kasun Udara is a computer science undergraduate at University of Colombo School of Computing, Sri Lanka. He is a Software Engineer, Web Developer, Mobile App Developer, Backend Developer, Frontend Developer, FullStack Developer, Machine Learning Enthusiast, Tech Enthusiast, Freelancer.",
-  ogImage: "./logo.jpeg",
+  title: {
+    default: "Kasun Udara",
+  },
+  description: {
+    default:
+      "A computer science undergraduate at University of Colombo School of Computing. I am also the founder at our startup IgniteX.",
+  },
 };
 
 interface RootLayoutProps {
@@ -22,12 +25,13 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
-        <meta property="og:image" content={metadata.ogImage} />
-
+        <title>{metadata.title.default}</title>
+        <meta name="description" content={metadata.description.default} />
+        <meta property="og:title" content={metadata.title.default} />
+        <meta
+          property="og:description"
+          content={metadata.description.default}
+        />
         <link rel="icon" href={logo.src} />
       </head>
       <body className={`flex ${inter.className}`}>
