@@ -4,8 +4,6 @@ import emailjs from "@emailjs/browser";
 import Particles from "@/components/particles/ParticleDesign";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const socials = [
   {
@@ -48,11 +46,13 @@ export default function Page() {
     navigator.clipboard
       .writeText(text)
       .then(() => {
+        setMessage("Email address copied to clipboard!");
+        setIsError(false);
         console.log("Text copied to clipboard!");
-        toast.success("Text copied to clipboard!");
       })
       .catch((err) => {
-        toast.error("Failed to copy text!");
+        setMessage("Failed to copy email address. Please try again later.");
+        setIsError(true);
         console.error("Could not copy text: ", err);
       });
   };
@@ -239,17 +239,6 @@ export default function Page() {
           </div>
         </motion.div>
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </>
   );
 }

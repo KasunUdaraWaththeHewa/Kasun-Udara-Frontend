@@ -1,11 +1,10 @@
 "use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import logo from "../../../public/logo.jpeg";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const tileVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -13,16 +12,21 @@ const tileVariants = {
 };
 
 export default function Page() {
+  const [message, setMessage] = useState<string | null>(null);
+  const [isError, setIsError] = useState(false);
+
   const handleTextClick = (text: any) => {
     navigator.clipboard
       .writeText(text)
       .then(() => {
         console.log("Text copied to clipboard!");
-        toast.success("Text copied to clipboard!");
+        setMessage("Email address copied to clipboard!");
+        setIsError(false);
       })
       .catch((err) => {
-        toast.error("Failed to copy text!");
         console.error("Could not copy text: ", err);
+        setMessage("Failed to copy email address. Please try again later.");
+        setIsError(true);
       });
   };
   return (
@@ -142,18 +146,16 @@ export default function Page() {
             </div>
           </div>
         </motion.div>
+        {message && (
+          <p
+            className={`mt-4 text-sm ${
+              isError ? "text-red-500" : "text-green-500"
+            }`}
+          >
+            {message}
+          </p>
+        )}
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </>
   );
 }
