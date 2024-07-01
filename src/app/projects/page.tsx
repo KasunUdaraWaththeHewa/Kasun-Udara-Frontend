@@ -52,7 +52,7 @@ const projects = [
   {
     title: "Finforecast",
     description:
-      "A web based application for Stock Based Analyzing and Prediction tasks for Colombo Stock Exchange",
+      "An application for Stocks Analyzing and Predictions for CSE",
     techStack: "Python Django React",
     image: Finforecast,
     link: "https://fin-forecast-frontend.vercel.app",
