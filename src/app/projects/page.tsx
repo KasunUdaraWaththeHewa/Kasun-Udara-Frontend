@@ -53,7 +53,7 @@ const projects = [
     title: "Finforecast",
     description:
       "An application for Stocks Analyzing and Predictions for CSE",
-    techStack: "Python Django React",
+    techStack: "Python FastAPI React Vite Typescript",
     image: Finforecast,
     link: "https://fin-forecast-frontend.vercel.app",
   },
