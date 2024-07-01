@@ -9,6 +9,7 @@ import CodefestAlgothon2022 from "../../../public/assests/competitions/CodeFest 
 import pyHack2 from "../../../public/assests/competitions/PyHack 2.0.png";
 import HackX2023 from "../../../public/assests/competitions/HackX2023.jpg";
 import Devthon from "../../../public/assests/competitions/Devthon 1.0.jpeg";
+import Codesprint from "../../../public/assests/competitions/codesprint.jpg";
 
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
@@ -70,6 +71,13 @@ const competitions = [
     image: Devthon,
     places: "Semi Finalist (Sri Lanka)",
   },
+  {
+    title: "Codesprint 8",
+    description:
+      "Codesprint is a Startup competition organized by the IEEE at IIT.",
+      "image":Codesprint,
+    places: "Finalist (Sri Lanka) - from over 525 teams",
+  }
 ];
 
 const tileVariants = {

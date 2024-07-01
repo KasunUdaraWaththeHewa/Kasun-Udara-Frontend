@@ -28,7 +28,7 @@ export default function SideBar() {
   }, [pathname]);
 
   return (
-    <div className="w-full h-screen bg-gradient-to-br from-black to-darkgreen text-gold flex flex-col items-center py-4">
+    <div className="w-full h-screen bg-black text-gold flex flex-col items-center py-4">
       <div className="hidden md:block w-full m-4 text-2xl font-bold flex flex-row pl-10 items-center justify-center">
         <div className="w-1/2 h-auto flex justify-center items-center cursor-pointer">
           <Link href="/" className="flex flex-col justify-center items-center">

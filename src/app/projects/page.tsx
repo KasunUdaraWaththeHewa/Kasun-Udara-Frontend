@@ -11,6 +11,7 @@ import noiportal from "../../../public/assests/projects/NOI Portal.png";
 import kasunudarame from "../../../public/assests/projects/kasunudara.me.png";
 import readConnect from "../../../public/assests/projects/readconnect.png";
 import kiddieED from "../../../public/assests/projects/kiddieED.png";
+import Finforecast from "../../../public/assests/projects/Finforecast.png";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
@@ -49,6 +50,14 @@ const projects = [
     link: "https://github.com/IgniteX-SL/Read-Connect",
   },
   {
+    title: "Finforecast",
+    description:
+      "A web based application for Stock Based Analyzing and Prediction tasks for Colombo Stock Exchange",
+    techStack: "Python Django React",
+    image: Finforecast,
+    link: "https://fin-forecast-frontend.vercel.app",
+  },
+  {
     title: "Kiddie ED Backend",
     description:
       "Backend for the Kiddie ED project which is a Kindergarten platform.",
@@ -85,7 +94,7 @@ const projects = [
     title: "kasunudara.me",
     description:
       "My personal portfolio website to show my projects, skills, certifications and services.",
-    techStack: "NextJS MongoDB Typescript Tailwind",
+    techStack: "NextJS Typescript Tailwind",
     image: kasunudarame,
     link: "https://github.com/KasunUdaraWaththeHewa/Kasun-Udara-Frontend",
   },
