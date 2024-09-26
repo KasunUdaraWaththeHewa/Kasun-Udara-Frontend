@@ -2,6 +2,9 @@
 import Image from "next/image";
 import Particles from "@/components/particles/ParticleDesign";
 import projectOne from "../../../public/assests/projects/project1.png";
+import LoneSurvivor from "../../../public/assests/projects/loneSurvivor.png";
+import Thahawuru from "../../../public/assests/projects/thahawuru.png";
+import SriTel from "../../../public/assests/projects/SriTelCustomerCare.png";
 import Akahub from "../../../public/assests/projects/Akahub.png";
 import StaySafeQuarantineCenter from "../../../public/assests/projects/Stay Safe Quarantine Center.png";
 import Hackathonslk from "../../../public/assests/projects/HackAthonslk.jpeg";
@@ -18,12 +21,37 @@ import { Typewriter } from "react-simple-typewriter";
 
 const projects = [
   {
+    title: "Thahawuru",
+    description:
+      "Blockchain based Digital Idenntity Verification System for Sri Lankan Citizens.",
+    techStack:
+      "NodeJS Express Springboot Nextjs Solidity Hardhat PostgreSQL Typescript Tailwind",
+    image: Thahawuru,
+    link: "https://github.com/orgs/Thahawuru/repositories",
+  },
+  {
     title: "ඇක Hub",
     description:
       "Student Collaborative and Connectivity platform for UCSC Students.",
     techStack: "PHP MySQL HTML CSS JS JQuery ",
     image: Akahub,
     link: "https://github.com/SaliyaBandara/aka-hub",
+  },
+  {
+    title: "Sri Tel - Customer Care System",
+    description:
+      "A Customer Care System for Sri Lanka Telecom using Microservice Architecture.",
+    techStack: "NodeJS Express MongoDB Springboot Go",
+    image: SriTel,
+    link: "https://github.com/KasunUdaraWaththeHewa/Sri-Tel-Customer-Care-Web-Portal-Backend",
+  },
+  {
+    title: "Lone Survivor",
+    description:
+      "Unity based 3D Survial Game developed for a University Project.",
+    techStack: "Unity C# Flooded Grounds",
+    image: LoneSurvivor,
+    link: "https://drive.google.com/drive/folders/1B9etWNldeIgbi0SmDnGhQVfKw9d1FYv2?usp=sharing",
   },
   {
     title: "Stay Safe Quarantine Center",
@@ -51,8 +79,7 @@ const projects = [
   },
   {
     title: "Finforecast",
-    description:
-      "An application for Stocks Analyzing and Predictions for CSE",
+    description: "An application for Stocks Analyzing and Predictions for CSE",
     techStack: "Python FastAPI React Vite Typescript",
     image: Finforecast,
     link: "https://fin-forecast-frontend.vercel.app",
