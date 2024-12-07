@@ -10,6 +10,7 @@ import pyHack2 from "../../../public/assests/competitions/PyHack 2.0.png";
 import HackX2023 from "../../../public/assests/competitions/HackX2023.jpg";
 import Devthon from "../../../public/assests/competitions/Devthon 1.0.jpeg";
 import Codesprint from "../../../public/assests/competitions/codesprint.jpg";
+import HackTheBoo2024 from "../../../public/assests/competitions/HackTheBoo 2024.png";
 
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
@@ -21,6 +22,13 @@ const competitions = [
       "Hack The Box UniCTF 2023 is a Capture The Flag competition organized by Hack The Box.",
     image: HackTheBoxUniCTF2023,
     places: "101st Place (Worldwide) , 1st Place (Sri Lanka)",
+  },
+  {
+    title: " Hack The Boo 2024",
+    description:
+      "Hack The Boo 2024 is a Capture The Flag competition organized by Hack The Box.",
+    image: HackTheBoo2024,
+    places: "109 th place from 6349 teams.",
   },
   {
     title: "IEEE Xtreme 17.0",

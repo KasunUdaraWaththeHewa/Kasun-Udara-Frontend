@@ -21,8 +21,8 @@ export default function Home() {
               </b>
             </h1>
             <p className="text-right text-white w-full text-sm pl-4 md:pl-0">
-              A computer science undergraduate at University of Colombo School
-              of Computing. I am also the founder at our startup IgniteX , Software Engineer at IntendAble.
+              A Computer Science Undergraduate at University of Colombo School
+              of Computing, Intern Software Engineer at Xeptagon.
             </p>
             <div className="sm:text-1xl md:text-2xl text-right text-gold w-full">
               <b>

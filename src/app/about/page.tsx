@@ -66,8 +66,7 @@ export default function Page() {
               Developer, Machine Learning Enthusiast, Tech Enthusiast,
               Freelancer. I am currently a computer science undergraduate at
               University of Colombo School of Computing. I went to Dharmasoka
-              College Ambalangoda. I am also the founder at our startup IgniteX
-              , software engineer at IntendAble.
+              College Ambalangoda. I am an Intern Software Engineer at Xeptagon.
             </p>
           </div>
         </motion.main>
