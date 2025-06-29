@@ -105,7 +105,7 @@ export default function Page() {
           </h1>
           <p className="text-white text-sm md:text-base w-full md:w-3/4 text-center mt-4">
             I specialize in a range of services across web and app development,
-            machine learning, and UI/UX design. Here's a snapshot of what I can
+            machine learning, and UI/UX design. Here`s a snapshot of what I can
             offer.
           </p>
         </div>

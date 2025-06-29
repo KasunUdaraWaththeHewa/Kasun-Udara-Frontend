@@ -143,7 +143,7 @@ export default function Page() {
             />
           </h1>
           <p className="text-white mt-4 text-sm md:text-base">
-            I have a confident understanding of these languages and tech stacks. I'm a fast, self-motivated learner who embraces new technologies and applies them in projects.
+            I have a confident understanding of these languages and tech stacks. I`m a fast, self-motivated learner who embraces new technologies and applies them in projects.
           </p>
         </div>
 

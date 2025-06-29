@@ -119,7 +119,7 @@ export default function Page() {
         </h1>
         <p className="text-white text-sm md:text-base text-center max-w-2xl mt-4 mb-10 px-4">
           I have actively participated in national and international hackathons,
-          coding competitions, and CTFs. Here's a glimpse of my journey and
+          coding competitions, and CTFs. Here`s a glimpse of my journey and
           achievements.
         </p>
       </motion.main>

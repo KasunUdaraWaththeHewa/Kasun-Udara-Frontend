@@ -74,7 +74,7 @@ export default function ContactPage() {
       >
         <h1 className="text-3xl md:text-5xl font-extrabold text-pink">
           <Typewriter
-            words={["Contact Me", "Let's Connect", "Send a Message"]}
+            words={["Contact Me", "Let`s Connect", "Send a Message"]}
             loop={0}
             cursor
             cursorStyle="|"

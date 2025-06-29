@@ -84,7 +84,7 @@ export default function Page() {
               Waththe Hewa Kasun Udara
             </h2>
             <p className="text-sm text-white/90 leading-relaxed">
-              I'm a Full-stack Developer and Java Developer with a strong
+              I`m a Full-stack Developer and Java Developer with a strong
               foundation in frontend, backend, and mobile app development. I
               love solving problems, learning emerging technologies, and
               delivering scalable solutions to real-world challenges.
@@ -118,7 +118,7 @@ export default function Page() {
         <p>
           My tech stack includes React, Node.js, Express, MongoDB, MySQL, PHP,
           Spring Boot, Java, Python, FastAPI, C++, and mobile frameworks like
-          Flutter and React Native. I'm currently exploring the integration of
+          Flutter and React Native. I`m currently exploring the integration of
           Machine Learning and Blockchain into full-stack systems.
         </p>
       </div>

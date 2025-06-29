@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import SideBar from "@/components/sidebar";
-// import Head from 'next/head';
+// import Head from `next/head`;
 import logo from "./favicon.ico";
 
 const inter = Inter({ subsets: ["latin"] });
