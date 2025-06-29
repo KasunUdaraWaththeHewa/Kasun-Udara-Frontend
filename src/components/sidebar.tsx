@@ -44,7 +44,7 @@ export default function SideBar() {
       <button
         aria-label="Toggle sidebar"
         onClick={() => setSidebarOpen((prev) => !prev)}
-        className="fixed top-5 left-5 z-60 md:hidden w-10 h-10 p-1 rounded-md text-gold shadow-lg flex items-center justify-center focus:outline-none"
+        className="fixed top-5 left-5 z-60 md:hidden w-10 h-10 p-1 rounded-md text-pink shadow-lg flex items-center justify-center focus:outline-none"
       >
         <i className={`bx ${sidebarOpen ? "bx-x" : "bx-menu"} text-3xl`}></i>
       </button>
@@ -52,7 +52,7 @@ export default function SideBar() {
       {/* Sidebar */}
       <aside
         className={`
-          fixed top-0 left-0 h-screen bg-black text-gold shadow-xl flex flex-col items-center py-8
+          fixed top-0 left-0 h-screen bg-black text-pink shadow-xl flex flex-col items-center py-8
           w-32 md:w-32
           transform md:transform-none
           transition-transform duration-300 ease-in-out z-50
@@ -90,7 +90,7 @@ export default function SideBar() {
                   ${
                     active === link
                       ? "text-[#ffffff]"
-                      : "text-gold hover:text-white"
+                      : "text-pink hover:text-white"
                   }
                 `}
               >
@@ -98,7 +98,7 @@ export default function SideBar() {
               </div>
 
               {/* Tooltip - above icon */}
-              <span className="absolute bottom-full mb-2 px-2 py-1 rounded bg-gold text-black text-xs font-semibold opacity-0 group-hover:opacity-100 pointer-events-none select-none whitespace-nowrap transition-opacity">
+              <span className="absolute bottom-full mb-2 px-2 py-1 rounded bg-pink text-black text-xs font-semibold opacity-0 group-hover:opacity-100 pointer-events-none select-none whitespace-nowrap transition-opacity">
                 {label}
               </span>
             </Link>

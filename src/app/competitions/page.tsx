@@ -95,7 +95,7 @@ const tileVariants = {
 
 export default function Page() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold py-10">
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkPink text-pink py-10">
       <Particles />
       <motion.main
         initial={{ opacity: 0, y: 40 }}
@@ -144,9 +144,9 @@ export default function Page() {
               />
             </div>
             <div className="mt-4">
-              <h2 className="text-lg font-semibold text-gold">{comp.title}</h2>
+              <h2 className="text-lg font-semibold text-pink">{comp.title}</h2>
               <p className="text-sm mt-1 text-gray-200">{comp.description}</p>
-              <p className="mt-2 text-sm text-gold font-semibold">
+              <p className="mt-2 text-sm text-pink font-semibold">
                 {comp.places}
               </p>
             </div>

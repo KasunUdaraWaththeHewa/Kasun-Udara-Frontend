@@ -81,7 +81,7 @@ function ServiceCard({
 // Page
 export default function Page() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-8">
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkPink text-pink flex flex-col items-center py-8">
       <Particles />
 
       <motion.main

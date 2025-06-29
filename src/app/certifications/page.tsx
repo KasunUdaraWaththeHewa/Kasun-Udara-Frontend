@@ -122,7 +122,7 @@ const tileVariants = {
 
 export default function Page() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold py-16 px-4">
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkPink text-pink py-16 px-4">
       <Particles />
 
       <motion.main
@@ -191,7 +191,7 @@ export default function Page() {
           href="https://www.linkedin.com/in/w-h-kasun-udara/details/certifications/"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline text-gold hover:text-white"
+          className="underline text-pink hover:text-white"
         >
           LinkedIn
         </a>{" "}
@@ -200,7 +200,7 @@ export default function Page() {
           href="https://github.com/KasunUdaraWaththeHewa/My-Certificates-in-IT"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline text-gold hover:text-white"
+          className="underline text-pink hover:text-white"
         >
           GitHub
         </a>{" "}

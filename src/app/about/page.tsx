@@ -30,7 +30,7 @@ export default function Page() {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkMaroon text-white relative py-10 px-4">
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkPink text-white relative py-10 px-4">
       <Particles />
 
       <motion.div
@@ -39,7 +39,7 @@ export default function Page() {
         transition={{ duration: 0.6 }}
         className="max-w-4xl mx-auto text-center space-y-6"
       >
-        <h1 className="text-3xl md:text-5xl font-extrabold text-gold">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-pink">
           <Typewriter
             words={[
               "About Me",
@@ -80,7 +80,7 @@ export default function Page() {
             className="rounded-full shadow-md"
           />
           <div className="flex-1 space-y-2">
-            <h2 className="text-xl font-bold text-gold">
+            <h2 className="text-xl font-bold text-pink">
               Waththe Hewa Kasun Udara
             </h2>
             <p className="text-sm text-white/90 leading-relaxed">
@@ -91,15 +91,15 @@ export default function Page() {
             </p>
 
             <div className="flex items-center gap-3 text-sm text-white/80 mt-2">
-              <i className="bx bx-location-plus text-lg text-gold" />
+              <i className="bx bx-location-plus text-lg text-pink" />
               <span>Ambalangoda, Sri Lanka</span>
             </div>
             <div
-              className="flex items-center gap-3 text-sm text-white/80 cursor-pointer hover:text-gold transition"
+              className="flex items-center gap-3 text-sm text-white/80 cursor-pointer hover:text-pink transition"
               onClick={() => handleTextClick("kasunu2001@gmail.com")}
               title="Click to copy email"
             >
-              <i className="bx bxl-gmail text-lg text-gold" />
+              <i className="bx bxl-gmail text-lg text-pink" />
               <span>kasunu2001@gmail.com</span>
             </div>
           </div>
@@ -108,7 +108,7 @@ export default function Page() {
 
       <div className="mt-10 max-w-4xl mx-auto space-y-6 text-sm text-white/90 leading-relaxed text-justify">
         <p>
-          As the <span className="text-gold">Web Master</span> of UCSC ACM, I’ve
+          As the <span className="text-pink">Web Master</span> of UCSC ACM, I’ve
           taken lead in managing web infrastructure and supporting event
           promotion and marketing strategies. My contributions also span
           logistics, programming, and finance roles, helping deliver impactful

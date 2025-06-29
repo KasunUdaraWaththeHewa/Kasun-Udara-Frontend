@@ -88,7 +88,7 @@ type TechCategoryProps = {
 
 const TechCategory = ({ title, stack }: TechCategoryProps) => (
   <div className="w-full max-w-6xl px-6 py-6">
-    <h2 className="text-xl font-semibold text-white mb-4 border-b border-gold pb-2">
+    <h2 className="text-xl font-semibold text-white mb-4 border-b border-pink pb-2">
       {title}
     </h2>
     <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
@@ -98,7 +98,7 @@ const TechCategory = ({ title, stack }: TechCategoryProps) => (
           variants={tileVariants}
           initial="hidden"
           animate="visible"
-          className="flex flex-col items-center justify-center bg-white/5 rounded-xl p-3 hover:bg-gold hover:text-black transition-all duration-300"
+          className="flex flex-col items-center justify-center bg-white/5 rounded-xl p-3 hover:bg-pink hover:text-black transition-all duration-300"
         >
           <Image
             src={tech.logo}
@@ -117,7 +117,7 @@ const TechCategory = ({ title, stack }: TechCategoryProps) => (
 
 export default function Page() {
   return (
-    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold py-10">
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkPink text-pink py-10">
       <Particles />
       <motion.main
         initial={{ opacity: 0, y: 50 }}

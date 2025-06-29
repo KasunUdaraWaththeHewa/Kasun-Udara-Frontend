@@ -65,14 +65,14 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-black to-darkMaroon text-gold py-20 px-6 min-h-screen">
+    <div className="relative bg-gradient-to-br from-black to-darkPink text-pink py-20 px-6 min-h-screen">
       <Particles />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         className="text-center mb-12"
       >
-        <h1 className="text-3xl md:text-5xl font-extrabold text-gold">
+        <h1 className="text-3xl md:text-5xl font-extrabold text-pink">
           <Typewriter
             words={["Contact Me", "Let's Connect", "Send a Message"]}
             loop={0}
@@ -121,7 +121,7 @@ export default function ContactPage() {
           />
           <button
             type="submit"
-            className="w-full py-2 rounded bg-gold text-black hover:bg-lightMaroon transition"
+            className="w-full py-2 rounded bg-pink text-black hover:bg-lightPink transition"
           >
             Send Message
           </button>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gold/10 hover:text-gold transition duration-300"
+                  className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-pink/10 hover:text-pink transition duration-300"
                 >
                   <i className={`bx ${social.logo} text-2xl`}></i>
                   <span className="text-base">{social.name}</span>
@@ -159,7 +159,7 @@ export default function ContactPage() {
             <p>
               Or reach out via email:{" "}
               <span
-                className="text-gold underline cursor-pointer hover:text-gold/80 transition"
+                className="text-pink underline cursor-pointer hover:text-pink/80 transition"
                 onClick={() =>
                   navigator.clipboard.writeText("kasunu2001@gmail.com")
                 }

@@ -134,7 +134,7 @@ const tileVariants = {
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold py-10 px-6 md:px-20 flex flex-col items-center">
+    <div className="min-h-screen bg-gradient-to-br from-black to-darkPink text-pink py-10 px-6 md:px-20 flex flex-col items-center">
       <Particles />
 
       <motion.main
@@ -191,13 +191,13 @@ export default function Page() {
                 />
               </div>
               <div className="mt-4 flex flex-col flex-grow">
-                <h2 className="text-lg font-semibold text-gold line-clamp-1 text-center">
+                <h2 className="text-lg font-semibold text-pink line-clamp-1 text-center">
                   {project.title}
                 </h2>
                 <p className="text-sm mt-1 text-gray-200 line-clamp-3 flex-grow">
                   {project.description}
                 </p>
-                <p className="mt-2 text-xs font-mono text-gold tracking-wide select-text text-center">
+                <p className="mt-2 text-xs font-mono text-pink tracking-wide select-text text-center">
                   {project.techStack}
                 </p>
               </div>

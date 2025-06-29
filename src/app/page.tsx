@@ -6,13 +6,13 @@ import profileImage from "./logo.jpeg";
 
 export default function Home() {
   return (
-    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-black to-darkMaroon text-gold px-6 pt-20 md:pt-0 relative overflow-hidden">
+    <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-black to-darkPink text-pink px-6 pt-20 md:pt-0 relative overflow-hidden">
       <Particles />
 
       <main className="w-full max-w-6xl flex flex-col-reverse md:flex-row justify-center items-center gap-10 relative z-20">
         {/* Text Content */}
         <section className="w-full md:w-1/2 flex flex-col justify-center items-start space-y-6 px-4 md:px-10">
-          <h1 className="text-5xl md:text-6xl font-extrabold text-gold leading-tight tracking-wide">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-pink leading-tight tracking-wide">
             Kasun Udara
           </h1>
 
@@ -21,7 +21,7 @@ export default function Home() {
             Computing, Software Engineer at Xeptagon.
           </p>
 
-          <div className="text-2xl md:text-3xl font-semibold text-gold h-12 md:h-14">
+          <div className="text-2xl md:text-3xl font-semibold text-pink h-12 md:h-14">
             <Typewriter
               words={[
                 "Software Engineer",
@@ -49,7 +49,7 @@ export default function Home() {
             href="https://drive.google.com/drive/folders/10xjKzVYgEHbfke_43dqWDfJW2NUZg_-H?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-lightMaroon text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black hover:shadow-lg transition duration-300 ease-in-out"
+            className="inline-block bg-lightPink text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black hover:shadow-lg transition duration-300 ease-in-out"
           >
             Download CV
           </a>
