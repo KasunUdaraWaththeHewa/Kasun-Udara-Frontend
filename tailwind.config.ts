@@ -25,8 +25,8 @@ const config: Config = {
           foreground: "#000000",
         },
         darkMaroon:{
-          DEFAULT: "#220901",
-          foreground: "#220901",
+          DEFAULT: "#050505",
+          foreground: "#090909",
         },
         lightMaroon:{
           DEFAULT: "#621708",

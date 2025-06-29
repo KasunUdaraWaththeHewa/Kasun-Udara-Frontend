@@ -36,3 +36,35 @@ body {
   -webkit-text-stroke: 1px #220901;
   color: white;
 }
+
+.blob-mask {
+  clip-path: polygon(
+    60% 10%,
+    80% 20%,
+    90% 40%,
+    85% 65%,
+    70% 85%,
+    50% 95%,
+    30% 90%,
+    15% 75%,
+    5% 55%,
+    10% 35%,
+    25% 20%,
+    45% 10%
+  );
+  transition: clip-path 0.3s ease-in-out;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}

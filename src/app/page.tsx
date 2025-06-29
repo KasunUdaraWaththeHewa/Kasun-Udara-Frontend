@@ -1,18 +1,19 @@
 "use client";
 import Particles from "@/components/particles/ParticleDesign";
 import { Typewriter } from "react-simple-typewriter";
-import SP from "@/components/spline";
+import Image from "next/image";
+import profileImage from "./logo.jpeg";
 
 export default function Home() {
   return (
     <>
-      <div className="w-full h-screen flex flex-col justify-center items-center bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center">
+      <div className="min-h-screen w-full flex flex-col justify-center items-center bg-gradient-to-br from-black to-darkMaroon text-gold px-4 pt-20 md:pt-0">
         <Particles />
         <div
-          className="w-full h-full flex flex-col md:flex-row justift-center items-center relative"
+          className="w-full h-full flex flex-col-reverse md:flex-row justift-center items-center relative"
           style={{ zIndex: 21 }}
         >
-          <div className="w-full md:w-1/3 flex flex-col justify-center items-center absolute top-[100px] md:relative md:top-auto">
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-start text-left space-y-4 px-4 md:px-10 mb-10 md:mb-0">
             <h1 className="text-right text-white w-full">
               <b>
                 <span className="text-4xl md:text-6xl text-outline">
@@ -22,7 +23,7 @@ export default function Home() {
             </h1>
             <p className="text-right text-white w-full text-sm pl-4 md:pl-0">
               A Computer Science Undergraduate at University of Colombo School
-              of Computing, Intern Software Engineer at Xeptagon.
+              of Computing, Software Engineer at Xeptagon.
             </p>
             <div className="sm:text-1xl md:text-2xl text-right text-gold w-full">
               <b>
@@ -60,8 +61,19 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="w-full md:w-2/3 h-full flex flex-col justify-center items-center cursor-pointer">
-            <SP />
+          <div className="w-full md:w-2/3 h-full flex flex-col justify-center items-center cursor-pointer group mb-10 md:mb-0">
+            <div className="relative w-64 h-64 md:w-96 md:h-96 flex items-center justify-center animate-float">
+              <div className="absolute inset-0 bg-gradient-to-br from-black-300 via-purple-300 to-gray-300 rounded-3xl blur-xl opacity-30 z-0" />
+              <div className="w-full h-full overflow-hidden shadow-2xl rounded-[2rem] backdrop-blur-lg transition-transform duration-300 ease-in-out group-hover:scale-[1.03] z-10">
+                <Image
+                  src={profileImage}
+                  alt="Profile Image"
+                  width={250}
+                  height={250}
+                  className="object-contain w-full h-full blob-mask"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
