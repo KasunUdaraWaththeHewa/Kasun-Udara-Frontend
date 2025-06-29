@@ -128,86 +128,83 @@ const projects = [
 ];
 
 const tileVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
 
 export default function Page() {
   return (
-    <>
-      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
-        <Particles />
-        <motion.main
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-auto flex flex-col justify-center items-center"
-        >
-          <div className="mt-12 w-full  flex flex-col justify-center items-center">
-            <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
-              <b>
-                <Typewriter
-                  words={[
-                    "Projects and Contributions",
-                    "What I have Worked on",
-                  ]}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </b>
-            </h1>
-            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
-              I have worked on several projects and have contributed to several
-              open source projects. Here are some of the projects I have worked
-              on and contributed to. You can find more on my GitHub profile.
-            </p>
-          </div>
-        </motion.main>
-        <div className="grid grid-rows-1 md:grid-cols-5 gap-4 mt-4 p-4">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              variants={tileVariants}
-              initial="hidden"
-              animate="visible"
-              className="w-full"
+    <div className="min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold py-10 px-6 md:px-20 flex flex-col items-center">
+      <Particles />
+
+      <motion.main
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-7xl w-full flex flex-col items-center mb-12"
+      >
+        <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-4 tracking-wide">
+          <Typewriter
+            words={["Projects and Contributions", "What I have Worked on"]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1200}
+          />
+        </h1>
+        <p className="max-w-4xl text-center text-base md:text-lg text-gray-300 leading-relaxed">
+          I have worked on several projects and contributed to many open source projects.
+          Below are some highlights. Feel free to explore more on my GitHub profile.
+        </p>
+      </motion.main>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 w-full max-w-7xl">
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.title}
+            variants={tileVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 cursor-pointer shadow-lg flex flex-col"
+          >
+            <Link
+              href={project.link || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit project ${project.title}`}
+              className="flex flex-col h-full"
             >
-              <Link
-                style={{ zIndex: 21 }}
-                key={index}
-                href={project.link}
-                passHref
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:cursor-pointer hover:scale-105 transition transform transition duration-500 ease-in-out shadow-lg hover:shadow-xl rounded-lg"
-              >
-                <div className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white flex flex-col justify-center items-center">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={200}
-                    height={200}
-                  />
-                  <h2 className="text-sm mt-2 text-center">
-                    <b>{project.title}</b>
-                  </h2>
-                  <p className="mt-2 text-xs text-center">
-                    {project.description}
-                  </p>
-                  <p className="mt-2 text-xs text-center">
-                    <b>{project.techStack}</b>
-                  </p>
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </div>
+              <div className="relative w-full h-40 md:h-44 rounded-xl overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={`Screenshot of ${project.title}`}
+                  fill
+                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 20vw"
+                  priority={index < 6}
+                  className="rounded-xl"
+                />
+              </div>
+              <div className="mt-4 flex flex-col flex-grow">
+                <h2 className="text-lg font-semibold text-gold line-clamp-1 text-center">
+                  {project.title}
+                </h2>
+                <p className="text-sm mt-1 text-gray-200 line-clamp-3 flex-grow">
+                  {project.description}
+                </p>
+                <p className="mt-2 text-xs font-mono text-gold tracking-wide select-text text-center">
+                  {project.techStack}
+                </p>
+              </div>
+            </Link>
+          </motion.div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }

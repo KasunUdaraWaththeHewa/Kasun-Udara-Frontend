@@ -35,306 +35,124 @@ import Vite from "../../../public/assests/techlogo/vite.png";
 import Docker from "../../../public/assests/techlogo/docker.png";
 import Kubernetes from "../../../public/assests/techlogo/kubernetes.webp";
 
-const FrontendDevelopment = [
-  {
-    name: "HTML",
-    logo: html,
-  },
-  {
-    name: "CSS",
-    logo: css,
-  },
-  {
-    name: "JavaScript",
-    logo: js,
-  },
-  {
-    name: "TypeScript",
-    logo: ts,
-  },
-  {
-    name: "React",
-    logo: react,
-  },
-  {
-    name: "NextJS",
-    logo: nextjs,
-  },
-  {
-    name: "Bootstrap",
-    logo: Bootsrap,
-  },
-  {
-    name: "TailwindCSS",
-    logo: Tailwind,
-  },
-  {
-    name: "Vite",
-    logo: Vite,
-  },
-];
-
-const BackendDevelopment = [
-  {
-    name: "NodeJS",
-    logo: node,
-  },
-  {
-    name: "ExpressJS",
-    logo: express,
-  },
-  {
-    name: "Java",
-    logo: java,
-  },
-  {
-    name: "Spring Boot",
-    logo: spring,
-  },
-  {
-    name: "Python",
-    logo: python,
-  },
-  {
-    name: "FastAPI",
-    logo: fastAPI,
-  },
-  {
-    name: "PHP",
-    logo: PHP,
-  },
-  {
-    name: "C",
-    logo: C,
-  },
-  {
-    name: "C++",
-    logo: Cpp,
-  },
-];
-
-const MobileDevelopment = [
-  {
-    name: "React Native",
-    logo: reactnative,
-  },
-  {
-    name: "Flutter",
-    logo: flutter,
-  },
-  {
-    name: "Firebase",
-    logo: Firebase,
-  },
-  {
-    name: "MySQL",
-    logo: MySQL,
-  },
-  {
-    name: "MongoDB",
-    logo: MongoDB,
-  },
-  {
-    name: "PostgreSQL",
-    logo: PostgreSQL,
-  },
-];
-
-const DevOps = [
-  {
-    name: "AWS",
-    logo: AWS,
-  },
-  {
-    name: "Azure",
-    logo: Azure,
-  },
-  {
-    name: "Vercel",
-    logo: Vercel,
-  },
-  {
-    name: "Github",
-    logo: Github,
-  },
-  {
-    name: "Postman",
-    logo: Postman,
-  },
-  {
-    name: "Docker",
-    logo: Docker,
-  },
-  {
-    name: "Kubernetes",
-    logo: Kubernetes,
-  },
-];
+const techStack = {
+  frontend: [
+    { name: "HTML", logo: html },
+    { name: "CSS", logo: css },
+    { name: "JavaScript", logo: js },
+    { name: "TypeScript", logo: ts },
+    { name: "React", logo: react },
+    { name: "NextJS", logo: nextjs },
+    { name: "Bootstrap", logo: Bootsrap },
+    { name: "TailwindCSS", logo: Tailwind },
+    { name: "Vite", logo: Vite },
+  ],
+  backend: [
+    { name: "NodeJS", logo: node },
+    { name: "ExpressJS", logo: express },
+    { name: "Java", logo: java },
+    { name: "Spring Boot", logo: spring },
+    { name: "Python", logo: python },
+    { name: "FastAPI", logo: fastAPI },
+    { name: "PHP", logo: PHP },
+    { name: "C", logo: C },
+    { name: "C++", logo: Cpp },
+  ],
+  mobile: [
+    { name: "React Native", logo: reactnative },
+    { name: "Flutter", logo: flutter },
+    { name: "Firebase", logo: Firebase },
+    { name: "MySQL", logo: MySQL },
+    { name: "MongoDB", logo: MongoDB },
+    { name: "PostgreSQL", logo: PostgreSQL },
+  ],
+  devops: [
+    { name: "AWS", logo: AWS },
+    { name: "Azure", logo: Azure },
+    { name: "Vercel", logo: Vercel },
+    { name: "Github", logo: Github },
+    { name: "Postman", logo: Postman },
+    { name: "Docker", logo: Docker },
+    { name: "Kubernetes", logo: Kubernetes },
+  ],
+};
 const tileVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 1, scale: 1, transition: { duration: 1 } },
 };
+
+type TechCategoryProps = {
+  title: string;
+  stack: { name: string; logo: any }[];
+};
+
+const TechCategory = ({ title, stack }: TechCategoryProps) => (
+  <div className="w-full max-w-6xl px-6 py-6">
+    <h2 className="text-xl font-semibold text-white mb-4 border-b border-gold pb-2">
+      {title}
+    </h2>
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+      {stack.map((tech) => (
+        <motion.div
+          key={tech.name}
+          variants={tileVariants}
+          initial="hidden"
+          animate="visible"
+          className="flex flex-col items-center justify-center bg-white/5 rounded-xl p-3 hover:bg-gold hover:text-black transition-all duration-300"
+        >
+          <Image
+            src={tech.logo}
+            alt={tech.name}
+            width={40}
+            height={40}
+            className="mb-2"
+            title={tech.name}
+          />
+          <p className="text-xs font-medium text-center">{tech.name}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+);
+
 export default function Page() {
   return (
-    <>
-      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
-        <Particles />
-        <motion.main
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-auto flex flex-col justify-center items-center"
-        >
-          <div className="mt-12 w-full flex flex-col justify-center items-center">
-            <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
-              <b>
-                <Typewriter
-                  words={[
-                    "Skills and Technologies",
-                    "What I am Good At",
-                    "Tech Stacks I am Familiar With",
-                  ]}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </b>
-            </h1>
-            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
-              I have a confident understanding on these languages and tech
-              stacks. I am a good quick self learner who always learn new
-              technologies and applying them for my projects.
-            </p>
-          </div>
-        </motion.main>
-        <div className="w-full flex flex-col justify-center items-center">
-          <div className="w-3/4 h:auto md:h-[150px] p-2 mt-4">
-            {/* <h1 className="text-sm text-white mt-2 w-full text-left">
-              Frontend Development
-            </h1> */}
-            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
-              {FrontendDevelopment.map((tech) => (
-                <motion.div
-                  key={tech.name}
-                  variants={tileVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="w-full"
-                >
-                  <div
-                    key={tech.name}
-                    className="flex flex-col justify-center items-center p-2  md:ml-10 cursor-pointer"
-                  >
-                    <Image
-                      src={tech.logo}
-                      alt={tech.name}
-                      width={50}
-                      height={50}
-                      style={{ zIndex: 21 }}
-                      title={tech.name}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          <div className="w-3/4 h:auto md:h-[150px] p-2 mt-4">
-            {/* <h1 className="text-sm text-white mt-2  w-full text-left">
-              Backend Development
-            </h1> */}
-            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
-              {BackendDevelopment.map((tech) => (
-                <motion.div
-                  key={tech.name}
-                  variants={tileVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="w-full"
-                >
-                  <div
-                    key={tech.name}
-                    className="flex flex-col justify-center items-center p-2  md:ml-10  cursor-pointer"
-                  >
-                    <Image
-                      src={tech.logo}
-                      alt={tech.name}
-                      width={50}
-                      height={50}
-                      style={{ zIndex: 21 }}
-                      title={tech.name}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          <div className="w-3/4 h:auto md:h-[150px] p-2">
-            {/* <h1 className="text-sm text-white mt-2  w-full text-left">
-              Mobile App Development
-            </h1> */}
-
-            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
-              {MobileDevelopment.map((tech) => (
-                <motion.div
-                  key={tech.name}
-                  variants={tileVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="w-full"
-                >
-                  <div
-                    key={tech.name}
-                    className="flex flex-col justify-center items-center p-2  md:ml-10 cursor-pointer"
-                  >
-                    <Image
-                      src={tech.logo}
-                      alt={tech.name}
-                      width={50}
-                      height={50}
-                      style={{ zIndex: 21 }}
-                      title={tech.name}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-          <div className="w-3/4 h:auto md:h-[150px] p-2">
-            {/* <h1 className="text-sm text-white mt-2  w-full text-left">
-              DevOps
-            </h1> */}
-            <div className="grid grid-row-1 grid-cols-2 md:grid-cols-9 gap-4 mt-4 mx-6 sm:mx-6 md:mx-10">
-              {DevOps.map((tech) => (
-                <motion.div
-                  key={tech.name}
-                  variants={tileVariants}
-                  initial="hidden"
-                  animate="visible"
-                  className="w-full"
-                >
-                  <div
-                    key={tech.name}
-                    className="flex flex-col justify-center items-center p-2 md:ml-10 cursor-pointer"
-                  >
-                    <Image
-                      src={tech.logo}
-                      alt={tech.name}
-                      width={50}
-                      height={50}
-                      style={{ zIndex: 21 }}
-                      title={tech.name}
-                    />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold py-10">
+      <Particles />
+      <motion.main
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.5 }}
+        className="w-full flex flex-col items-center"
+      >
+        <div className="max-w-4xl w-full text-center">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-4 tracking-wide">
+            <Typewriter
+              words={[
+                "Skills and Technologies",
+                "What I am Good At",
+                "Tech Stacks I am Familiar With",
+              ]}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </h1>
+          <p className="text-white mt-4 text-sm md:text-base">
+            I have a confident understanding of these languages and tech stacks. I'm a fast, self-motivated learner who embraces new technologies and applies them in projects.
+          </p>
         </div>
-      </div>
-    </>
+
+        {/* Section rendering */}
+        <TechCategory title="Frontend Development" stack={techStack.frontend} />
+        <TechCategory title="Backend Development" stack={techStack.backend} />
+        <TechCategory title="Mobile Development" stack={techStack.mobile} />
+        <TechCategory title="DevOps & Tools" stack={techStack.devops} />
+      </motion.main>
+    </div>
   );
 }

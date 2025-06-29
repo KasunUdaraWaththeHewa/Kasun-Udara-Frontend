@@ -28,7 +28,7 @@ const ParticleDesign = () => {
                             }
                         },
                         "color": {
-                            "value": "#F3D592"
+                            "value": "#BA68C8"
                         },
                         "shape": {
                             "type": "circle",

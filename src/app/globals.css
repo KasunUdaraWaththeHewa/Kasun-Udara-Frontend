@@ -52,19 +52,20 @@ body {
     25% 20%,
     45% 10%
   );
-  transition: clip-path 0.3s ease-in-out;
+  /* Remove transition on clip-path */
+  /* transition: clip-path 0.3s ease-in-out; */
+  will-change: transform;
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
+  0%, 100% {
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-6px); /* reduced from -10px */
   }
 }
 
 .animate-float {
-  animation: float 5s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite;
 }

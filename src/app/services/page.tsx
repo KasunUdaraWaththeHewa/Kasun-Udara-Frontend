@@ -3,99 +3,124 @@ import Particles from "@/components/particles/ParticleDesign";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 
+// Services Data
 const Services = [
   {
     title: "Frontend Development",
     description:
-      "I am confident on my frontend development skills. I have worked on several frontend development tasks.",
+      "Responsive, modern web interfaces built with React, Tailwind, and best practices.",
+    iconClass: "bx bx-laptop",
   },
   {
     title: "Backend Development",
     description:
-      "I am confident on my backend development skills. I have worked on several backend development tasks.",
+      "Scalable APIs and backend systems using Node.js, Express, and databases.",
+    iconClass: "bx bx-server",
   },
   {
     title: "Full Stack Development",
     description:
-      "I am confident on my full stack development skills. I have worked on several full stack development tasks.",
+      "End-to-end application development covering both frontend and backend.",
+    iconClass: "bx bx-code-alt",
   },
   {
     title: "Mobile App Development",
     description:
-      "I am confident on my mobile app development skills. I have worked on cross platform mobile app dev tasks.",
+      "Cross-platform mobile apps built with React Native for iOS and Android.",
+    iconClass: "bx bx-mobile-alt",
   },
   {
     title: "Machine Learning",
     description:
-      "I am confident on my machine learning skills. I have worked on several machine learning tasks.",
+      "Intelligent systems using Python, TensorFlow, and data modeling.",
+    iconClass: "bx bx-brain",
   },
   {
     title: "UI/UX Design",
     description:
-      "I am confident on my UI/UX design skills. I have worked on several UI/UX design tasks.",
+      "User-centered designs that focus on accessibility, clarity, and delight.",
+    iconClass: "bx bx-paint",
   },
 ];
+
+// Animation
 const tileVariants = {
   hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
+
+// Card Component
+function ServiceCard({
+  iconClass,
+  title,
+  description,
+}: {
+  iconClass: string;
+  title: string;
+  description: string;
+}) {
+  return (
+    <motion.div
+      variants={tileVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="w-full"
+    >
+      <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 cursor-pointer shadow-lg flex flex-col">
+        <div className="flex justify-center text-4xl mb-2">
+          <i className={iconClass}></i>
+        </div>
+        <h2 className="text-lg font-semibold text-center text-white">{title}</h2>
+        <p className="mt-2 text-sm text-center">{description}</p>
+      </div>
+    </motion.div>
+  );
+}
+
+// Page
 export default function Page() {
   return (
-    <>
-      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
-        <Particles />
-        <motion.main
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-auto flex flex-col justify-center items-center"
-        >
-          <div className="mt-12 w-full flex flex-col justify-center items-center">
-            <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
-              <b>
-                <Typewriter
-                  words={["Services I offer", "What I can do for you"]}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </b>
-            </h1>
-            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
-              I offer several services including web development services. Here
-              are some of the services I offer You can contact me for more
-              details.
-            </p>
-          </div>
-        </motion.main>
-        <div className="grid grid-row-1 md:grid-cols-3 gap-4 mt-4 p-4 mx-6 sm:mx-6 md:mx-10">
-          {Services.map((service, index) => (
-            <motion.div
-              key={index}
-              variants={tileVariants}
-              initial="hidden"
-              animate="visible"
-              className="w-full"
-            >
-              <div
-                key={index}
-                className="text-black cursor-pointer p-4 rounded-lg bg-white p-2 transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white"
-              >
-                <h2 className="text-sm mt-2 text-center">
-                  <b>{service.title}</b>
-                </h2>
-                <p className="mt-2 text-sm text-center">
-                  {service.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-8">
+      <Particles />
+
+      <motion.main
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -50 }}
+        transition={{ duration: 0.6 }}
+        className="w-full flex flex-col justify-center items-center"
+      >
+        <div className="mt-12 w-full flex flex-col justify-center items-center px-4">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-4 tracking-wide">
+            <Typewriter
+              words={["Services I offer", "What I can do for you"]}
+              loop={false}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={40}
+              delaySpeed={1000}
+            />
+          </h1>
+          <p className="text-white text-sm md:text-base w-full md:w-3/4 text-center mt-4">
+            I specialize in a range of services across web and app development,
+            machine learning, and UI/UX design. Here's a snapshot of what I can
+            offer.
+          </p>
         </div>
+      </motion.main>
+
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-8 px-6 w-full max-w-6xl">
+        {Services.map((service, index) => (
+          <ServiceCard
+            key={index}
+            iconClass={service.iconClass}
+            title={service.title}
+            description={service.description}
+          />
+        ))}
       </div>
-    </>
+    </div>
   );
 }
