@@ -61,7 +61,7 @@ const tileVariants = {
 export default function Page() {
   return (
     <>
-      <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
+      <div className="w-full min-h-screen h-auto bg-gradient-to-br from-black to-darkPink text-pink flex flex-col items-center py-4">
         <Particles />
         <motion.main
           initial={{ opacity: 0, y: 50 }}
@@ -95,7 +95,7 @@ export default function Page() {
           className="w-full h-auto flex flex-col justify-center items-center"
         >
           <div className="mt-4 w-full flex flex-col justify-center items-center sm:items-center md:items-left sm:justify-center">
-            <h1 className="sm:text-1xl md:text-2xl text-gold w-full flex flex-col justify-center items-center">
+            <h1 className="sm:text-1xl md:text-2xl text-pink w-full flex flex-col justify-center items-center">
               <b>
                 <Typewriter
                   words={["Blogs and Publications","What I have Written"]}
@@ -134,7 +134,7 @@ export default function Page() {
                     href={blog.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="h-[150px] text-black w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white p-2"
+                    className="h-[150px] text-black w-full block rounded-lg flex flex-col items-center justify-center hover:cursor-pointer  bg-white hover:shadow-xl transition transform hover:scale-105 transition duration-500 ease-in-out hover:bg-lightPink hover:text-white p-2"
                   >
                     <h1 className="text-1xl mt-2 text-center">
                       <b className="text-center">{blog.title}</b>

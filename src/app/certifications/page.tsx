@@ -116,103 +116,96 @@ const certifications = [
 ];
 
 const tileVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 export default function Page() {
   return (
-    <>
-      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
-        <Particles />
-        <motion.main
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-auto flex flex-col justify-center items-center"
-        >
-          <div className="mt-12 w-full flex flex-col justify-center items-center">
-            <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
-              <b>
-                <Typewriter
-                  words={["Licenses and Certifications"]}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </b>
-            </h1>
-            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
-              I have completed several courses and certifications to enhance my
-              skills and knowledge. I am always eager to learn new technologies
-              and tools to improve my work. Here are some of the certifications
-              I have completed so far in my career.
-            </p>
-          </div>
-        </motion.main>
-        <div className="w-full flex flex-wrap justify-center items-center mt-4">
-          <div className="w-3/4 grid grid-cols-1 md:grid-cols-2 gap-4">
-            {certifications.map((certification) => (
-              <motion.div
-                key={certification.name}
-                variants={tileVariants}
-                initial="hidden"
-                animate="visible"
-                className="w-full"
-              >
-                <a
-                  key={certification.name}
-                  href={certification.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 rounded-lg transition transform hover:scale-105 transition duration-500 ease-in-out bg-black p-2 hover:bg-darkMaroon hover:shadow-lg"
-                >
-                  <Image
-                    src={certification.logo}
-                    alt={certification.name}
-                    width={25}
-                    height={25}
-                    className="rounded-lg"
-                  />
-                  <span className="text-white text-sm w-full">
-                    <h1 className="text-sm text-left md:text-left">
-                      {certification.name}
-                    </h1>
-                  </span>
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        <p
-          className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4"
-          style={{ zIndex: 21 }}
-        >
-          You may visit my{" "}
-          <a
-            href="https://www.linkedin.com/in/w-h-kasun-udara/details/certifications/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gold cursor-pointer"
-          >
-            LinkedIn
-          </a>{" "}
-          profile or{" "}
-          <a
-            href="https://github.com/KasunUdaraWaththeHewa/My-Certificates-in-IT"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gold cursor-pointer"
-          >
-            Github
-          </a>{" "}
-          repository to see more certifications I possess.
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkPink text-pink py-16 px-4">
+      <Particles />
+
+      <motion.main
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full flex flex-col items-center mb-12"
+      >
+        <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-4">
+          <Typewriter
+            words={["Licenses and Certifications"]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={60}
+            deleteSpeed={30}
+            delaySpeed={1200}
+          />
+        </h1>
+        <p className="text-white text-center max-w-2xl text-base mt-2">
+          These certifications highlight my continued growth and dedication to staying current in tech. Click to view each one.
         </p>
+      </motion.main>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {certifications.map((cert, index) => (
+          <motion.div
+            key={index}
+            variants={tileVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            onClick={() => cert.link && window.open(cert.link, "_blank")}
+            className={`cursor-pointer bg-white/10 transition-all duration-300 p-6 rounded-xl border border-white/10 shadow-md backdrop-blur-lg`}
+          >
+            <div className="flex items-center space-x-4 mb-4">
+              <div className="relative w-12 h-12">
+                <Image
+                  src={cert.logo}
+                  alt={cert.name}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              </div>
+              <h3 className="text-base font-semibold leading-snug">
+                {cert.name}
+              </h3>
+            </div>
+
+            {cert.link ? (
+              <p className="text-sm underline mt-2 text-[#ffffff]">
+                View Certificate
+              </p>
+            ) : (
+              <p className="text-xs italic text-gray-400 mt-2">
+                No certificate link provided
+              </p>
+            )}
+          </motion.div>
+        ))}
       </div>
-    </>
+
+      <p className="text-white text-sm text-center mt-16 max-w-xl mx-auto">
+        See more certifications on my{" "}
+        <a
+          href="https://www.linkedin.com/in/w-h-kasun-udara/details/certifications/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-pink hover:text-white"
+        >
+          LinkedIn
+        </a>{" "}
+        or{" "}
+        <a
+          href="https://github.com/KasunUdaraWaththeHewa/My-Certificates-in-IT"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline text-pink hover:text-white"
+        >
+          GitHub
+        </a>{" "}
+        profiles.
+      </p>
+    </div>
   );
 }

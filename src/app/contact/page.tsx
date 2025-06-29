@@ -28,217 +28,149 @@ const socials = [
   },
 ];
 
-const tileVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-};
-
-export default function Page() {
+export default function ContactPage() {
   const form = useRef<HTMLFormElement>(null);
-  const [message, setMessage] = useState<string | null>(null);
-  const [isError, setIsError] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [feedback, setFeedback] = useState<{
+    msg: string;
+    isError: boolean;
+  } | null>(null);
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [userMessage, setUserMessage] = useState("");
-
-  const handleTextClick = (text: any) => {
-    navigator.clipboard
-      .writeText(text)
-      .then(() => {
-        setMessage("Email address copied to clipboard!");
-        setIsError(false);
-        console.log("Text copied to clipboard!");
-      })
-      .catch((err) => {
-        setMessage("Failed to copy email address. Please try again later.");
-        setIsError(true);
-        console.error("Could not copy text: ", err);
-      });
-  };
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
+    const { name, email, message } = formData;
 
-    if (!name || !email || !userMessage) {
-      setMessage("All fields are required.");
-      setIsError(true);
+    if (!name || !email || !message) {
+      setFeedback({ msg: "All fields are required.", isError: true });
       return;
     }
 
-    if (form.current) {
-      emailjs
-        .sendForm(
-          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-          form.current,
-          process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
-        )
-        .then(
-          (result) => {
-            console.log(result.text);
-            console.log("Message Sent");
-            setMessage(
-              "Your message has been sent successfully! Kasun Udara will contact you soon."
-            );
-            setIsError(false);
-            form.current?.reset();
-            setName("");
-            setEmail("");
-            setUserMessage("");
-          },
-          (error) => {
-            console.log(error.text);
-            setMessage("Failed to send your message. Please try again later.");
-            setIsError(true);
-          }
-        );
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        form.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      );
+      setFeedback({ msg: "Message sent successfully!", isError: false });
+      setFormData({ name: "", email: "", message: "" });
+      form.current?.reset();
+    } catch (err) {
+      setFeedback({ msg: "Failed to send. Try again later.", isError: true });
     }
   };
 
   return (
-    <>
-      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
-        <Particles />
-        <motion.main
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-auto flex flex-col justify-center items-center"
+    <div className="relative bg-gradient-to-br from-black to-darkPink text-pink py-20 px-6 min-h-screen">
+      <Particles />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center mb-12"
+      >
+        <h1 className="text-3xl md:text-5xl font-extrabold text-pink">
+          <Typewriter
+            words={["Contact Me", "Let`s Connect", "Send a Message"]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={60}
+            deleteSpeed={30}
+            delaySpeed={1000}
+          />
+        </h1>
+        <p className="text-white mt-4 max-w-xl mx-auto">
+          I’m always open to discussing new opportunities. Feel free to reach
+          out through the form or social platforms.
+        </p>
+      </motion.div>
+
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <form
+          ref={form}
+          onSubmit={handleSend}
+          className="bg-white/10 p-6 rounded-xl space-y-4"
         >
-          <div className="mt-12 w-full flex flex-col justify-center items-center">
-            <h1 className="md:text-2xl text-gold w-full text-center">
-              <b>
-                <Typewriter
-                  words={[
-                    "Contact Me",
-                    "Get in touch with me",
-                    "Let's Talk!",
-                    "Send me a message!",
-                  ]}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </b>
-            </h1>
+          <input
+            name="user_name"
+            type="text"
+            placeholder="Your Name"
+            className="w-full p-3 rounded bg-white text-black"
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          />
+          <input
+            name="user_email"
+            type="email"
+            placeholder="Your Email"
+            className="w-full p-3 rounded bg-white text-black"
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+          />
+          <textarea
+            name="user_message"
+            placeholder="Your Message"
+            className="w-full p-3 rounded bg-white text-black h-40"
+            onChange={(e) =>
+              setFormData({ ...formData, message: e.target.value })
+            }
+          />
+          <button
+            type="submit"
+            className="w-full py-2 rounded bg-pink text-black hover:bg-lightPink transition"
+          >
+            Send Message
+          </button>
+          {feedback && (
             <p
-              className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4"
-              style={{ zIndex: 21 }}
+              className={`text-sm ${
+                feedback.isError ? "text-red-500" : "text-green-500"
+              }`}
             >
-              Feel free to contact me for any inquiries or collaborations. I am
-              always open to new opportunities and projects. You can reach me
-              through the following social media platforms or send me an email
-              directly.I will get back to you as soon as possible. My Email
-              address is{" "}
-              <span
-                className="text-gold cursor-pointer"
-                onClick={() => handleTextClick("kasunu2001@gmail.com")}
-                title="Click to copy email address"
-              >
-                kasunu2001@gmail.com
-              </span>{" "}
-              Thank you!
+              {feedback.msg}
             </p>
-          </div>
-        </motion.main>
-        <motion.div
-          variants={tileVariants}
-          initial="hidden"
-          animate="visible"
-          className="w-full"
-        >
-          <div className="w-full flex flex-wrap justify-center items-center mt-4">
-            <div className="w-1/2 flex flex-col md:flex-row items-center justify-center items-center">
-              {socials.map((social) => (
+          )}
+        </form>
+
+        <div className="w-full max-w-md mx-auto space-y-6 text-white">
+          <h3 className="text-2xl font-bold text-center">Connect With Me</h3>
+
+          <ul className="space-y-3">
+            {socials.map((social) => (
+              <li key={social.name}>
                 <a
-                  key={social.name}
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-col justify-center items-center space-x-2 rounded-lg p-2 transition transform hover:scale-110 transition duration-500 ease-in-out"
+                  className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-pink/10 hover:text-pink transition duration-300"
                 >
-                  <div className="flex flex-row justify-center items-center w-[100px]">
-                    <i className={`bx ${social.logo} text-1xl text-white`}></i>
-                    <span className="text-white text-sm">
-                      &nbsp;{social.name}
-                    </span>
-                  </div>
+                  <i className={`bx ${social.logo} text-2xl`}></i>
+                  <span className="text-base">{social.name}</span>
                 </a>
-              ))}
-            </div>
-          </div>
-        </motion.div>
-        <motion.div
-          variants={tileVariants}
-          initial="hidden"
-          animate="visible"
-          className="w-full flex flex-col justify-center items-center"
-        >
-          <div className="w-1/2 flex flex-col justify-center items-center mt-4">
-            <form ref={form} onSubmit={sendEmail} className="w-full">
-              <div className="w-full flex flex-col items-center justify-center">
-                <label className="text-white text-1xl w-full text-left">
-                  Your Name{" "}
-                </label>
-                <input
-                  type="text"
-                  name="user_name"
-                  className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
-                  style={{ zIndex: 21 }}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </div>
-              <div className="w-full flex flex-col items-center justify-center mt-4">
-                <label className="text-white text-1xl w-full text-left">
-                  Your Email{" "}
-                </label>
-                <input
-                  type="email"
-                  name="user_email"
-                  className="w-full h-[50px] p-2 rounded-lg mt-2 text-black"
-                  style={{ zIndex: 21 }}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </div>
-              <div className="w-full flex flex-col items-center justify-center mt-4">
-                <label className="text-white text-1xl w-full text-left">
-                  Your Message{" "}
-                </label>
-                <textarea
-                  className="w-full h-[200px] p-2 rounded-lg mt-2 text-black"
-                  name="user_message"
-                  style={{ zIndex: 21 }}
-                  onChange={(e) => setUserMessage(e.target.value)}
-                />
-              </div>
-              <div className="w-1/2 md:w-1/6 flex flex-col items-center justify-center mt-4 mb-4">
-                <button
-                  type="submit"
-                  value="Send"
-                  className="w-full h-[35px] bg-gold hover:bg-lightMaroon hover:text-white transition transform hover:scale-110 transition duration-500 ease-in-out text-black rounded-lg cursor-pointer"
-                  style={{ zIndex: 21 }}
-                >
-                  <b>Send</b>
-                </button>
-              </div>
-            </form>
-            {message && (
-              <p
-                className={`mt-4 text-sm ${
-                  isError ? "text-red-500" : "text-green-500"
-                }`}
+              </li>
+            ))}
+          </ul>
+
+          <div className="text-center text-sm text-white">
+            <p>
+              Or reach out via email:{" "}
+              <span
+                className="text-pink underline cursor-pointer hover:text-pink/80 transition"
+                onClick={() =>
+                  navigator.clipboard.writeText("kasunu2001@gmail.com")
+                }
+                title="Click to copy email"
               >
-                {message}
-              </p>
-            )}
+                kasunu2001@gmail.com
+              </span>
+            </p>
           </div>
-        </motion.div>
+        </div>
       </div>
-    </>
+    </div>
   );
 }

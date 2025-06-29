@@ -24,17 +24,17 @@ const config: Config = {
           DEFAULT: "#000000",
           foreground: "#000000",
         },
-        darkMaroon:{
-          DEFAULT: "#220901",
-          foreground: "#220901",
+        darkPink:{
+          DEFAULT: "#050505",
+          foreground: "#090909",
         },
-        lightMaroon:{
-          DEFAULT: "#621708",
+        lightPink:{
+          DEFAULT: "#BA68C8",
           foreground: "#621708",
         },
-        gold: {
-          DEFAULT: "#F3D592",
-          foreground: "#F3D592",
+        pink: {
+          DEFAULT: "#BA68C8",
+          foreground: "#BA68C8",
         },
         gray: {
           DEFAULT: "#f9f9f9",

@@ -1,4 +1,4 @@
-'use client'
+`use client`
 import { useCallback } from "react";
 import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
@@ -28,7 +28,7 @@ const ParticleDesign = () => {
                             }
                         },
                         "color": {
-                            "value": "#F3D592"
+                            "value": "#BA68C8"
                         },
                         "shape": {
                             "type": "circle",

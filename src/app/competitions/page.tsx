@@ -83,82 +83,76 @@ const competitions = [
     title: "Codesprint 8",
     description:
       "Codesprint is a Startup competition organized by the IEEE at IIT.",
-      "image":Codesprint,
+    image: Codesprint,
     places: "Finalist (Sri Lanka) - from over 525 teams",
-  }
+  },
 ];
 
 const tileVariants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
 };
 
 export default function Page() {
   return (
-    <>
-      <div className="w-full h-auto md:h-screen bg-gradient-to-br from-black to-darkMaroon text-gold flex flex-col items-center py-4">
-        <Particles />
-        <motion.main
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.5 }}
-          className="w-full h-auto flex flex-col justify-center items-center"
-        >
-          <div className="mt-12 w-full flex flex-col justify-center items-center">
-            <h1 className="text-1xl md:text-2xl text-gold w-full text-center">
-              <b>
-                <Typewriter
-                  words={["Competitions and Victories","What I have Participated"]}
-                  loop={0}
-                  cursor
-                  cursorStyle="|"
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
-                />
-              </b>
-            </h1>
-            <p className="text-white text-sm w-3/4 md:w-3/4 text-center md:text-center mt-4">
-              I have participated in several competitions and hackathons and
-              have won several of them. Here are some of the competitions I have
-              participated in and won.
-            </p>
-          </div>
-        </motion.main>
-        <div className="grid grid-row-1 md:grid-cols-3 gap-4 mt-4 md:p-4 mx-6 sm:mx-6 md:mx-10">
-          {competitions.map((competition, index) => (
-            <motion.div
-              key={index}
-              variants={tileVariants}
-              initial="hidden"
-              animate="visible"
-              className="w-full"
-            >
-              <div
-                key={index}
-                className="text-black p-4 rounded-lg bg-white cursor-pointer transition transform transition duration-500 ease-in-out hover:bg-lightMaroon hover:text-white hover:scale-105 mx-4 mt-2 flex flex-col md:justify-center items-center"
-              >
-                <Image
-                  src={competition.image}
-                  alt={competition.title}
-                  width={200}
-                  height={200}
-                />
-                <h2 className="text-sm text-center mt-2">
-                  <b>{competition.title}</b>
-                </h2>
-                <p className="mt-2 text-sm text-center">
-                  {competition.description}
-                </p>
-                <p className="mt-2 text-sm text-center">
-                  <b>{competition.places}</b>
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+    <div className="w-full min-h-screen bg-gradient-to-br from-black to-darkPink text-pink py-10">
+      <Particles />
+      <motion.main
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="w-full flex flex-col items-center"
+      >
+        <h1 className="text-3xl md:text-5xl font-extrabold text-center mb-4 tracking-wide">
+          <Typewriter
+            words={[
+              "Competitions and Victories",
+              "What I Have Participated In",
+            ]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={60}
+            deleteSpeed={30}
+            delaySpeed={1200}
+          />
+        </h1>
+        <p className="text-white text-sm md:text-base text-center max-w-2xl mt-4 mb-10 px-4">
+          I have actively participated in national and international hackathons,
+          coding competitions, and CTFs. Here`s a glimpse of my journey and
+          achievements.
+        </p>
+      </motion.main>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-6 md:px-20">
+        {competitions.map((comp, index) => (
+          <motion.div
+            key={index}
+            variants={tileVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="bg-white/10 backdrop-blur-md border border-white/10 rounded-2xl p-4 hover:scale-105 transform transition duration-300 shadow-lg text-white"
+          >
+            <div className="w-full h-40 relative rounded-xl overflow-hidden">
+              <Image
+                src={comp.image}
+                alt={comp.title}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-xl"
+              />
+            </div>
+            <div className="mt-4">
+              <h2 className="text-lg font-semibold text-pink">{comp.title}</h2>
+              <p className="text-sm mt-1 text-gray-200">{comp.description}</p>
+              <p className="mt-2 text-sm text-pink font-semibold">
+                {comp.places}
+              </p>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
