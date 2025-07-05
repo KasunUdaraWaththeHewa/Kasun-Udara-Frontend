@@ -146,7 +146,7 @@ export default function ContactPage() {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-pink/10 hover:text-pink transition duration-300"
+                  className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-pink/10 hover:text-pink transition duration-300 flex flex-row justify-center items-center"
                 >
                   <i className={`bx ${social.logo} text-2xl`}></i>
                   <span className="text-base">{social.name}</span>

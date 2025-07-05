@@ -57,9 +57,9 @@ export default function Home() {
 
         {/* Image Section */}
         <section className="w-full md:w-1/2 flex justify-center items-center cursor-pointer group">
-          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl shadow-xl overflow-hidden animate-float">
+          <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl shadow-xl overflow-hidden animate-float blob-mask">
             {/* Soft Glow Background */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-700 via-pink-500 to-yellow-400 opacity-30 blur-3xl z-0" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-purple-700 via-pink-500 to-yellow-400 opacity-30 blur-3xl z-0 p-4 blob-mask" />
 
             {/* Profile Image */}
             <div className="relative w-72 h-72 md:w-96 md:h-96 overflow-hidden bg-black/20 backdrop-blur-md shadow-lg transition-transform duration-300 ease-in-out group-hover:scale-105 z-10 blob-mask animate-float">
